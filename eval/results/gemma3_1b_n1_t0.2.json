@@ -1,0 +1,1492 @@
+{
+  "model": "gemma3:1b",
+  "total_tasks": 164,
+  "samples_per_task": 1,
+  "temperature": 0.2,
+  "max_tokens": 1024,
+  "workers": 1,
+  "total_elapsed_s": 103.2,
+  "avg_latency_ms": 615,
+  "pass_at_1": 1.83,
+  "pass_at_5": null,
+  "pass_at_10": null,
+  "tasks_passed_any": 3,
+  "task_results": [
+    {
+      "task_id": "HumanEval/0",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpet6a_5yu.py\", line 16\n    return False\n                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False\n",
+      "extracted_body": "    for i in range(len(numbers)):\n            for j in range(i + 1, len(numbers)):\n                if abs(numbers[i] - numbers[j]) < threshold:\n                    return True\n        return False",
+      "latency_ms": 7598
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpvvtsm0pi.py\", line 44, in <module>\n    check(separate_paren_groups)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpvvtsm0pi.py\", line 32, in check\n    assert candidate('(()()) ((())) () ((())()())') == [\nAssertionError\n",
+      "raw_output": "def separate_paren_groups(paren_string: str) -> List[str]:\n    result = []\n    start = 0\n    for i in range(len(paren_string)):\n        if paren_string[i] == '(':\n            start = i\n        elif paren_string[i] == ')':\n            end = start\n            result.append(paren_string[start:end])\n            start = end + 1\n    return result\n",
+      "extracted_body": "    result = []\n    start = 0\n    for i in range(len(paren_string)):\n        if paren_string[i] == '(':\n            start = i\n        elif paren_string[i] == ')':\n            end = start\n            result.append(paren_string[start:end])\n            start = end + 1\n    return result",
+      "latency_ms": 738
+    },
+    {
+      "task_id": "HumanEval/2",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp2zn8atob.py\", line 13\n    decimal_part = number - integer_part\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    integer_part = number % 1\n    decimal_part = number - integer_part\n    return decimal_part\n```",
+      "extracted_body": "    integer_part = number % 1\n        decimal_part = number - integer_part\n        return decimal_part",
+      "latency_ms": 297
+    },
+    {
+      "task_id": "HumanEval/3",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmplxc1vmbv.py\", line 16\n    return False\n                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    for operation in operations:\n        if operation < 0:\n            return True\n    return False\n```",
+      "extracted_body": "    for operation in operations:\n            if operation < 0:\n                return True\n        return False",
+      "latency_ms": 281
+    },
+    {
+      "task_id": "HumanEval/4",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5o8u9drx.py\", line 16\n    mean = sum(numbers) / len(numbers)\n                                      ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not numbers:\n        return 0.0\n\n    mean = sum(numbers) / len(numbers)\n    absolute_deviations = [abs(number - mean) for number in numbers]\n    mad = sum(absolute_deviations) / len(absolute_deviations)\n\n    return mad\n```",
+      "extracted_body": "    if not numbers:\n            return 0.0\n    \n        mean = sum(numbers) / len(numbers)\n        absolute_deviations = [abs(number - mean) for number in numbers]\n        mad = sum(absolute_deviations) / len(absolute_deviations)\n    \n        return mad",
+      "latency_ms": 513
+    },
+    {
+      "task_id": "HumanEval/5",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpumqujdc_.py\", line 12\n    for i in range(len(numbers)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+      "extracted_body": "    result = []\n        for i in range(len(numbers)):\n            result.append(numbers[i])\n            if i < len(numbers) - 1:\n                result.append(delimeter)\n        return result",
+      "latency_ms": 426
+    },
+    {
+      "task_id": "HumanEval/6",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpwdmcjp6d.py\", line 13\n    max_depth = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    stack = [0]\n    max_depth = 0\n    depths = {}\n\n    for char in paren_string:\n        if char == '(':\n            stack.append(0)\n            max_depth = max(max_depth, stack[-1])\n        elif char == ')':\n            stack.pop()\n            if not stack:\n                stack[-1] = 0\n            depths[paren_string.count('(')] = stack[-1]\n            max_depth = max(max_depth, stack[-1])\n    \n    result = []\n    for depth in depths.values():\n        result.extend([depth] * depth)\n    \n    return result\n```",
+      "extracted_body": "    stack = [0]\n        max_depth = 0\n        depths = {}\n    \n        for char in paren_string:\n            if char == '(':\n                stack.append(0)\n                max_depth = max(max_depth, stack[-1])\n            elif char == ')':\n                stack.pop()\n                if not stack:\n                    stack[-1] = 0\n                depths[paren_string.count('(')] = stack[-1]\n                max_depth = max(max_depth, stack[-1])\n        \n        result = []\n        for depth in depths.values():\n            result.extend([depth] * depth)\n        \n        return result",
+      "latency_ms": 989
+    },
+    {
+      "task_id": "HumanEval/7",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n    result = []\n    for string in strings:\n        if substring in string:\n            result.append(string)\n    return result\n",
+      "extracted_body": "    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n    result = []\n    for string in strings:\n        if substring in string:\n            result.append(string)\n    return result",
+      "latency_ms": 796
+    },
+    {
+      "task_id": "HumanEval/8",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpmqvczxja.py\", line 13\n    product_val = 1\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum_val = 0\n    product_val = 1\n    for number in numbers:\n        sum_val += number\n        product_val *= number\n    return (sum_val, product_val)\n```",
+      "extracted_body": "    sum_val = 0\n        product_val = 1\n        for number in numbers:\n            sum_val += number\n            product_val *= number\n        return (sum_val, product_val)",
+      "latency_ms": 415
+    },
+    {
+      "task_id": "HumanEval/9",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqmhlmsqc.py\", line 13\n    result = [numbers[0]]\n                         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not numbers:\n        return []\n\n    result = [numbers[0]]\n    for i in range(1, len(numbers)):\n        if numbers[i] > result[-1]:\n            result.append(numbers[i])\n        else:\n            break\n\n    return result\n```",
+      "extracted_body": "    if not numbers:\n            return []\n    \n        result = [numbers[0]]\n        for i in range(1, len(numbers)):\n            if numbers[i] > result[-1]:\n                result.append(numbers[i])\n            else:\n                break\n    \n        return result",
+      "latency_ms": 504
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpo0571108.py\", line 23\n    for i in range(len(string)):\n                                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    if not string:\n        return \"\"\n\n    for i in range(len(string)):\n        prefix = string[i:]\n        if prefix == prefix[::-1]:\n            return prefix\n\n    return string[::-1]  # If no palindrome is found, return the reversed string\n",
+      "extracted_body": "    if not string:\n            return \"\"\n    \n        for i in range(len(string)):\n            prefix = string[i:]\n            if prefix == prefix[::-1]:\n                return prefix\n    \n        return string[::-1]  # If no palindrome is found, return the reversed string",
+      "latency_ms": 462
+    },
+    {
+      "task_id": "HumanEval/11",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzjyfonr8.py\", line 11\n    for i in range(len(a)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = ''\n    for i in range(len(a)):\n        if a[i] == b[i]:\n            result += '1'\n        else:\n            result += '0'\n    return result\n```",
+      "extracted_body": "    result = ''\n        for i in range(len(a)):\n            if a[i] == b[i]:\n                result += '1'\n            else:\n                result += '0'\n        return result",
+      "latency_ms": 428
+    },
+    {
+      "task_id": "HumanEval/12",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp03p9foub.py\", line 17\n    longest_string = strings[0]\n                               ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not strings:\n        return None\n\n    longest_string = strings[0]\n    for string in strings:\n        if len(string) > len(longest_string):\n            longest_string = string\n\n    return longest_string\n```",
+      "extracted_body": "    if not strings:\n            return None\n    \n        longest_string = strings[0]\n        for string in strings:\n            if len(string) > len(longest_string):\n                longest_string = string\n    \n        return longest_string",
+      "latency_ms": 441
+    },
+    {
+      "task_id": "HumanEval/13",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpfpdh1pyz.py\", line 12\n    return a\n            ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    while(b):\n        a, b = b, a % b\n    return a\n```",
+      "extracted_body": "    while(b):\n            a, b = b, a % b\n        return a",
+      "latency_ms": 260
+    },
+    {
+      "task_id": "HumanEval/14",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpyo4q2fas.py\", line 10\n    for i in range(len(string)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    prefixes = []\n    for i in range(len(string)):\n        for j in range(i, len(string)):\n            prefixes.append(string[i:j+1])\n    return prefixes\n```",
+      "extracted_body": "    prefixes = []\n        for i in range(len(string)):\n            for j in range(i, len(string)):\n                prefixes.append(string[i:j+1])\n        return prefixes",
+      "latency_ms": 409
+    },
+    {
+      "task_id": "HumanEval/15",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp7cnnxx1g.py\", line 11\n    for i in range(n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = \"\"\n    for i in range(n + 1):\n        result += str(i) + \" \"\n    return result.strip()\n```",
+      "extracted_body": "    result = \"\"\n        for i in range(n + 1):\n            result += str(i) + \" \"\n        return result.strip()",
+      "latency_ms": 348
+    },
+    {
+      "task_id": "HumanEval/16",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpukjko07j.py\", line 11\n    for char in string:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    distinct_chars = set()\n    for char in string:\n        distinct_chars.add(char.lower())\n    return len(distinct_chars)\n```",
+      "extracted_body": "    distinct_chars = set()\n        for char in string:\n            distinct_chars.add(char.lower())\n        return len(distinct_chars)",
+      "latency_ms": 349
+    },
+    {
+      "task_id": "HumanEval/17",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqq8urycm.py\", line 18\n    for note in music_string:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    beats = []\n    for note in music_string:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n```",
+      "extracted_body": "    beats = []\n        for note in music_string:\n            if note == 'o':\n                beats.append(4)\n            elif note == 'o|':\n                beats.append(2)\n            elif note == '.|':\n                beats.append(1)\n        return beats",
+      "latency_ms": 525
+    },
+    {
+      "task_id": "HumanEval/18",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmps6rwz2ov.py\", line 13\n    for i in range(len(string) - len(substring) + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for i in range(len(string) - len(substring) + 1):\n        if string[i:i+len(substring)] == substring:\n            count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for i in range(len(string) - len(substring) + 1):\n            if string[i:i+len(substring)] == substring:\n                count += 1\n        return count",
+      "latency_ms": 429
+    },
+    {
+      "task_id": "HumanEval/19",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzq0w4szv.py\", line 12\n    numbers_list.sort()\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    numbers_list = [num for num in numbers.split() if int(num) != 0]\n    numbers_list.sort()\n    return ''.join(numbers_list)\n```",
+      "extracted_body": "    numbers_list = [num for num in numbers.split() if int(num) != 0]\n        numbers_list.sort()\n        return ''.join(numbers_list)",
+      "latency_ms": 373
+    },
+    {
+      "task_id": "HumanEval/20",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpbjqspcbx.py\", line 14\n    closest_pair = (numbers[0], numbers[1])\n                                           ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(numbers) < 2:\n        return None\n    closest_pair = (numbers[0], numbers[1])\n    min_diff = abs(numbers[0] - numbers[1])\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            diff = abs(numbers[i] - numbers[j])\n            if diff < min_diff:\n                min_diff = diff\n                closest_pair = (numbers[i], numbers[j])\n    return closest_pair\n```",
+      "extracted_body": "    if len(numbers) < 2:\n            return None\n        closest_pair = (numbers[0], numbers[1])\n        min_diff = abs(numbers[0] - numbers[1])\n        for i in range(len(numbers)):\n            for j in range(i + 1, len(numbers)):\n                diff = abs(numbers[i] - numbers[j])\n                if diff < min_diff:\n                    min_diff = diff\n                    closest_pair = (numbers[i], numbers[j])\n        return closest_pair",
+      "latency_ms": 838
+    },
+    {
+      "task_id": "HumanEval/21",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphmrbbupf.py\", line 12\n    min_val = min(numbers)\n                          ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(numbers) < 2:\n        return numbers\n    min_val = min(numbers)\n    max_val = max(numbers)\n    new_numbers = [0.0] * len(numbers)\n    new_numbers[0] = min_val\n    new_numbers[-1] = max_val\n    return new_numbers\n```",
+      "extracted_body": "    if len(numbers) < 2:\n            return numbers\n        min_val = min(numbers)\n        max_val = max(numbers)\n        new_numbers = [0.0] * len(numbers)\n        new_numbers[0] = min_val\n        new_numbers[-1] = max_val\n        return new_numbers",
+      "latency_ms": 585
+    },
+    {
+      "task_id": "HumanEval/22",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result\n",
+      "extracted_body": "    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result",
+      "latency_ms": 798
+    },
+    {
+      "task_id": "HumanEval/23",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpx5rrmuwf.py\", line 12\n    return len(string)\n                      ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    if not string:\n        return 0\n    return len(string)\n",
+      "extracted_body": "    if not string:\n            return 0\n        return len(string)",
+      "latency_ms": 224
+    },
+    {
+      "task_id": "HumanEval/24",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzhaioco8.py\", line 11\n    return 1\n            ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    for i in range(n // 2, 0, -1):\n        if n % i == 0:\n            return i\n    return 1\n```",
+      "extracted_body": "    for i in range(n // 2, 0, -1):\n            if n % i == 0:\n                return i\n        return 1",
+      "latency_ms": 350
+    },
+    {
+      "task_id": "HumanEval/25",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpggmnl9mf.py\", line 16\n    d = 2\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    factors = []\n    d = 2\n    while d * d <= n:\n        while n % d == 0:\n            factors.append(d)\n            n //= d\n        d += 1\n    if n > 1:\n        factors.append(n)\n    return factors\n```",
+      "extracted_body": "    factors = []\n        d = 2\n        while d * d <= n:\n            while n % d == 0:\n                factors.append(d)\n                n //= d\n            d += 1\n        if n > 1:\n            factors.append(n)\n        return factors",
+      "latency_ms": 539
+    },
+    {
+      "task_id": "HumanEval/26",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpk7gft8f4.py\", line 11\n    result = []\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    counts = {}\n    result = []\n    for number in numbers:\n        if number in counts:\n            counts[number] += 1\n        else:\n            counts[number] = 1\n    for number in numbers:\n        if counts[number] == 1:\n            result.append(number)\n    return result\n```",
+      "extracted_body": "    counts = {}\n        result = []\n        for number in numbers:\n            if number in counts:\n                counts[number] += 1\n            else:\n                counts[number] = 1\n        for number in numbers:\n            if counts[number] == 1:\n                result.append(number)\n        return result",
+      "latency_ms": 572
+    },
+    {
+      "task_id": "HumanEval/27",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpfj6hdnfq.py\", line 9\n    for char in string:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = ''\n    for char in string:\n        if 'a' <= char <= 'z':\n            result += char.upper()\n        elif 'A' <= char <= 'Z':\n            result += char.lower()\n        else:\n            result += char\n    return result\n```",
+      "extracted_body": "    result = ''\n        for char in string:\n            if 'a' <= char <= 'z':\n                result += char.upper()\n            elif 'A' <= char <= 'Z':\n                result += char.lower()\n            else:\n                result += char\n        return result",
+      "latency_ms": 503
+    },
+    {
+      "task_id": "HumanEval/28",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp4eoowii0.py\", line 12\n    for string in strings:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = ''\n    for string in strings:\n        result += string\n    return result\n```",
+      "extracted_body": "    result = ''\n        for string in strings:\n            result += string\n        return result",
+      "latency_ms": 268
+    },
+    {
+      "task_id": "HumanEval/29",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpkiegvt0g.py\", line 12\n    for string in strings:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    filtered_strings = []\n    for string in strings:\n        if string.startswith(prefix):\n            filtered_strings.append(string)\n    return filtered_strings\n```",
+      "extracted_body": "    filtered_strings = []\n        for string in strings:\n            if string.startswith(prefix):\n                filtered_strings.append(string)\n        return filtered_strings",
+      "latency_ms": 405
+    },
+    {
+      "task_id": "HumanEval/30",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphm6npo65.py\", line 11\n    for number in l:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    positive_numbers = []\n    for number in l:\n        if number > 0:\n            positive_numbers.append(number)\n    return positive_numbers\n```",
+      "extracted_body": "    positive_numbers = []\n        for number in l:\n            if number > 0:\n                positive_numbers.append(number)\n        return positive_numbers",
+      "latency_ms": 364
+    },
+    {
+      "task_id": "HumanEval/31",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpnzcf1qe0.py\", line 22\n    for i in range(2, int(n**0.5) + 1):\n                                       ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n",
+      "extracted_body": "    if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True",
+      "latency_ms": 408
+    },
+    {
+      "task_id": "HumanEval/32",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp4fr88e03.py\", line 26\n    if len(xs) % 2 != 0:\n                        ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(xs) == 0:\n        return 0\n    if len(xs) % 2 != 0:\n        return 0\n    x = xs[0]\n    for i in range(1, len(xs), 2):\n        x = x * (xs[i] / xs[0])\n    return x\n```",
+      "extracted_body": "    if len(xs) == 0:\n            return 0\n        if len(xs) % 2 != 0:\n            return 0\n        x = xs[0]\n        for i in range(1, len(xs), 2):\n            x = x * (xs[i] / xs[0])\n        return x",
+      "latency_ms": 602
+    },
+    {
+      "task_id": "HumanEval/33",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp4ug1qlgj.py\", line 13\n    res = []\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    l.sort()\n    res = []\n    for i in range(len(l)):\n        if (i + 1) % 3 != 0:\n            res.append(l[i])\n    return res\n```",
+      "extracted_body": "    l.sort()\n        res = []\n        for i in range(len(l)):\n            if (i + 1) % 3 != 0:\n                res.append(l[i])\n        return res",
+      "latency_ms": 433
+    },
+    {
+      "task_id": "HumanEval/34",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpes7rpiia.py\", line 9\n    for element in l:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    unique_list = []\n    for element in l:\n        if element not in unique_list:\n            unique_list.append(element)\n    unique_list.sort()\n    return unique_list\n```",
+      "extracted_body": "    unique_list = []\n        for element in l:\n            if element not in unique_list:\n                unique_list.append(element)\n        unique_list.sort()\n        return unique_list",
+      "latency_ms": 402
+    },
+    {
+      "task_id": "HumanEval/35",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpd2p8ivcj.py\", line 11\n    for element in l:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    max_element = l[0]\n    for element in l:\n        if element > max_element:\n            max_element = element\n    return max_element\n```",
+      "extracted_body": "    max_element = l[0]\n        for element in l:\n            if element > max_element:\n                max_element = element\n        return max_element",
+      "latency_ms": 361
+    },
+    {
+      "task_id": "HumanEval/36",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpoxhavlil.py\", line 13\n    for i in range(1, n):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for i in range(1, n):\n        if (i % 11 == 0 or i % 13 == 0):\n            if '7' in str(i):\n                count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for i in range(1, n):\n            if (i % 11 == 0 or i % 13 == 0):\n                if '7' in str(i):\n                    count += 1\n        return count",
+      "latency_ms": 469
+    },
+    {
+      "task_id": "HumanEval/37",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpdye38ylg.py\", line 13\n    return l\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    l.sort(key=lambda x: x % 2)\n    return l\n```",
+      "extracted_body": "    l.sort(key=lambda x: x % 2)\n        return l",
+      "latency_ms": 266
+    },
+    {
+      "task_id": "HumanEval/38",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpztzbax7z.py\", line 49, in <module>\n    check(decode_cyclic)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpztzbax7z.py\", line 45, in check\n    assert candidate(encoded_str) == str\nAssertionError\n",
+      "raw_output": "def decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\n    decoded_s = s\n    i = 0\n    while i < len(decoded_s):\n        group = decoded_s[i:i+3]\n        if len(group) == 3:\n            decoded_s = decoded_s[:i] + decoded_s[i+3:]\n            i = 0\n        else:\n            i += 3\n    return decoded_s\n",
+      "extracted_body": "    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\n    decoded_s = s\n    i = 0\n    while i < len(decoded_s):\n        group = decoded_s[i:i+3]\n        if len(group) == 3:\n            decoded_s = decoded_s[:i] + decoded_s[i+3:]\n            i = 0\n        else:\n            i += 3\n    return decoded_s",
+      "latency_ms": 808
+    },
+    {
+      "task_id": "HumanEval/39",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpxqfjinuc.py\", line 17\n    if n < 2:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    fib_numbers = [1, 2]\n    while fib_numbers[-1] <= n:\n        next_fib = fib_numbers[-1] + fib_numbers[-2]\n        if next_fib > n:\n            break\n        fib_numbers.append(next_fib)\n\n    for fib_num in fib_numbers:\n        if fib_num > 1 and is_prime(fib_num):\n            return fib_num\n\n    return -1\n```",
+      "extracted_body": "        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    fib_numbers = [1, 2]\n    while fib_numbers[-1] <= n:\n        next_fib = fib_numbers[-1] + fib_numbers[-2]\n        if next_fib > n:\n            break\n        fib_numbers.append(next_fib)\n\n    for fib_num in fib_numbers:\n        if fib_num > 1 and is_prime(fib_num):\n            return fib_num\n\n    return -1",
+      "latency_ms": 1033
+    },
+    {
+      "task_id": "HumanEval/40",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp225nt9_t.py\", line 21\n    for i in range(len(l)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sums = set()\n    for i in range(len(l)):\n        for j in range(i + 1, len(l)):\n            for k in range(j + 1, len(l)):\n                if l[i] + l[j] + l[k] == 0:\n                    return True\n    return False\n```",
+      "extracted_body": "    sums = set()\n        for i in range(len(l)):\n            for j in range(i + 1, len(l)):\n                for k in range(j + 1, len(l)):\n                    if l[i] + l[j] + l[k] == 0:\n                        return True\n        return False",
+      "latency_ms": 578
+    },
+    {
+      "task_id": "HumanEval/41",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpwad3aqo9.py\", line 17\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n == 1:\n        return 0\n    else:\n        return 0\n```",
+      "extracted_body": "    if n == 1:\n            return 0\n        else:\n            return 0",
+      "latency_ms": 275
+    },
+    {
+      "task_id": "HumanEval/42",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzrx943wk.py\", line 11\n    for num in l:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for num in l:\n        result.append(num + 1)\n    return result\n```",
+      "extracted_body": "    result = []\n        for num in l:\n            result.append(num + 1)\n        return result",
+      "latency_ms": 291
+    },
+    {
+      "task_id": "HumanEval/43",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp09d13lpl.py\", line 20\n    for x in l:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    seen = set()\n    for x in l:\n        complement = -x\n        if complement in seen:\n            return True\n        seen.add(x)\n    return False\n```",
+      "extracted_body": "    seen = set()\n        for x in l:\n            complement = -x\n            if complement in seen:\n                return True\n            seen.add(x)\n        return False",
+      "latency_ms": 379
+    },
+    {
+      "task_id": "HumanEval/44",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp_dseg8xk.py\", line 17\n    digits = \"0123456789ABCDEF\"\n                               ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if x == 0:\n        return \"0\"\n\n    digits = \"0123456789ABCDEF\"\n    result = \"\"\n    while x > 0:\n        remainder = x % base\n        result = digits[remainder] + result\n        x //= base\n\n    return result\n```",
+      "extracted_body": "    if x == 0:\n            return \"0\"\n    \n        digits = \"0123456789ABCDEF\"\n        result = \"\"\n        while x > 0:\n            remainder = x % base\n            result = digits[remainder] + result\n            x //= base\n    \n        return result",
+      "latency_ms": 535
+    },
+    {
+      "task_id": "HumanEval/45",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp3fsxwpaw.py\", line 9\n    area = (s * a * h) / 2\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    s = (a + h) / 2\n    area = (s * a * h) / 2\n    return area\n```",
+      "extracted_body": "    s = (a + h) / 2\n        area = (s * a * h) / 2\n        return area",
+      "latency_ms": 311
+    },
+    {
+      "task_id": "HumanEval/46",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8wten3ir.py\", line 20\n    if n == 1:\n              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n == 0:\n        return 0\n    if n == 1:\n        return 0\n    if n == 2:\n        return 2\n    if n == 3:\n        return 0\n    a = 0\n    b = 0\n    for _ in range(n - 1):\n        temp = a + b\n        a = b\n        b = temp\n    return b\n```",
+      "extracted_body": "    if n == 0:\n            return 0\n        if n == 1:\n            return 0\n        if n == 2:\n            return 2\n        if n == 3:\n            return 0\n        a = 0\n        b = 0\n        for _ in range(n - 1):\n            temp = a + b\n            a = b\n            b = temp\n        return b",
+      "latency_ms": 678
+    },
+    {
+      "task_id": "HumanEval/47",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpnbbs09u4.py\", line 11\n    n = len(l)\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    l.sort()\n    n = len(l)\n    if n % 2 == 0:\n        return (l[n // 2 - 1] + l[n // 2]) / 2\n    else:\n        return float(l[n // 2])\n```",
+      "extracted_body": "    l.sort()\n        n = len(l)\n        if n % 2 == 0:\n            return (l[n // 2 - 1] + l[n // 2]) / 2\n        else:\n            return float(l[n // 2])",
+      "latency_ms": 499
+    },
+    {
+      "task_id": "HumanEval/48",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqb4ocpgp.py\", line 16\n    reversed_text = processed_text[::-1]\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    processed_text = text.lower()\n    reversed_text = processed_text[::-1]\n    if processed_text == reversed_text:\n        return True\n    else:\n        return False\n```",
+      "extracted_body": "    processed_text = text.lower()\n        reversed_text = processed_text[::-1]\n        if processed_text == reversed_text:\n            return True\n        else:\n            return False",
+      "latency_ms": 394
+    },
+    {
+      "task_id": "HumanEval/49",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpsv04rzot.py\", line 17\n    p_mod = p\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    res = 1\n    p_mod = p\n    while n > 0:\n        if n % 2 == 1:\n            res = (res * p_mod) % p_mod\n        n //= 2\n        p_mod = (p_mod * p_mod) % p_mod\n    return res\n```",
+      "extracted_body": "    res = 1\n        p_mod = p\n        while n > 0:\n            if n % 2 == 1:\n                res = (res * p_mod) % p_mod\n            n //= 2\n            p_mod = (p_mod * p_mod) % p_mod\n        return res",
+      "latency_ms": 565
+    },
+    {
+      "task_id": "HumanEval/50",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp76uv84u8.py\", line 37, in <module>\n    check(decode_shift)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp76uv84u8.py\", line 33, in check\n    assert candidate(copy.deepcopy(encoded_str)) == str\nAssertionError\n",
+      "raw_output": "def decode_shift(s: str):\n    \"\"\"\n    takes as input string encoded with encode_shift function. Returns decoded string.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) - 5) % 26) + ord('a')) for ch in s])\n",
+      "extracted_body": "    \"\"\"\n    takes as input string encoded with encode_shift function. Returns decoded string.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) - 5) % 26) + ord('a')) for ch in s])",
+      "latency_ms": 481
+    },
+    {
+      "task_id": "HumanEval/51",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp_xld070h.py\", line 20\n    result = \"\"\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    vowels = \"aeiouAEIOU\"\n    result = \"\"\n    for char in text:\n        if char not in vowels:\n            result += char\n    return result\n```",
+      "extracted_body": "    vowels = \"aeiouAEIOU\"\n        result = \"\"\n        for char in text:\n            if char not in vowels:\n                result += char\n        return result",
+      "latency_ms": 380
+    },
+    {
+      "task_id": "HumanEval/52",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzzatsqoc.py\", line 13\n    return True\n               ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    for num in l:\n        if num >= t:\n            return False\n    return True\n",
+      "extracted_body": "    for num in l:\n            if num >= t:\n                return False\n        return True",
+      "latency_ms": 252
+    },
+    {
+      "task_id": "HumanEval/53",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "```python\n    return x + y\n```",
+      "extracted_body": "    return x + y",
+      "latency_ms": 181
+    },
+    {
+      "task_id": "HumanEval/54",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpirry5b9p.py\", line 20\n    s1_chars = {}\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    s0_chars = {}\n    s1_chars = {}\n\n    for char in s0:\n        s0_chars[char] = s0_chars.get(char, 0) + 1\n\n    for char in s1:\n        s1_chars[char] = s1_chars.get(char, 0) + 1\n\n    if s0_chars == s1_chars:\n        return True\n    else:\n        return False\n```",
+      "extracted_body": "    s0_chars = {}\n        s1_chars = {}\n    \n        for char in s0:\n            s0_chars[char] = s0_chars.get(char, 0) + 1\n    \n        for char in s1:\n            s1_chars[char] = s1_chars.get(char, 0) + 1\n    \n        if s0_chars == s1_chars:\n            return True\n        else:\n            return False",
+      "latency_ms": 727
+    },
+    {
+      "task_id": "HumanEval/55",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpymkeh6i4.py\", line 14\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n <= 1:\n        return n\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b\n```",
+      "extracted_body": "    if n <= 1:\n            return n\n        else:\n            a, b = 0, 1\n            for _ in range(2, n + 1):\n                a, b = b, a + b\n            return b",
+      "latency_ms": 442
+    },
+    {
+      "task_id": "HumanEval/56",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpt_pgc4lt.py\", line 17\n    for char in brackets:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    stack = []\n    for char in brackets:\n        if char == '<':\n            stack.append(char)\n        elif char == '>':\n            if not stack:\n                return False\n            stack.pop()\n    return not stack\n```",
+      "extracted_body": "    stack = []\n        for char in brackets:\n            if char == '<':\n                stack.append(char)\n            elif char == '>':\n                if not stack:\n                    return False\n                stack.pop()\n        return not stack",
+      "latency_ms": 439
+    },
+    {
+      "task_id": "HumanEval/57",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmps5yrl46i.py\", line 13\n    decreasing = True\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    increasing = True\n    decreasing = True\n    for i in range(1, len(l)):\n        if l[i] < l[i - 1]:\n            increasing = False\n        if l[i] > l[i - 1]:\n            decreasing = False\n    return increasing or decreasing\n```",
+      "extracted_body": "    increasing = True\n        decreasing = True\n        for i in range(1, len(l)):\n            if l[i] < l[i - 1]:\n                increasing = False\n            if l[i] > l[i - 1]:\n                decreasing = False\n        return increasing or decreasing",
+      "latency_ms": 515
+    },
+    {
+      "task_id": "HumanEval/58",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpafc0q22y.py\", line 12\n    result = sorted(list(common_set))\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    common_set = set(l1) & set(l2)\n    result = sorted(list(common_set))\n    return result\n```",
+      "extracted_body": "    common_set = set(l1) & set(l2)\n        result = sorted(list(common_set))\n        return result",
+      "latency_ms": 338
+    },
+    {
+      "task_id": "HumanEval/59",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpujp1gqp3.py\", line 11\n    while i * i <= n:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n    return n\n```",
+      "extracted_body": "    i = 2\n        while i * i <= n:\n            if n % i:\n                i += 1\n            else:\n                n //= i\n        return n",
+      "latency_ms": 381
+    },
+    {
+      "task_id": "HumanEval/60",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0gu63bp3.py\", line 17\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    total = 0\n    for i in range(1, n + 1):\n        total += i\n    return total\n```",
+      "extracted_body": "    total = 0\n        for i in range(1, n + 1):\n            total += i\n        return total",
+      "latency_ms": 306
+    },
+    {
+      "task_id": "HumanEval/61",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8074_lax.py\", line 17\n    for char in brackets:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    stack = []\n    for char in brackets:\n        if char == '(':\n            stack.append(char)\n        elif char == ')':\n            if not stack:\n                return False\n            stack.pop()\n    return not stack\n```",
+      "extracted_body": "    stack = []\n        for char in brackets:\n            if char == '(':\n                stack.append(char)\n            elif char == ')':\n                if not stack:\n                    return False\n                stack.pop()\n        return not stack",
+      "latency_ms": 446
+    },
+    {
+      "task_id": "HumanEval/62",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpps1ghx0n.py\", line 13\n    for i in range(len(xs)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for i in range(len(xs)):\n        term = xs[i]\n        if i > 0:\n            term *= xs[i-1]\n        result.append(term)\n    return result\n```",
+      "extracted_body": "    result = []\n        for i in range(len(xs)):\n            term = xs[i]\n            if i > 0:\n                term *= xs[i-1]\n            result.append(term)\n        return result",
+      "latency_ms": 438
+    },
+    {
+      "task_id": "HumanEval/63",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpa25yuajn.py\", line 19\n    if n == 1:\n              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n == 0:\n        return 0\n    if n == 1:\n        return 0\n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n\n    return b\n```",
+      "extracted_body": "    if n == 0:\n            return 0\n        if n == 1:\n            return 0\n    \n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n    \n        return b",
+      "latency_ms": 509
+    },
+    {
+      "task_id": "HumanEval/64",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmph2dxab5b.py\", line 19\n    count = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    vowels = \"aeiouy\"\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count\n```",
+      "extracted_body": "    vowels = \"aeiouy\"\n        count = 0\n        for char in s:\n            if char.lower() in vowels:\n                count += 1\n        return count",
+      "latency_ms": 387
+    },
+    {
+      "task_id": "HumanEval/65",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpaczwrsez.py\", line 12\n    n = len(s)\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    s = str(x)\n    n = len(s)\n    if shift > n:\n        shift = n - 1\n    shifted_s = s[-shift:] + s[:-shift]\n    return shifted_s\n```",
+      "extracted_body": "    s = str(x)\n        n = len(s)\n        if shift > n:\n            shift = n - 1\n        shifted_s = s[-shift:] + s[:-shift]\n        return shifted_s",
+      "latency_ms": 430
+    },
+    {
+      "task_id": "HumanEval/66",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0jtyfh8i.py\", line 16\n    for char in s:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum = 0\n    for char in s:\n        if 'A' <= char <= 'Z':\n            sum += ord(char)\n        elif 'a' <= char <= 'z':\n            sum += ord(char)\n    return sum\n```",
+      "extracted_body": "    sum = 0\n        for char in s:\n            if 'A' <= char <= 'Z':\n                sum += ord(char)\n            elif 'a' <= char <= 'z':\n                sum += ord(char)\n        return sum",
+      "latency_ms": 452
+    },
+    {
+      "task_id": "HumanEval/67",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9eakz49z.py\", line 16\n    oranges = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    apples = 0\n    oranges = 0\n    mango = 0\n    for i in range(len(s)):\n        if s[i] == 'a':\n            apples += 1\n        elif s[i] == 'o':\n            oranges += 1\n        else:\n            mango += 1\n    return mango\n```",
+      "extracted_body": "    apples = 0\n        oranges = 0\n        mango = 0\n        for i in range(len(s)):\n            if s[i] == 'a':\n                apples += 1\n            elif s[i] == 'o':\n                oranges += 1\n            else:\n                mango += 1\n        return mango",
+      "latency_ms": 586
+    },
+    {
+      "task_id": "HumanEval/68",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp89m8n3ib.py\", line 39\n    even_values = [node for node in arr if node % 2 == 0]\n                                                         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not arr:\n        return []\n\n    even_values = [node for node in arr if node % 2 == 0]\n\n    if not even_values:\n        return []\n\n    min_even = min(even_values)\n    min_index = even_values.index(min_even)\n\n    return [min_even, min_index]\n```",
+      "extracted_body": "    if not arr:\n            return []\n    \n        even_values = [node for node in arr if node % 2 == 0]\n    \n        if not even_values:\n            return []\n    \n        min_even = min(even_values)\n        min_index = even_values.index(min_even)\n    \n        return [min_even, min_index]",
+      "latency_ms": 620
+    },
+    {
+      "task_id": "HumanEval/69",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqx9nlh66.py\", line 14\n    for num in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    counts = {}\n    for num in lst:\n        counts[num] = counts.get(num, 0) + 1\n    \n    max_val = -1\n    for num, count in counts.items():\n        if count >= num:\n            max_val = max(max_val, num)\n    \n    return max_val\n```",
+      "extracted_body": "    counts = {}\n        for num in lst:\n            counts[num] = counts.get(num, 0) + 1\n        \n        max_val = -1\n        for num, count in counts.items():\n            if count >= num:\n                max_val = max(max_val, num)\n        \n        return max_val",
+      "latency_ms": 586
+    },
+    {
+      "task_id": "HumanEval/70",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpupahafqa.py\", line 16\n    result = [lst[0]]\n                     ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "    if not lst:\n        return []\n\n    result = [lst[0]]\n    for i in range(1, len(lst)):\n        if lst[i] < result[-1]:\n            result.append(lst[i])\n        elif lst[i] > result[-1]:\n            result = [lst[i]]\n\n    return result\n",
+      "extracted_body": "    if not lst:\n            return []\n    \n        result = [lst[0]]\n        for i in range(1, len(lst)):\n            if lst[i] < result[-1]:\n                result.append(lst[i])\n            elif lst[i] > result[-1]:\n                result = [lst[i]]\n    \n        return result",
+      "latency_ms": 555
+    },
+    {
+      "task_id": "HumanEval/71",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpkeq9tfg5.py\", line 16\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if a + b > c and a + c > b and b + c > a:\n        area = 0.5 * a * b\n        return round(area, 2)\n    else:\n        return -1\n```",
+      "extracted_body": "    if a + b > c and a + c > b and b + c > a:\n            area = 0.5 * a * b\n            return round(area, 2)\n        else:\n            return -1",
+      "latency_ms": 428
+    },
+    {
+      "task_id": "HumanEval/72",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp34olymbp.py\", line 25\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if q == q[::-1]:\n        if sum(q) <= max(w for w in range(1, 2 * q + 1)):\n            return True\n        else:\n            return False\n    else:\n        return False\n```",
+      "extracted_body": "    if q == q[::-1]:\n            if sum(q) <= max(w for w in range(1, 2 * q + 1)):\n                return True\n            else:\n                return False\n        else:\n            return False",
+      "latency_ms": 465
+    },
+    {
+      "task_id": "HumanEval/73",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpmxk7vrfy.py\", line 14\n    for num in arr:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    counts = {}\n    for num in arr:\n        counts[num] = counts.get(num, 0) + 1\n    odd_counts = 0\n    for num in counts:\n        if counts[num] % 2 != 0:\n            odd_counts += 1\n    return odd_counts\n```",
+      "extracted_body": "    counts = {}\n        for num in arr:\n            counts[num] = counts.get(num, 0) + 1\n        odd_counts = 0\n        for num in counts:\n            if counts[num] % 2 != 0:\n                odd_counts += 1\n        return odd_counts",
+      "latency_ms": 550
+    },
+    {
+      "task_id": "HumanEval/74",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpp8dibmin.py\", line 18\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(lst1) == len(lst2):\n        return lst1\n    else:\n        return lst2\n```",
+      "extracted_body": "    if len(lst1) == len(lst2):\n            return lst1\n        else:\n            return lst2",
+      "latency_ms": 312
+    },
+    {
+      "task_id": "HumanEval/75",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpf81xo0l8.py\", line 15\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if a < 100:\n        for i in range(2, a + 1):\n            if a % i == 0:\n                return False\n        return True\n    else:\n        return False\n```",
+      "extracted_body": "    if a < 100:\n            for i in range(2, a + 1):\n                if a % i == 0:\n                    return False\n            return True\n        else:\n            return False",
+      "latency_ms": 411
+    },
+    {
+      "task_id": "HumanEval/76",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzqeidf3t.py\", line 16\n    if x == 2:\n              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if x == 1:\n        return True\n    if x == 2:\n        return True\n    if x == 4:\n        return True\n    if x == 8:\n        return True\n    if x == 3:\n        return False\n    if x == 5:\n        return False\n    if x == 6:\n        return False\n    return False\n```",
+      "extracted_body": "    if x == 1:\n            return True\n        if x == 2:\n            return True\n        if x == 4:\n            return True\n        if x == 8:\n            return True\n        if x == 3:\n            return False\n        if x == 5:\n            return False\n        if x == 6:\n            return False\n        return False",
+      "latency_ms": 622
+    },
+    {
+      "task_id": "HumanEval/77",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9g5crgwh.py\", line 17\n    root = round(a ** 0.5)\n                          ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if a < 0:\n        return False\n    root = round(a ** 0.5)\n    return root * root == a\n```",
+      "extracted_body": "    if a < 0:\n            return False\n        root = round(a ** 0.5)\n        return root * root == a",
+      "latency_ms": 327
+    },
+    {
+      "task_id": "HumanEval/78",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5iogaz2c.py\", line 21\n    for digit in num:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for digit in num:\n        if digit in '2357':\n            count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for digit in num:\n            if digit in '2357':\n                count += 1\n        return count",
+      "latency_ms": 362
+    },
+    {
+      "task_id": "HumanEval/79",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpdh2uujkp.py\", line 15\n    return binary.replace(\"0b\", \"\") + binary\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    binary = bin(decimal)[2:]\n    return binary.replace(\"0b\", \"\") + binary\n```",
+      "extracted_body": "    binary = bin(decimal)[2:]\n        return binary.replace(\"0b\", \"\") + binary",
+      "latency_ms": 274
+    },
+    {
+      "task_id": "HumanEval/80",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpoc_1cwg7.py\", line 15\n    for char in s:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    counts = {}\n    for char in s:\n        counts[char] = counts.get(char, 0) + 1\n    \n    dream = []\n    for char in s:\n        if char in counts and counts[char] == 1:\n            del counts[char]\n        else:\n            dream.append(char)\n    \n    if len(dream) < 3:\n        return False\n    \n    for i in range(len(dream) - 2):\n        if dream[i] == dream[i+1] == dream[i+2]:\n            return False\n    \n    return True\n```",
+      "extracted_body": "    counts = {}\n        for char in s:\n            counts[char] = counts.get(char, 0) + 1\n        \n        dream = []\n        for char in s:\n            if char in counts and counts[char] == 1:\n                del counts[char]\n            else:\n                dream.append(char)\n        \n        if len(dream) < 3:\n            return False\n        \n        for i in range(len(dream) - 2):\n            if dream[i] == dream[i+1] == dream[i+2]:\n                return False\n        \n        return True",
+      "latency_ms": 911
+    },
+    {
+      "task_id": "HumanEval/81",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpz2r98gb8.py\", line 28\n    for grade in grades:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    letter_grades = []\n    for grade in grades:\n        if grade >= 4.0:\n            letter_grades.append('A+')\n        elif grade >= 3.7:\n            letter_grades.append('A')\n        elif grade >= 3.3:\n            letter_grades.append('A-')\n        elif grade >= 3.0:\n            letter_grades.append('B+')\n        elif grade >= 2.7:\n            letter_grades.append('B')\n        elif grade >= 2.3:\n            letter_grades.append('B-')\n        elif grade >= 2.0:\n            letter_grades.append('C+')\n        elif grade >= 1.7:\n            letter_grades.append('C')\n        elif grade >= 1.3:\n            letter_grades.append('C-')\n        elif grade >= 1.0:\n            letter_grades.append('D+')\n        elif grade >= 0.7:\n            letter_grades.append('D')\n        elif grade >= 0.0:\n            letter_grades.append('D-')\n        else:\n            letter_grades.append('E')\n    return letter_grades\n```",
+      "extracted_body": "    letter_grades = []\n        for grade in grades:\n            if grade >= 4.0:\n                letter_grades.append('A+')\n            elif grade >= 3.7:\n                letter_grades.append('A')\n            elif grade >= 3.3:\n                letter_grades.append('A-')\n            elif grade >= 3.0:\n                letter_grades.append('B+')\n            elif grade >= 2.7:\n                letter_grades.append('B')\n            elif grade >= 2.3:\n                letter_grades.append('B-')\n            elif grade >= 2.0:\n                letter_grades.append('C+')\n            elif grade >= 1.7:\n                letter_grades.append('C')\n            elif grade >= 1.3:\n                letter_grades.append('C-')\n            elif grade >= 1.0:\n                letter_grades.append('D+')\n            elif grade >= 0.7:\n                letter_grades.append('D')\n            elif grade >= 0.0:\n                letter_grades.append('D-')\n            else:\n                letter_grades.append('E')\n      ",
+      "latency_ms": 1647
+    },
+    {
+      "task_id": "HumanEval/82",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppr8j57ek.py\", line 12\n    if length <= 1:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    length = len(string)\n    if length <= 1:\n        return False\n\n    for i in range(2, int(length**0.5) + 1):\n        if length % i == 0:\n            return False\n\n    return True\n```",
+      "extracted_body": "    length = len(string)\n        if length <= 1:\n            return False\n    \n        for i in range(2, int(length**0.5) + 1):\n            if length % i == 0:\n                return False\n    \n        return True",
+      "latency_ms": 469
+    },
+    {
+      "task_id": "HumanEval/83",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5s83rkgq.py\", line 8\n    length = len(n_str)\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    n_str = str(n)\n    length = len(n_str)\n    if n % 2 == 0:\n        return 0\n    else:\n        first_digit = int(n_str[0])\n        second_digit = int(n_str[1])\n        if first_digit == 1:\n            return 1\n        else:\n            return 1 + starts_one_ends(n // 2)\n```",
+      "extracted_body": "    n_str = str(n)\n        length = len(n_str)\n        if n % 2 == 0:\n            return 0\n        else:\n            first_digit = int(n_str[0])\n            second_digit = int(n_str[1])\n            if first_digit == 1:\n                return 1\n            else:\n                return 1 + starts_one_ends(n // 2)",
+      "latency_ms": 700
+    },
+    {
+      "task_id": "HumanEval/84",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp70nmp57_.py\", line 17\n    for digit in str(N):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum_digits = 0\n    for digit in str(N):\n        sum_digits += int(digit)\n    return str(sum_digits)\n```",
+      "extracted_body": "    sum_digits = 0\n        for digit in str(N):\n            sum_digits += int(digit)\n        return str(sum_digits)",
+      "latency_ms": 352
+    },
+    {
+      "task_id": "HumanEval/85",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpf9mwccxs.py\", line 10\n    for i in range(len(lst)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for i in range(len(lst)):\n        if i % 2 == 0:\n            result.append(lst[i])\n    return result\n```",
+      "extracted_body": "    result = []\n        for i in range(len(lst)):\n            if i % 2 == 0:\n                result.append(lst[i])\n        return result",
+      "latency_ms": 368
+    },
+    {
+      "task_id": "HumanEval/86",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpul5979j0.py\", line 16\n    result = []\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    words = s.split()\n    result = []\n    for word in words:\n        sorted_word = ''.join(sorted(word))\n        result.append(sorted_word)\n    return ' '.join(result)\n```",
+      "extracted_body": "    words = s.split()\n        result = []\n        for word in words:\n            sorted_word = ''.join(sorted(word))\n            result.append(sorted_word)\n        return ' '.join(result)",
+      "latency_ms": 441
+    },
+    {
+      "task_id": "HumanEval/87",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp65nuhvvs.py\", line 23\n    for row in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for row in lst:\n        for i, val in enumerate(row):\n            if val == x:\n                result.append((i, i))\n    result.sort(key=lambda x: (x[0], -x[1]))\n    return result\n```",
+      "extracted_body": "    result = []\n        for row in lst:\n            for i, val in enumerate(row):\n                if val == x:\n                    result.append((i, i))\n        result.sort(key=lambda x: (x[0], -x[1]))\n        return result",
+      "latency_ms": 524
+    },
+    {
+      "task_id": "HumanEval/88",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpnm1dkxgh.py\", line 20\n    array.sort()\n                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not array:\n        return []\n\n    array.sort()\n    return array\n```",
+      "extracted_body": "    if not array:\n            return []\n    \n        array.sort()\n        return array",
+      "latency_ms": 273
+    },
+    {
+      "task_id": "HumanEval/89",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9183sbek.py\", line 14\n    for char in s:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = ''\n    for char in s:\n        if 'a' <= char <= 'z':\n            encrypted_char = chr(((ord(char) - ord('a') + 2) % 26) + ord('a'))\n        elif 'A' <= char <= 'Z':\n            encrypted_char = chr(((ord(char) - ord('A') + 2) % 26) + ord('A'))\n        else:\n            encrypted_char = char\n        result += encrypted_char\n    return result\n```",
+      "extracted_body": "    result = ''\n        for char in s:\n            if 'a' <= char <= 'z':\n                encrypted_char = chr(((ord(char) - ord('a') + 2) % 26) + ord('a'))\n            elif 'A' <= char <= 'Z':\n                encrypted_char = chr(((ord(char) - ord('A') + 2) % 26) + ord('A'))\n            else:\n                encrypted_char = char\n            result += encrypted_char\n        return result",
+      "latency_ms": 789
+    },
+    {
+      "task_id": "HumanEval/90",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpwyfihu7h.py\", line 15\n    lst.sort()\n              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(lst) < 2:\n        return None\n    lst.sort()\n    return lst[1]\n```",
+      "extracted_body": "    if len(lst) < 2:\n            return None\n        lst.sort()\n        return lst[1]",
+      "latency_ms": 306
+    },
+    {
+      "task_id": "HumanEval/91",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphd48bh7t.py\", line 15\n    for word in S.split():\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for word in S.split():\n        if word.startswith(\"I\"):\n            count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for word in S.split():\n            if word.startswith(\"I\"):\n                count += 1\n        return count",
+      "latency_ms": 332
+    },
+    {
+      "task_id": "HumanEval/92",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp6fa4twxp.py\", line 22\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if isinstance(x, int) and isinstance(y, int) and isinstance(z, int):\n        return x == y + z or x == y - z or x == y + z - z\n    else:\n        return False\n```",
+      "extracted_body": "    if isinstance(x, int) and isinstance(y, int) and isinstance(z, int):\n            return x == y + z or x == y - z or x == y + z - z\n        else:\n            return False",
+      "latency_ms": 438
+    },
+    {
+      "task_id": "HumanEval/93",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpmdi2zu6g.py\", line 17\n    for char in message:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = ''\n    for char in message:\n        if 'a' <= char <= 'z':\n            encoded_char = chr(((ord(char) - ord('a') + 2) % 26) + ord('a'))\n            result += encoded_char\n        elif 'A' <= char <= 'Z':\n            encoded_char = chr(((ord(char) - ord('A') + 2) % 26) + ord('A'))\n            result += encoded_char\n        else:\n            result += char\n    return result\n```",
+      "extracted_body": "    result = ''\n        for char in message:\n            if 'a' <= char <= 'z':\n                encoded_char = chr(((ord(char) - ord('a') + 2) % 26) + ord('a'))\n                result += encoded_char\n            elif 'A' <= char <= 'Z':\n                encoded_char = chr(((ord(char) - ord('A') + 2) % 26) + ord('A'))\n                result += encoded_char\n            else:\n                result += char\n        return result",
+      "latency_ms": 820
+    },
+    {
+      "task_id": "HumanEval/94",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpw0odizv0.py\", line 15\n    if n <= 1:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    def sum_digits(n):\n        s = 0\n        while n:\n            s += n % 10\n            n //= 10\n        return s\n\n    max_prime = -1\n    max_digit_sum = 0\n\n    for num in lst:\n        if is_prime(num):\n            if num > max_prime:\n                max_prime = num\n                max_digit_sum = sum_digits(num)\n            elif num == max_prime:\n                max_digit_sum = max(max_digit_sum, sum_digits(num))\n\n    return max_digit_sum\n```",
+      "extracted_body": "        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n        s = 0\n        while n:\n            s += n % 10\n            n //= 10\n        return s\n\n    max_prime = -1\n    max_digit_sum = 0\n\n    for num in lst:\n        if is_prime(num):\n            if num > max_prime:\n                max_prime = num\n                max_digit_sum = sum_digits(num)\n            elif num == max_prime:\n                max_digit_sum = max(max_digit_sum, sum_digits(num))\n\n    return max_digit_sum",
+      "latency_ms": 1272
+    },
+    {
+      "task_id": "HumanEval/95",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpulrmwdqu.py\", line 17\n    lower_keys = [key for key in dict.keys() if key.islower()]\n                                                              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not dict:\n        return False\n\n    lower_keys = [key for key in dict.keys() if key.islower()]\n    upper_keys = [key for key in dict.keys() if key.isupper()]\n\n    return lower_keys == list(dict.keys()) or upper_keys == list(dict.keys())\n```",
+      "extracted_body": "    if not dict:\n            return False\n    \n        lower_keys = [key for key in dict.keys() if key.islower()]\n        upper_keys = [key for key in dict.keys() if key.isupper()]\n    \n        return lower_keys == list(dict.keys()) or upper_keys == list(dict.keys())",
+      "latency_ms": 566
+    },
+    {
+      "task_id": "HumanEval/96",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpxlekbmvg.py\", line 16\n    primes = []\n               ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n < 2:\n        return []\n\n    primes = []\n    i = 2\n    while len(primes) < n:\n        is_prime = True\n        for j in range(2, int(i**0.5) + 1):\n            if i % j == 0:\n                is_prime = False\n                break\n        if is_prime:\n            primes.append(i)\n        i += 1\n\n    return primes\n```",
+      "extracted_body": "    if n < 2:\n            return []\n    \n        primes = []\n        i = 2\n        while len(primes) < n:\n            is_prime = True\n            for j in range(2, int(i**0.5) + 1):\n                if i % j == 0:\n                    is_prime = False\n                    break\n            if is_prime:\n                primes.append(i)\n            i += 1\n    \n        return primes",
+      "latency_ms": 719
+    },
+    {
+      "task_id": "HumanEval/97",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpyze_7jxv.py\", line 13\n    for digit in str(a):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    product = 1\n    for digit in str(a):\n        product *= int(digit)\n    for digit in str(b):\n        product *= int(digit)\n    return product\n```",
+      "extracted_body": "    product = 1\n        for digit in str(a):\n            product *= int(digit)\n        for digit in str(b):\n            product *= int(digit)\n        return product",
+      "latency_ms": 381
+    },
+    {
+      "task_id": "HumanEval/98",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8rrahkt6.py\", line 12\n    for i in range(0, len(s), 2):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].lower() in 'aeiou':\n            count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for i in range(0, len(s), 2):\n            if s[i].lower() in 'aeiou':\n                count += 1\n        return count",
+      "latency_ms": 394
+    },
+    {
+      "task_id": "HumanEval/99",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqr__ia0n.py\", line 23\n    value = str(value)\n                      ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not isinstance(value, str):\n        raise TypeError(\"Input must be a string.\")\n\n    value = str(value)\n    if '0' in value:\n        if len(value) == 1:\n            return value\n        else:\n            return float('inf')\n\n    if len(value) == 1:\n        return value\n\n    min_diff = float('inf')\n    closest_int = float('inf')\n\n    for i in range(10):\n        if abs(i - int(value)) < min_diff:\n            min_diff = abs(i - int(value))\n            closest_int = i\n\n    if abs(int(value) - closest_int) < min_diff:\n        closest_int = int(value)\n\n    return closest_int\n```",
+      "extracted_body": "    if not isinstance(value, str):\n            raise TypeError(\"Input must be a string.\")\n    \n        value = str(value)\n        if '0' in value:\n            if len(value) == 1:\n                return value\n            else:\n                return float('inf')\n    \n        if len(value) == 1:\n            return value\n    \n        min_diff = float('inf')\n        closest_int = float('inf')\n    \n        for i in range(10):\n            if abs(i - int(value)) < min_diff:\n                min_diff = abs(i - int(value))\n                closest_int = i\n    \n        if abs(int(value) - closest_int) < min_diff:\n            closest_int = int(value)\n    \n        return closest_int",
+      "latency_ms": 1119
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp3bu6ni4o.py\", line 17\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    pile = [n]\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            pile.append(i)\n        else:\n            pile.append(i + 1)\n    return pile\n```",
+      "extracted_body": "    pile = [n]\n        for i in range(1, n + 1):\n            if i % 2 == 0:\n                pile.append(i)\n            else:\n                pile.append(i + 1)\n        return pile",
+      "latency_ms": 473
+    },
+    {
+      "task_id": "HumanEval/101",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpopzay26o.py\", line 12\n    return words\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    words = s.split()\n    return words\n```",
+      "extracted_body": "    words = s.split()\n        return words",
+      "latency_ms": 212
+    },
+    {
+      "task_id": "HumanEval/102",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5zhjmsqb.py\", line 13\n    elif x % 2 == 0:\n                    ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if x % 2 == 0 and y % 2 == 0:\n        return -1\n    elif x % 2 == 0:\n        return x\n    else:\n        return y\n```",
+      "extracted_body": "    if x % 2 == 0 and y % 2 == 0:\n            return -1\n        elif x % 2 == 0:\n            return x\n        else:\n            return y",
+      "latency_ms": 407
+    },
+    {
+      "task_id": "HumanEval/103",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0fdpne9y.py\", line 16\n    sum_val = (n + m) // 2\n                          ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n > m:\n        return -1\n    \n    sum_val = (n + m) // 2\n    \n    binary = bin(sum_val)[2:]\n    \n    return binary.zfill(3)\n```",
+      "extracted_body": "    if n > m:\n            return -1\n        \n        sum_val = (n + m) // 2\n        \n        binary = bin(sum_val)[2:]\n        \n        return binary.zfill(3)",
+      "latency_ms": 445
+    },
+    {
+      "task_id": "HumanEval/104",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpxxig2t9r.py\", line 15\n    for i in x:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    unique = []\n    for i in x:\n        s = str(i)\n        has_even = False\n        for digit in s:\n            if int(digit) % 2 == 0:\n                has_even = True\n                break\n        if not has_even:\n            unique.append(i)\n    unique.sort()\n    return unique\n```",
+      "extracted_body": "    unique = []\n        for i in x:\n            s = str(i)\n            has_even = False\n            for digit in s:\n                if int(digit) % 2 == 0:\n                    has_even = True\n                    break\n            if not has_even:\n                unique.append(i)\n        unique.sort()\n        return unique",
+      "latency_ms": 598
+    },
+    {
+      "task_id": "HumanEval/105",
+      "sample": 0,
+      "passed": false,
+      "error": "st):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppxsq3ifb.py\", line 80, in <module>\n    check(by_length)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppxsq3ifb.py\", line 69, in check\n    assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"], \"Error\"\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppxsq3ifb.py\", line 57, in by_length\n    name_code = name.get(s[1])\nIndexError: string index out of range\n",
+      "raw_output": "```python\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n    if not arr:\n        return []\n\n    sorted_arr = [x for x in arr if 1 <= x <= 9]\n    sorted_arr.sort()\n\n    result = []\n    for num in reversed(sorted_arr):\n        s = str(num)\n        name = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine'}\n        name_code = name.get(s[0])\n        if name_code is None:\n            name_code = name.get(s[1])\n        if name_code is not None:\n            result.append(name_code)\n        else:\n            result.append(s)\n\n    return result\n```",
+      "extracted_body": "    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\".\n\n    For example:\n      arr = [2, 1, 1, 4, 5, 8, 2, 3]   \n            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] \n            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]\n      return [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]\n    \n      If the array is empty, return an empty array:\n      arr = []\n      return []\n    \n      If the array has any strange number ignore it:\n      arr = [1, -1 , 55] \n            -> sort arr -> [-1, 1, 55]\n            -> reverse arr -> [55, 1, -1]\n      return = ['One']\n    \"\"\"\n    if not arr:\n        return []\n\n    sorted_arr = [x for x in arr if 1 <= x <= 9]\n    sorted_arr.sort()\n\n    result = []\n    for num in reversed(sorted_arr):\n        s = str(num)\n        name = {1: 'One', 2: 'T",
+      "latency_ms": 2758
+    },
+    {
+      "task_id": "HumanEval/106",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppy3ze7kq.py\", line 12\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(i)\n    return result\n```",
+      "extracted_body": "    result = []\n        for i in range(1, n + 1):\n            if i % 2 == 0:\n                factorial = 1\n                for j in range(1, i + 1):\n                    factorial *= j\n                result.append(factorial)\n            else:\n                result.append(i)\n        return result",
+      "latency_ms": 573
+    },
+    {
+      "task_id": "HumanEval/107",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpmh47hynb.py\", line 26\n    odd_count = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    even_count = 0\n    odd_count = 0\n    for i in range(1, n + 1):\n        s = str(i)\n        if s == s[::-1]:\n            if i % 2 == 0:\n                odd_count += 1\n            else:\n                even_count += 1\n    return (even_count, odd_count)\n```",
+      "extracted_body": "    even_count = 0\n        odd_count = 0\n        for i in range(1, n + 1):\n            s = str(i)\n            if s == s[::-1]:\n                if i % 2 == 0:\n                    odd_count += 1\n                else:\n                    even_count += 1\n        return (even_count, odd_count)",
+      "latency_ms": 644
+    },
+    {
+      "task_id": "HumanEval/108",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp3dt6wrzz.py\", line 13\n    for num in arr:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for num in arr:\n        sum_digits = 0\n        for digit in str(abs(num)):\n            sum_digits += int(digit)\n        if sum_digits > 0:\n            count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for num in arr:\n            sum_digits = 0\n            for digit in str(abs(num)):\n                sum_digits += int(digit)\n            if sum_digits > 0:\n                count += 1\n        return count",
+      "latency_ms": 482
+    },
+    {
+      "task_id": "HumanEval/109",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp404cdqbw.py\", line 57, in <module>\n    check(move_one_ball)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp404cdqbw.py\", line 51, in check\n    assert candidate([4, 3, 1, 2])==False\nAssertionError\n",
+      "raw_output": "def move_one_ball(arr):\n    n = len(arr)\n    if n == 0:\n        return True\n    \n    left = 0\n    right = n - 1\n    \n    while left < right:\n        if arr[left] > arr[right]:\n            arr[left], arr[right] = arr[right], arr[left]\n            left += 1\n            right -= 1\n        else:\n            break\n    \n    return True\n",
+      "extracted_body": "    n = len(arr)\n    if n == 0:\n        return True\n    \n    left = 0\n    right = n - 1\n    \n    while left < right:\n        if arr[left] > arr[right]:\n            arr[left], arr[right] = arr[right], arr[left]\n            left += 1\n            right -= 1\n        else:\n            break\n    \n    return True",
+      "latency_ms": 750
+    },
+    {
+      "task_id": "HumanEval/110",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpijxly8hb.py\", line 16\n    odd_lst2 = [num for num in lst2 if num % 2 != 0]\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    odd_lst1 = [num for num in lst1 if num % 2 != 0]\n    odd_lst2 = [num for num in lst2 if num % 2 != 0]\n    if len(odd_lst1) == len(odd_lst2):\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+      "extracted_body": "    odd_lst1 = [num for num in lst1 if num % 2 != 0]\n        odd_lst2 = [num for num in lst2 if num % 2 != 0]\n        if len(odd_lst1) == len(odd_lst2):\n            return \"YES\"\n        else:\n            return \"NO\"",
+      "latency_ms": 603
+    },
+    {
+      "task_id": "HumanEval/111",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpx8iux7g4.py\", line 16\n    for char in test:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    counts = {}\n    for char in test:\n        if char in counts:\n            counts[char] += 1\n        else:\n            counts[char] = 1\n    \n    max_count = 0\n    result = {}\n    for char, count in counts.items():\n        if count > max_count:\n            max_count = count\n            result = {char: count}\n        elif count == max_count:\n            result[char] = count\n    \n    return result\n```",
+      "extracted_body": "    counts = {}\n        for char in test:\n            if char in counts:\n                counts[char] += 1\n            else:\n                counts[char] = 1\n        \n        max_count = 0\n        result = {}\n        for char, count in counts.items():\n            if count > max_count:\n                max_count = count\n                result = {char: count}\n            elif count == max_count:\n                result[char] = count\n        \n        return result",
+      "latency_ms": 764
+    },
+    {
+      "task_id": "HumanEval/112",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp02gy12p6.py\", line 14\n    for char in s:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = \"\"\n    for char in s:\n        if char in c:\n            result += char\n    return (result, True)\n```",
+      "extracted_body": "    result = \"\"\n        for char in s:\n            if char in c:\n                result += char\n        return (result, True)",
+      "latency_ms": 330
+    },
+    {
+      "task_id": "HumanEval/113",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpk0vyksg6.py\", line 15\n    for s in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for s in lst:\n        odd_count = 0\n        for digit in s:\n            if int(digit) % 2 != 0:\n                odd_count += 1\n        result.append(f\"the number of odd elements {odd_count}n the str{odd_count}ng of the {s}.\")\n    return result\n```",
+      "extracted_body": "    result = []\n        for s in lst:\n            odd_count = 0\n            for digit in s:\n                if int(digit) % 2 != 0:\n                    odd_count += 1\n            result.append(f\"the number of odd elements {odd_count}n the str{odd_count}ng of the {s}.\")\n        return result",
+      "latency_ms": 624
+    },
+    {
+      "task_id": "HumanEval/114",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpi1_h4zjl.py\", line 11\n    current_min = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    min_so_far = float('inf')\n    current_min = 0\n\n    for num in nums:\n        current_min += num\n        if current_min < min_so_far:\n            min_so_far = current_min\n\n        if current_min > 0:\n            current_min = 0\n\n    return min_so_far\n```",
+      "extracted_body": "    min_so_far = float('inf')\n        current_min = 0\n    \n        for num in nums:\n            current_min += num\n            if current_min < min_so_far:\n                min_so_far = current_min\n    \n            if current_min > 0:\n                current_min = 0\n    \n        return min_so_far",
+      "latency_ms": 591
+    },
+    {
+      "task_id": "HumanEval/115",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpta5rs2qp.py\", line 38\n    count = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    rows, cols = len(grid), len(grid[0])\n    count = 0\n    for i in range(rows):\n        for j in range(cols):\n            if grid[i][j] == 0:\n                bucket_level = 0\n                while bucket_level < capacity:\n                    bucket_level += 1\n                if bucket_level == capacity:\n                    count += 1\n                    bucket_level = 0\n    return count\n```",
+      "extracted_body": "    rows, cols = len(grid), len(grid[0])\n        count = 0\n        for i in range(rows):\n            for j in range(cols):\n                if grid[i][j] == 0:\n                    bucket_level = 0\n                    while bucket_level < capacity:\n                        bucket_level += 1\n                    if bucket_level == capacity:\n                        count += 1\n                        bucket_level = 0\n        return count",
+      "latency_ms": 750
+    },
+    {
+      "task_id": "HumanEval/116",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9qx0fj66.py\", line 13\n    binary = bin(n)[2:]\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    def count_ones(n):\n        binary = bin(n)[2:]\n        count = 0\n        for bit in binary:\n            if bit == '1':\n                count += 1\n        return count\n\n    arr.sort(key=lambda x: (count_ones(x), x))\n    return arr\n```",
+      "extracted_body": "        binary = bin(n)[2:]\n        count = 0\n        for bit in binary:\n            if bit == '1':\n                count += 1\n        return count\n\n    arr.sort(key=lambda x: (count_ones(x), x))\n    return arr",
+      "latency_ms": 557
+    },
+    {
+      "task_id": "HumanEval/117",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpl78t_47m.py\", line 18\n    words = s.split()\n                     ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not s:\n        return []\n\n    words = s.split()\n    result = []\n\n    for word in words:\n        vowels = \"aeiouAEIOU\"\n        consonant_count = 0\n        for char in word:\n            if 'a' <= char <= 'z' or 'A' <= char <= 'Z':\n                if char not in vowels:\n                    consonant_count += 1\n        if consonant_count == n:\n            result.append(word)\n\n    return result\n```",
+      "extracted_body": "    if not s:\n            return []\n    \n        words = s.split()\n        result = []\n    \n        for word in words:\n            vowels = \"aeiouAEIOU\"\n            consonant_count = 0\n            for char in word:\n                if 'a' <= char <= 'z' or 'A' <= char <= 'Z':\n                    if char not in vowels:\n                        consonant_count += 1\n            if consonant_count == n:\n                result.append(word)\n    \n        return result",
+      "latency_ms": 809
+    },
+    {
+      "task_id": "HumanEval/118",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpypumhbuw.py\", line 18\n    closest_vowel = \"\"\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    vowels = \"aeiou\"\n    closest_vowel = \"\"\n    min_distance = float('inf')\n\n    for i in range(len(word) - 1):\n        if word[i] in vowels and word[i+1] in vowels:\n            distance = abs(ord(word[i]) - ord(word[i+1]))\n            if distance < min_distance:\n                min_distance = distance\n                closest_vowel = word[i]\n\n    return closest_vowel\n```",
+      "extracted_body": "    vowels = \"aeiou\"\n        closest_vowel = \"\"\n        min_distance = float('inf')\n    \n        for i in range(len(word) - 1):\n            if word[i] in vowels and word[i+1] in vowels:\n                distance = abs(ord(word[i]) - ord(word[i+1]))\n                if distance < min_distance:\n                    min_distance = distance\n                    closest_vowel = word[i]\n    \n        return closest_vowel",
+      "latency_ms": 780
+    },
+    {
+      "task_id": "HumanEval/119",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5s6lh5zk.py\", line 20\n    if len(lst) == 1:\n                     ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(lst) == 0:\n        return 'Yes'\n\n    if len(lst) == 1:\n        return 'Yes'\n\n    if lst[0][0] == '(' and lst[0][1] == ')':\n        return 'Yes'\n\n    if lst[1][0] == '(' and lst[1][1] == ')':\n        return 'Yes'\n\n    return 'No'\n```",
+      "extracted_body": "    if len(lst) == 0:\n            return 'Yes'\n    \n        if len(lst) == 1:\n            return 'Yes'\n    \n        if lst[0][0] == '(' and lst[0][1] == ')':\n            return 'Yes'\n    \n        if lst[1][0] == '(' and lst[1][1] == ')':\n            return 'Yes'\n    \n        return 'No'",
+      "latency_ms": 664
+    },
+    {
+      "task_id": "HumanEval/120",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8od7nd3p.py\", line 28\n    return arr\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    arr.sort()\n    return arr\n```",
+      "extracted_body": "    arr.sort()\n        return arr",
+      "latency_ms": 223
+    },
+    {
+      "task_id": "HumanEval/121",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0ths7iyv.py\", line 12\n    for i in range(0, len(lst), 2):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum_of_odds = 0\n    for i in range(0, len(lst), 2):\n        sum_of_odds += lst[i]\n    return sum_of_odds\n```",
+      "extracted_body": "    sum_of_odds = 0\n        for i in range(0, len(lst), 2):\n            sum_of_odds += lst[i]\n        return sum_of_odds",
+      "latency_ms": 400
+    },
+    {
+      "task_id": "HumanEval/122",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpsy5qpo5b.py\", line 17\n    for i in range(len(arr)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    total = 0\n    for i in range(len(arr)):\n        for j in range(i, len(arr)):\n            sum_val = 0\n            for l in range(i, j + 1):\n                sum_val += arr[l]\n            total += sum_val\n    return total\n```",
+      "extracted_body": "    total = 0\n        for i in range(len(arr)):\n            for j in range(i, len(arr)):\n                sum_val = 0\n                for l in range(i, j + 1):\n                    sum_val += arr[l]\n                total += sum_val\n        return total",
+      "latency_ms": 546
+    },
+    {
+      "task_id": "HumanEval/123",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpb_fbtsrq.py\", line 20\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    odd_numbers = []\n    for i in range(1, n + 1):\n        if i % 2 != 0:\n            odd_numbers.append(i)\n    odd_numbers.sort()\n    return odd_numbers\n```",
+      "extracted_body": "    odd_numbers = []\n        for i in range(1, n + 1):\n            if i % 2 != 0:\n                odd_numbers.append(i)\n        odd_numbers.sort()\n        return odd_numbers",
+      "latency_ms": 468
+    },
+    {
+      "task_id": "HumanEval/124",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5dqez7pp.py\", line 25\n    days = 0\n            ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not date:\n        return False\n\n    days = 0\n    for i in range(1, 13):\n        if (i % 2 == 0 and date[0] == '0') or (i % 2 != 0 and date[1] == '0'):\n            days += 1\n    \n    if days < 1 or days > 31:\n        return False\n\n    if date[2] == '04' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n        days -= 1\n    \n    if date[2] == '06' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n        days -= 1\n    \n    if date[2] == '09' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n        days -= 1\n    \n    if date[2] == '11' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n        days -= 1\n    \n    if date[2] == '2' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n        days -= 1\n\n    return True\n```",
+      "extracted_body": "    if not date:\n            return False\n    \n        days = 0\n        for i in range(1, 13):\n            if (i % 2 == 0 and date[0] == '0') or (i % 2 != 0 and date[1] == '0'):\n                days += 1\n        \n        if days < 1 or days > 31:\n            return False\n    \n        if date[2] == '04' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n            days -= 1\n        \n        if date[2] == '06' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n            days -= 1\n        \n        if date[2] == '09' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n            days -= 1\n        \n        if date[2] == '11' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '4'):\n            days -= 1\n        \n        if date[2] == '2' and (date[1] == '0' or date[1] == '1' or date[1] == '2' or date[1] == '3' or date[1] == '",
+      "latency_ms": 2423
+    },
+    {
+      "task_id": "HumanEval/125",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmprt_tudzm.py\", line 13\n    if not words:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    words = txt.split()\n    if not words:\n        return []\n    result = []\n    for word in words:\n        if len(word) == 0:\n            continue\n        if 'a' in word and ord(word[0]) % 2 == 0:\n            result.append(word)\n        elif 'a' in word and ord(word[0]) % 1 == 0:\n            result.append(word)\n        elif 'a' in word and ord(word[0]) % 2 != 0:\n            result.append(word)\n        elif 'a' in word and ord(word[0]) % 1 != 0:\n            result.append(word)\n    return result\n```",
+      "extracted_body": "    words = txt.split()\n        if not words:\n            return []\n        result = []\n        for word in words:\n            if len(word) == 0:\n                continue\n            if 'a' in word and ord(word[0]) % 2 == 0:\n                result.append(word)\n            elif 'a' in word and ord(word[0]) % 1 == 0:\n                result.append(word)\n            elif 'a' in word and ord(word[0]) % 2 != 0:\n                result.append(word)\n            elif 'a' in word and ord(word[0]) % 1 != 0:\n                result.append(word)\n        return result",
+      "latency_ms": 1059
+    },
+    {
+      "task_id": "HumanEval/126",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpn67_jy2h.py\", line 21\n    seen = set()\n                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(lst) <= 1:\n        return True\n\n    seen = set()\n    for num in lst:\n        if num in seen:\n            return False\n        seen.add(num)\n\n    return True\n```",
+      "extracted_body": "    if len(lst) <= 1:\n            return True\n    \n        seen = set()\n        for num in lst:\n            if num in seen:\n                return False\n            seen.add(num)\n    \n        return True",
+      "latency_ms": 452
+    },
+    {
+      "task_id": "HumanEval/127",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp2x_7s3hs.py\", line 23\n    start2, end2 = interval2\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    start1, end1 = interval1\n    start2, end2 = interval2\n\n    if start1 > end1 or start2 > end2:\n        return \"NO\"\n\n    intersection_start = max(start1, start2)\n    intersection_end = min(end1, end2)\n\n    if intersection_end - intersection_start == 0:\n        return \"NO\"\n\n    intersection_length = intersection_end - intersection_start\n\n    if intersection_length <= 1:\n        return \"NO\"\n\n    for i in range(2, int(intersection_length**0.5) + 1):\n        if intersection_length % i == 0:\n            return \"NO\"\n\n    return \"YES\"\n```",
+      "extracted_body": "    start1, end1 = interval1\n        start2, end2 = interval2\n    \n        if start1 > end1 or start2 > end2:\n            return \"NO\"\n    \n        intersection_start = max(start1, start2)\n        intersection_end = min(end1, end2)\n    \n        if intersection_end - intersection_start == 0:\n            return \"NO\"\n    \n        intersection_length = intersection_end - intersection_start\n    \n        if intersection_length <= 1:\n            return \"NO\"\n    \n        for i in range(2, int(intersection_length**0.5) + 1):\n            if intersection_length % i == 0:\n                return \"NO\"\n    \n        return \"YES\"",
+      "latency_ms": 1042
+    },
+    {
+      "task_id": "HumanEval/128",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp6bk5p7dp.py\", line 17\n    sum_of_magnitudes = 0\n                         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not arr:\n        return None\n\n    sum_of_magnitudes = 0\n    product_of_signs = 1\n\n    for num in arr:\n        sum_of_magnitudes += abs(num)\n        product_of_signs *= -1\n\n    return sum_of_magnitudes\n```",
+      "extracted_body": "    if not arr:\n            return None\n    \n        sum_of_magnitudes = 0\n        product_of_signs = 1\n    \n        for num in arr:\n            sum_of_magnitudes += abs(num)\n            product_of_signs *= -1\n    \n        return sum_of_magnitudes",
+      "latency_ms": 524
+    },
+    {
+      "task_id": "HumanEval/129",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp806fanqe.py\", line 37\n    if (i, j, count) in dp:\nIndentationError: unexpected indent\n",
+      "raw_output": "def minPath(grid, k):\n    n = len(grid)\n    if n == 1:\n        return [grid[0][0]]\n    dp = {}\n\n    def find_min_path(i, j, count):\n        if (i, j, count) in dp:\n            return dp[(i, j, count)]\n\n        if i == n or j == n:\n            return float('inf')\n\n        if i == n - 1 and j == n - 1:\n            return 0\n\n        min_val = float('inf')\n        for di, dj in [(0, 1), (0, -1), (1, 0), (-1, 0)]:\n            new_i, new_j = i + di, j + dj\n            if 0 <= new_i < n and 0 <= new_j < n:\n                val = grid[new_i][new_j]\n                min_val = min(min_val, val)\n\n        min_val = min(min_val, find_min_path(i + 1, j, count + 1))\n        min_val = min(min_val, find_min_path(i, j + 1, count + 1))\n\n        dp[(i, j, count)] = min_val\n        return min_val\n\n    result = []\n    min_val = find_min_path(0, 0, 0)\n    for i in range(n):\n        for j in range(n):\n            result.append(grid[i][j])\n    return result\n",
+      "extracted_body": "    n = len(grid)\n    if n == 1:\n        return [grid[0][0]]\n    dp = {}\n\n        if (i, j, count) in dp:\n            return dp[(i, j, count)]\n\n        if i == n or j == n:\n            return float('inf')\n\n        if i == n - 1 and j == n - 1:\n            return 0\n\n        min_val = float('inf')\n        for di, dj in [(0, 1), (0, -1), (1, 0), (-1, 0)]:\n            new_i, new_j = i + di, j + dj\n            if 0 <= new_i < n and 0 <= new_j < n:\n                val = grid[new_i][new_j]\n                min_val = min(min_val, val)\n\n        min_val = min(min_val, find_min_path(i + 1, j, count + 1))\n        min_val = min(min_val, find_min_path(i, j + 1, count + 1))\n\n        dp[(i, j, count)] = min_val\n        return min_val\n\n    result = []\n    min_val = find_min_path(0, 0, 0)\n    for i in range(n):\n        for j in range(n):\n            result.append(grid[i][j])\n    return result",
+      "latency_ms": 2106
+    },
+    {
+      "task_id": "HumanEval/130",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5e5gvcqj.py\", line 20\n    if n <= 2:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = [1, 3, 2]\n    if n <= 2:\n        return result[:n+1]\n    for i in range(3, n + 1):\n        next_num = tri(i - 1) + tri(i - 2) + tri(i + 1)\n        result.append(next_num)\n    return result\n```",
+      "extracted_body": "    result = [1, 3, 2]\n        if n <= 2:\n            return result[:n+1]\n        for i in range(3, n + 1):\n            next_num = tri(i - 1) + tri(i - 2) + tri(i + 1)\n            result.append(next_num)\n        return result",
+      "latency_ms": 638
+    },
+    {
+      "task_id": "HumanEval/131",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzbnj0dcc.py\", line 11\n    has_odd = False\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    product = 1\n    has_odd = False\n    for digit in str(n):\n        digit = int(digit)\n        if digit % 2 != 0:\n            product *= digit\n            has_odd = True\n    if not has_odd:\n        return 0\n    return product\n```",
+      "extracted_body": "    product = 1\n        has_odd = False\n        for digit in str(n):\n            digit = int(digit)\n            if digit % 2 != 0:\n                product *= digit\n                has_odd = True\n        if not has_odd:\n            return 0\n        return product",
+      "latency_ms": 521
+    },
+    {
+      "task_id": "HumanEval/132",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp57vkbb9g.py\", line 18\n    for i in range(len(string) - 1):\n                                    ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(string) <= 1:\n        return False\n\n    for i in range(len(string) - 1):\n        if string[i] == '[' and string[i+1] == ']':\n            return True\n\n    return False\n```",
+      "extracted_body": "    if len(string) <= 1:\n            return False\n    \n        for i in range(len(string) - 1):\n            if string[i] == '[' and string[i+1] == ']':\n                return True\n    \n        return False",
+      "latency_ms": 460
+    },
+    {
+      "task_id": "HumanEval/133",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpthm9qonm.py\", line 17\n    for num in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum_sq = 0\n    for num in lst:\n        num = round(num)\n        sum_sq += num * num\n    return sum_sq\n```",
+      "extracted_body": "    sum_sq = 0\n        for num in lst:\n            num = round(num)\n            sum_sq += num * num\n        return sum_sq",
+      "latency_ms": 359
+    },
+    {
+      "task_id": "HumanEval/134",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphwth9puh.py\", line 18\n    last_char = txt[-1]\n                       ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not txt:\n        return False\n\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n\n    if len(txt) > 1:\n        word = txt.split()\n        if len(word) > 1:\n            for char in word[-2:]:\n                if not char.isalpha():\n                    return False\n        return True\n    else:\n        return True\n```",
+      "extracted_body": "    if not txt:\n            return False\n    \n        last_char = txt[-1]\n        if not last_char.isalpha():\n            return False\n    \n        if len(txt) > 1:\n            word = txt.split()\n            if len(word) > 1:\n                for char in word[-2:]:\n                    if not char.isalpha():\n                        return False\n            return True\n        else:\n            return True",
+      "latency_ms": 671
+    },
+    {
+      "task_id": "HumanEval/135",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpc22xw9h2.py\", line 13\n    for i in range(1, len(arr)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    largest = -1\n    for i in range(1, len(arr)):\n        if arr[i] >= arr[i-1]:\n            largest = i\n    return largest\n```",
+      "extracted_body": "    largest = -1\n        for i in range(1, len(arr)):\n            if arr[i] >= arr[i-1]:\n                largest = i\n        return largest",
+      "latency_ms": 382
+    },
+    {
+      "task_id": "HumanEval/136",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpfh1f7v09.py\", line 15\n    positive_nums = []\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    negative_nums = []\n    positive_nums = []\n    for num in lst:\n        if num < 0:\n            negative_nums.append(num)\n        elif num > 0:\n            positive_nums.append(num)\n    if not negative_nums and not positive_nums:\n        return (None, None)\n    if not negative_nums:\n        return (None, None)\n    if not positive_nums:\n        return (None, None)\n    return (max(negative_nums), min(positive_nums))\n```",
+      "extracted_body": "    negative_nums = []\n        positive_nums = []\n        for num in lst:\n            if num < 0:\n                negative_nums.append(num)\n            elif num > 0:\n                positive_nums.append(num)\n        if not negative_nums and not positive_nums:\n            return (None, None)\n        if not negative_nums:\n            return (None, None)\n        if not positive_nums:\n            return (None, None)\n        return (max(negative_nums), min(positive_nums))",
+      "latency_ms": 823
+    },
+    {
+      "task_id": "HumanEval/137",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9chxkikt.py\", line 17\n    except ValueError:\n                      ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    try:\n        float_a = float(a)\n        float_b = float(b)\n    except ValueError:\n        return None\n\n    if float_a > float_b:\n        return float_a\n    else:\n        return float_b\n```",
+      "extracted_body": "    try:\n            float_a = float(a)\n            float_b = float(b)\n        except ValueError:\n            return None\n    \n        if float_a > float_b:\n            return float_a\n        else:\n            return float_b",
+      "latency_ms": 479
+    },
+    {
+      "task_id": "HumanEval/138",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpypre6bb3.py\", line 11\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n % 2 != 0:\n        return False\n    else:\n        return n % 2 == 0 and n // 2 == 0\n```",
+      "extracted_body": "    if n % 2 != 0:\n            return False\n        else:\n            return n % 2 == 0 and n // 2 == 0",
+      "latency_ms": 351
+    },
+    {
+      "task_id": "HumanEval/139",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpvz8xodh4.py\", line 15\n    for i in range(1, n + 1):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```",
+      "extracted_body": "    result = 1\n        for i in range(1, n + 1):\n            result *= i\n        return result",
+      "latency_ms": 312
+    },
+    {
+      "task_id": "HumanEval/140",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp29q7w_y1.py\", line 14\n    for i in range(0, len(text), 2):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = \"\"\n    for i in range(0, len(text), 2):\n        if text[i] == ' ':\n            if i + 1 < len(text):\n                result += \"_\"\n            else:\n                result += \"-\"\n        else:\n            result += text[i]\n    return result\n```",
+      "extracted_body": "    result = \"\"\n        for i in range(0, len(text), 2):\n            if text[i] == ' ':\n                if i + 1 < len(text):\n                    result += \"_\"\n                else:\n                    result += \"-\"\n            else:\n                result += text[i]\n        return result",
+      "latency_ms": 546
+    },
+    {
+      "task_id": "HumanEval/141",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpdcsvjj5q.py\", line 19\n    if '.' in file_name and len(file_name) == 1:\n                                                ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(file_name) > 3:\n        return 'No'\n\n    if '.' in file_name and len(file_name) == 1:\n        return 'No'\n\n    if not file_name.startswith(''):\n        file_name = file_name[1:]\n\n    if not file_name:\n        return 'No'\n\n    if not file_name[0].isalpha():\n        return 'No'\n\n    if file_name[1:].isalnum():\n        if file_name[1:].isalnum()[0] not in ['a', 'A']:\n            return 'No'\n\n    return 'Yes'\n```",
+      "extracted_body": "    if len(file_name) > 3:\n            return 'No'\n    \n        if '.' in file_name and len(file_name) == 1:\n            return 'No'\n    \n        if not file_name.startswith(''):\n            file_name = file_name[1:]\n    \n        if not file_name:\n            return 'No'\n    \n        if not file_name[0].isalpha():\n            return 'No'\n    \n        if file_name[1:].isalnum():\n            if file_name[1:].isalnum()[0] not in ['a', 'A']:\n                return 'No'\n    \n        return 'Yes'",
+      "latency_ms": 944
+    },
+    {
+      "task_id": "HumanEval/142",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp3np2da4a.py\", line 16\n    for i in range(len(lst)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum = 0\n    for i in range(len(lst)):\n        if i % 3 == 0:\n            sum += lst[i] * lst[i]\n        else:\n            sum += lst[i] * lst[i] * lst[i]\n    return sum\n```",
+      "extracted_body": "    sum = 0\n        for i in range(len(lst)):\n            if i % 3 == 0:\n                sum += lst[i] * lst[i]\n            else:\n                sum += lst[i] * lst[i] * lst[i]\n        return sum",
+      "latency_ms": 517
+    },
+    {
+      "task_id": "HumanEval/143",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphb652p9o.py\", line 22\n    if n <= 1:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return \" \".join(result)\n```",
+      "extracted_body": "        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return \" \".join(result)",
+      "latency_ms": 736
+    },
+    {
+      "task_id": "HumanEval/144",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpu_3fh_oe.py\", line 15\n    denominator = n\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    numerator = int(x // n)\n    denominator = n\n    if denominator == 0:\n        return False\n    if numerator * n == 0:\n        return True\n    else:\n        return False\n```",
+      "extracted_body": "    numerator = int(x // n)\n        denominator = n\n        if denominator == 0:\n            return False\n        if numerator * n == 0:\n            return True\n        else:\n            return False",
+      "latency_ms": 412
+    },
+    {
+      "task_id": "HumanEval/145",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpj62__xrk.py\", line 13\n    s = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    def sum_digits(n):\n        s = 0\n        while n > 0:\n            s += n % 10\n            n //= 10\n        return s\n\n    nums_with_sum = []\n    for i, num in enumerate(nums):\n        nums_with_sum.append((num, sum_digits(num)))\n\n    nums_with_sum.sort(key=lambda x: x[1])\n\n    result = []\n    for num, sum_val in nums_with_sum:\n        result.append(num)\n\n    return result\n```",
+      "extracted_body": "        s = 0\n        while n > 0:\n            s += n % 10\n            n //= 10\n        return s\n\n    nums_with_sum = []\n    for i, num in enumerate(nums):\n        nums_with_sum.append((num, sum_digits(num)))\n\n    nums_with_sum.sort(key=lambda x: x[1])\n\n    result = []\n    for num, sum_val in nums_with_sum:\n        result.append(num)\n\n    return result",
+      "latency_ms": 865
+    },
+    {
+      "task_id": "HumanEval/146",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpllost0au.py\", line 11\n    for num in nums:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for num in nums:\n        if num > 10 and (num % 10 == 1 or num % 10 == 3 or num % 10 == 5 or num % 10 == 7 or num % 10 == 9):\n            if num > 0:\n                count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for num in nums:\n            if num > 10 and (num % 10 == 1 or num % 10 == 3 or num % 10 == 5 or num % 10 == 7 or num % 10 == 9):\n                if num > 0:\n                    count += 1\n        return count",
+      "latency_ms": 619
+    },
+    {
+      "task_id": "HumanEval/147",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp9ngoi4v0.py\", line 17\n    for i in range(1, n):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    count = 0\n    for i in range(1, n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (i * i - i + 1) % 3 == 0 and (j * j - j + 1) % 3 == 0 and (k * k - k + 1) % 3 == 0:\n                    count += 1\n    return count\n```",
+      "extracted_body": "    count = 0\n        for i in range(1, n):\n            for j in range(i + 1, n):\n                for k in range(j + 1, n):\n                    if (i * i - i + 1) % 3 == 0 and (j * j - j + 1) % 3 == 0 and (k * k - k + 1) % 3 == 0:\n                        count += 1\n        return count",
+      "latency_ms": 740
+    },
+    {
+      "task_id": "HumanEval/148",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmplvf7t57v.py\", line 21\n    if planet1 not in [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]:\n                                                                                                      ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not isinstance(planet1, str) or not isinstance(planet2, str):\n        return ()\n\n    if planet1 not in [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]:\n        return ()\n\n    planet1_orbit = planet1\n    planet2_orbit = planet2\n\n    if planet1_orbit < planet2_orbit:\n        planet1_orbit, planet2_orbit = planet2_orbit, planet1_orbit\n\n    result = []\n    for planet in planet1, planet2:\n        if planet in [\"Saturn\", \"Uranus\", \"Neptune\"]:\n            result.append(planet)\n        elif planet_orbit > planet_orbit:\n            result.append(planet)\n        else:\n            result.append(planet)\n\n    return tuple(sorted(result))\n```",
+      "extracted_body": "    if not isinstance(planet1, str) or not isinstance(planet2, str):\n            return ()\n    \n        if planet1 not in [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]:\n            return ()\n    \n        planet1_orbit = planet1\n        planet2_orbit = planet2\n    \n        if planet1_orbit < planet2_orbit:\n            planet1_orbit, planet2_orbit = planet2_orbit, planet1_orbit\n    \n        result = []\n        for planet in planet1, planet2:\n            if planet in [\"Saturn\", \"Uranus\", \"Neptune\"]:\n                result.append(planet)\n            elif planet_orbit > planet_orbit:\n                result.append(planet)\n            else:\n                result.append(planet)\n    \n        return tuple(sorted(result))",
+      "latency_ms": 1219
+    },
+    {
+      "task_id": "HumanEval/149",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp70tjnq_9.py\", line 18\n    for word in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    filtered_list = []\n    for word in lst:\n        if len(word) % 2 == 0:\n            filtered_list.append(word)\n    filtered_list.sort(key=lambda x: (len(x), x))\n    return filtered_list\n```",
+      "extracted_body": "    filtered_list = []\n        for word in lst:\n            if len(word) % 2 == 0:\n                filtered_list.append(word)\n        filtered_list.sort(key=lambda x: (len(x), x))\n        return filtered_list",
+      "latency_ms": 503
+    },
+    {
+      "task_id": "HumanEval/150",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpprrgsdus.py\", line 16\n    else:\n         ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if n > 1:\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return n\n        return y\n    else:\n        return y\n```",
+      "extracted_body": "    if n > 1:\n            for i in range(2, int(n**0.5) + 1):\n                if n % i == 0:\n                    return n\n            return y\n        else:\n            return y",
+      "latency_ms": 443
+    },
+    {
+      "task_id": "HumanEval/151",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpgrdq523v.py\", line 15\n    for num in lst:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sum_of_squares = 0\n    for num in lst:\n        if isinstance(num, int) and num % 2 != 0:\n            sum_of_squares += num**2\n    return sum_of_squares\n```",
+      "extracted_body": "    sum_of_squares = 0\n        for num in lst:\n            if isinstance(num, int) and num % 2 != 0:\n                sum_of_squares += num**2\n        return sum_of_squares",
+      "latency_ms": 444
+    },
+    {
+      "task_id": "HumanEval/152",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmptvhpg_y5.py\", line 18\n    for i in range(len(game)):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    diff = 0\n    for i in range(len(game)):\n        diff += abs(game[i] - guess[i])\n    return diff\n```",
+      "extracted_body": "    diff = 0\n        for i in range(len(game)):\n            diff += abs(game[i] - guess[i])\n        return diff",
+      "latency_ms": 362
+    },
+    {
+      "task_id": "HumanEval/153",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpc8y05xdj.py\", line 51, in <module>\n    check(Strongest_Extension)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpc8y05xdj.py\", line 37, in check\n    assert candidate('Watashi', ['tEN', 'niNE', 'eIGHt8OKe']) == 'Watashi.eIGHt8OKe'\nAssertionError\n",
+      "raw_output": "def Strongest_Extension(class_name, extensions):\n    strongest_extension = None\n    max_strength = -1\n    for extension in extensions:\n        cap = 0\n        sm = 0\n        for char in extension:\n            if 'A' <= char <= 'Z':\n                cap += 1\n            else:\n                sm += 1\n        if cap - sm > max_strength:\n            max_strength = cap - sm\n            strongest_extension = extension\n    return class_name + '.' + strongest_extension\n",
+      "extracted_body": "    strongest_extension = None\n    max_strength = -1\n    for extension in extensions:\n        cap = 0\n        sm = 0\n        for char in extension:\n            if 'A' <= char <= 'Z':\n                cap += 1\n            else:\n                sm += 1\n        if cap - sm > max_strength:\n            max_strength = cap - sm\n            strongest_extension = extension\n    return class_name + '.' + strongest_extension",
+      "latency_ms": 807
+    },
+    {
+      "task_id": "HumanEval/154",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpxgo167jz.py\", line 15\n    if len(a) < len(b):\n                       ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if len(a) == 0 or len(b) == 0:\n        return False\n\n    if len(a) < len(b):\n        return False\n\n    for i in range(len(b)):\n        rotated_b = b[i:] + b[:i]\n        if rotated_b in a:\n            return True\n\n    return False\n```",
+      "extracted_body": "    if len(a) == 0 or len(b) == 0:\n            return False\n    \n        if len(a) < len(b):\n            return False\n    \n        for i in range(len(b)):\n            rotated_b = b[i:] + b[:i]\n            if rotated_b in a:\n                return True\n    \n        return False",
+      "latency_ms": 591
+    },
+    {
+      "task_id": "HumanEval/155",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpswamvi88.py\", line 10\n    odd = 0\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    even = 0\n    odd = 0\n    for digit in str(num):\n        if int(digit) % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n    return (even, odd)\n```",
+      "extracted_body": "    even = 0\n        odd = 0\n        for digit in str(num):\n            if int(digit) % 2 == 0:\n                even += 1\n            else:\n                odd += 1\n        return (even, odd)",
+      "latency_ms": 470
+    },
+    {
+      "task_id": "HumanEval/156",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpdonkaloc.py\", line 17\n    result = ''\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    roman_map = {\n        1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L',\n        90: 'XC', 100: 'C', 400: 'CD', 500: 'D', 900: 'CM', 1000: 'M'\n    }\n    result = ''\n    while number != 0:\n        if list(roman_map.keys())[0] <= number:\n            result += list(roman_map.keys())[0]\n            number -= 1\n        else:\n            number -= 1\n    return result\n```",
+      "extracted_body": "    roman_map = {\n            1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L',\n            90: 'XC', 100: 'C', 400: 'CD', 500: 'D', 900: 'CM', 1000: 'M'\n        }\n        result = ''\n        while number != 0:\n            if list(roman_map.keys())[0] <= number:\n                result += list(roman_map.keys())[0]\n                number -= 1\n            else:\n                number -= 1\n        return result",
+      "latency_ms": 1048
+    },
+    {
+      "task_id": "HumanEval/157",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5e7_2gee.py\", line 13\n    return sides[0]**2 + sides[1]**2 == sides[2]**2\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    sides = sorted([a, b, c])\n    return sides[0]**2 + sides[1]**2 == sides[2]**2\n```",
+      "extracted_body": "    sides = sorted([a, b, c])\n        return sides[0]**2 + sides[1]**2 == sides[2]**2",
+      "latency_ms": 344
+    },
+    {
+      "task_id": "HumanEval/158",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpz7mf6fpr.py\", line 15\n    max_unique_count = 0\n                        ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not words:\n        return \"\"\n\n    max_unique_count = 0\n    max_word = \"\"\n\n    for word in words:\n        unique_chars = set(word)\n        unique_count = len(unique_chars)\n\n        if unique_count > max_unique_count:\n            max_unique_count = unique_count\n            max_word = word\n        elif unique_count == max_unique_count and word < max_word:\n            max_word = word\n\n    return max_word\n```",
+      "extracted_body": "    if not words:\n            return \"\"\n    \n        max_unique_count = 0\n        max_word = \"\"\n    \n        for word in words:\n            unique_chars = set(word)\n            unique_count = len(unique_chars)\n    \n            if unique_count > max_unique_count:\n                max_unique_count = unique_count\n                max_word = word\n            elif unique_count == max_unique_count and word < max_word:\n                max_word = word\n    \n        return max_word",
+      "latency_ms": 798
+    },
+    {
+      "task_id": "HumanEval/159",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp1pb982vy.py\", line 33\n    return [number, remaining]\n                              ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if number > need:\n        remaining += 1\n    return [number, remaining]\n```",
+      "extracted_body": "    if number > need:\n            remaining += 1\n        return [number, remaining]",
+      "latency_ms": 293
+    },
+    {
+      "task_id": "HumanEval/160",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmptijd9kow.py\", line 52\n    except:\n           ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    try:\n        if len(operator) == 1:\n            if len(operand) == 1:\n                return operator[0]\n            else:\n                return eval(str(operand[0]) + ' + ' + operator[1])\n        elif len(operator) == 2:\n            op1 = operator[0]\n            op2 = operator[1]\n\n            if op1 == '+':\n                result = op1 + op2\n            elif op1 == '-':\n                result = op1 - op2\n            elif op1 == '*':\n                result = op1 * op2\n            elif op1 == '/':\n                if op2 == 0:\n                    return \"Error\"\n                result = op1 // op2\n            elif op1 == '**':\n                result = op1 ** op2\n            return result\n        else:\n            return \"Error\"\n    except:\n        return \"Error\"\n```",
+      "extracted_body": "    try:\n            if len(operator) == 1:\n                if len(operand) == 1:\n                    return operator[0]\n                else:\n                    return eval(str(operand[0]) + ' + ' + operator[1])\n            elif len(operator) == 2:\n                op1 = operator[0]\n                op2 = operator[1]\n    \n                if op1 == '+':\n                    result = op1 + op2\n                elif op1 == '-':\n                    result = op1 - op2\n                elif op1 == '*':\n                    result = op1 * op2\n                elif op1 == '/':\n                    if op2 == 0:\n                        return \"Error\"\n                    result = op1 // op2\n                elif op1 == '**':\n                    result = op1 ** op2\n                return result\n            else:\n                return \"Error\"\n        except:\n            return \"Error\"",
+      "latency_ms": 1259
+    },
+    {
+      "task_id": "HumanEval/161",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmplcqle_x_.py\", line 14\n    for char in s:\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    res = ''\n    for char in s:\n        if 'a' <= char <= 'z':\n            res += char.upper()\n        elif 'A' <= char <= 'Z':\n            res += char.lower()\n        else:\n            res += char\n    return res\n```",
+      "extracted_body": "    res = ''\n        for char in s:\n            if 'a' <= char <= 'z':\n                res += char.upper()\n            elif 'A' <= char <= 'Z':\n                res += char.lower()\n            else:\n                res += char\n        return res",
+      "latency_ms": 500
+    },
+    {
+      "task_id": "HumanEval/162",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpqw_x8sco.py\", line 12\n    md5_hash = hashlib.md5(text.encode('utf-8')).hexdigest()\n                                                            ^\nIndentationError: unindent does not match any outer indentation level\n",
+      "raw_output": "```python\n    if not text:\n        return None\n\n    md5_hash = hashlib.md5(text.encode('utf-8')).hexdigest()\n    return md5_hash\n```",
+      "extracted_body": "    if not text:\n            return None\n    \n        md5_hash = hashlib.md5(text.encode('utf-8')).hexdigest()\n        return md5_hash",
+      "latency_ms": 368
+    },
+    {
+      "task_id": "HumanEval/163",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpoqpytx8o.py\", line 13\n    for digit in str(a):\nIndentationError: unexpected indent\n",
+      "raw_output": "```python\n    result = []\n    for digit in str(a):\n        if int(digit) % 2 == 0:\n            result.append(int(digit))\n    for digit in str(b):\n        if int(digit) % 2 == 0:\n            result.append(int(digit))\n    return sorted(result)\n```",
+      "extracted_body": "    result = []\n        for digit in str(a):\n            if int(digit) % 2 == 0:\n                result.append(int(digit))\n        for digit in str(b):\n            if int(digit) % 2 == 0:\n                result.append(int(digit))\n        return sorted(result)",
+      "latency_ms": 564
+    }
+  ]
+}

@@ -1,0 +1,1492 @@
+{
+  "model": "qwen2.5-coder:32b",
+  "total_tasks": 164,
+  "samples_per_task": 1,
+  "temperature": 0.2,
+  "max_tokens": 1024,
+  "workers": 1,
+  "total_elapsed_s": 570.5,
+  "avg_latency_ms": 3454,
+  "pass_at_1": 84.76,
+  "pass_at_5": null,
+  "pass_at_10": null,
+  "tasks_passed_any": 139,
+  "task_results": [
+    {
+      "task_id": "HumanEval/0",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "for i in range(len(numbers)):\n    for j in range(i + 1, len(numbers)):\n        if abs(numbers[i] - numbers[j]) < threshold:\n            return True\nreturn False",
+      "extracted_body": "    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+      "latency_ms": 4206
+    },
+    {
+      "task_id": "HumanEval/1",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def separate_paren_groups(paren_string: str) -> List[str]:\n    result = []\n    current_group = []\n    balance = 0\n\n    for char in paren_string.replace(\" \", \"\"):\n        if char == '(':\n            balance += 1\n        elif char == ')':\n            balance -= 1\n\n        current_group.append(char)\n\n        if balance == 0 and current_group:\n            result.append(''.join(current_group))\n            current_group = []\n\n    return result",
+      "extracted_body": "    result = []\n    current_group = []\n    balance = 0\n\n    for char in paren_string.replace(\" \", \"\"):\n        if char == '(':\n            balance += 1\n        elif char == ')':\n            balance -= 1\n\n        current_group.append(char)\n\n        if balance == 0 and current_group:\n            result.append(''.join(current_group))\n            current_group = []\n\n    return result",
+      "latency_ms": 4989
+    },
+    {
+      "task_id": "HumanEval/2",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return number - int(number)",
+      "extracted_body": "    return number - int(number)",
+      "latency_ms": 851
+    },
+    {
+      "task_id": "HumanEval/3",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "balance = 0\nfor operation in operations:\n    balance += operation\n    if balance < 0:\n        return True\nreturn False",
+      "extracted_body": "    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False",
+      "latency_ms": 1942
+    },
+    {
+      "task_id": "HumanEval/4",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "mean = sum(numbers) / len(numbers)\nreturn sum(abs(x - mean) for x in numbers) / len(numbers)",
+      "extracted_body": "    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+      "latency_ms": 1816
+    },
+    {
+      "task_id": "HumanEval/5",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not numbers:\n    return []\nresult = [numbers[0]]\nfor number in numbers[1:]:\n    result.extend([delimeter, number])\nreturn result",
+      "extracted_body": "    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.extend([delimeter, number])\n    return result",
+      "latency_ms": 1997
+    },
+    {
+      "task_id": "HumanEval/6",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def parse_nested_parens(paren_string: str) -> List[int]:\n    def max_nesting(s: str) -> int:\n        max_depth = 0\n        current_depth = 0\n        for char in s:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        return max_depth\n\n    return [max_nesting(group) for group in paren_string.split()]",
+      "extracted_body": "    def max_nesting(s: str) -> int:\n        max_depth = 0\n        current_depth = 0\n        for char in s:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        return max_depth\n\n    return [max_nesting(group) for group in paren_string.split()]",
+      "latency_ms": 5311
+    },
+    {
+      "task_id": "HumanEval/7",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [s for s in strings if substring in s]",
+      "extracted_body": "    return [s for s in strings if substring in s]",
+      "latency_ms": 1115
+    },
+    {
+      "task_id": "HumanEval/8",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "sum_value = 0\nproduct_value = 1\nfor number in numbers:\n    sum_value += number\n    product_value *= number\nreturn sum_value, product_value",
+      "extracted_body": "    sum_value = 0\n    product_value = 1\n    for number in numbers:\n        sum_value += number\n        product_value *= number\n    return sum_value, product_value",
+      "latency_ms": 2261
+    },
+    {
+      "task_id": "HumanEval/9",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "current_max = float('-inf')\nresult = []\nfor number in numbers:\n    current_max = max(current_max, number)\n    result.append(current_max)\nreturn result",
+      "extracted_body": "    current_max = float('-inf')\n    result = []\n    for number in numbers:\n        current_max = max(current_max, number)\n        result.append(current_max)\n    return result",
+      "latency_ms": 2049
+    },
+    {
+      "task_id": "HumanEval/10",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "for i in range(len(string)):\n    if is_palindrome(string[i:]):\n        return string + string[:i][::-1]\nreturn string + string[::-1]",
+      "extracted_body": "    for i in range(len(string)):\n        if is_palindrome(string[i:]):\n            return string + string[:i][::-1]\n    return string + string[::-1]",
+      "latency_ms": 2396
+    },
+    {
+      "task_id": "HumanEval/11",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "result = []\nfor x, y in zip(a, b):\n    result.append('1' if x != y else '0')\nreturn ''.join(result)",
+      "extracted_body": "    result = []\n    for x, y in zip(a, b):\n        result.append('1' if x != y else '0')\n    return ''.join(result)",
+      "latency_ms": 1994
+    },
+    {
+      "task_id": "HumanEval/12",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not strings:\n    return None\nreturn max(strings, key=len)",
+      "extracted_body": "    if not strings:\n        return None\n    return max(strings, key=len)",
+      "latency_ms": 1367
+    },
+    {
+      "task_id": "HumanEval/13",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "while b:\n    a, b = b, a % b\nreturn a",
+      "extracted_body": "    while b:\n        a, b = b, a % b\n    return a",
+      "latency_ms": 1291
+    },
+    {
+      "task_id": "HumanEval/14",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [string[:i] for i in range(1, len(string) + 1)]",
+      "extracted_body": "    return [string[:i] for i in range(1, len(string) + 1)]",
+      "latency_ms": 1284
+    },
+    {
+      "task_id": "HumanEval/15",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return ' '.join(str(i) for i in range(n + 1))",
+      "extracted_body": "    return ' '.join(str(i) for i in range(n + 1))",
+      "latency_ms": 1291
+    },
+    {
+      "task_id": "HumanEval/16",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return len(set(string.lower()))",
+      "extracted_body": "    return len(set(string.lower()))",
+      "latency_ms": 836
+    },
+    {
+      "task_id": "HumanEval/17",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def parse_music(music_string: str) -> List[int]:\n    note_map = {'o': 4, 'o|': 2, '.|': 1}\n    return [note_map[note] for note in music_string.split()]",
+      "extracted_body": "    note_map = {'o': 4, 'o|': 2, '.|': 1}\n    return [note_map[note] for note in music_string.split()]",
+      "latency_ms": 3275
+    },
+    {
+      "task_id": "HumanEval/18",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "count = 0\nstart = 0\n\nwhile start <= len(string) - len(substring):\n    pos = string.find(substring, start)\n    if pos != -1:\n        count += 1\n        start = pos + 1\n    else:\n        break\n\nreturn count",
+      "extracted_body": "    count = 0\n    start = 0\n    \n    while start <= len(string) - len(substring):\n        pos = string.find(substring, start)\n        if pos != -1:\n            count += 1\n            start = pos + 1\n        else:\n            break\n    \n    return count",
+      "latency_ms": 3246
+    },
+    {
+      "task_id": "HumanEval/19",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "num_to_word = {\n    0: 'zero',\n    1: 'one',\n    2: 'two',\n    3: 'three',\n    4: 'four',\n    5: 'five',\n    6: 'six',\n    7: 'seven',\n    8: 'eight',\n    9: 'nine'\n}\n\nword_to_num = {word: num for num, word in num_to_word.items()}\n\nwords = numbers.split()\nsorted_words = sorted(words, key=lambda word: word_to_num[word])\nreturn ' '.join(sorted_words)",
+      "extracted_body": "    num_to_word = {\n        0: 'zero',\n        1: 'one',\n        2: 'two',\n        3: 'three',\n        4: 'four',\n        5: 'five',\n        6: 'six',\n        7: 'seven',\n        8: 'eight',\n        9: 'nine'\n    }\n    \n    word_to_num = {word: num for num, word in num_to_word.items()}\n    \n    words = numbers.split()\n    sorted_words = sorted(words, key=lambda word: word_to_num[word])\n    return ' '.join(sorted_words)",
+      "latency_ms": 6113
+    },
+    {
+      "task_id": "HumanEval/20",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "numbers.sort()\nmin_diff = float('inf')\nclosest_pair = (None, None)\nfor i in range(len(numbers) - 1):\n    diff = numbers[i + 1] - numbers[i]\n    if diff < min_diff:\n        min_diff = diff\n        closest_pair = (numbers[i], numbers[i + 1])\nreturn closest_pair",
+      "extracted_body": "    numbers.sort()\n    min_diff = float('inf')\n    closest_pair = (None, None)\n    for i in range(len(numbers) - 1):\n        diff = numbers[i + 1] - numbers[i]\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (numbers[i], numbers[i + 1])\n    return closest_pair",
+      "latency_ms": 4222
+    },
+    {
+      "task_id": "HumanEval/21",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "min_val = min(numbers)\nmax_val = max(numbers)\nrange_val = max_val - min_val\nreturn [(num - min_val) / range_val for num in numbers]",
+      "extracted_body": "    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    return [(num - min_val) / range_val for num in numbers]",
+      "latency_ms": 2306
+    },
+    {
+      "task_id": "HumanEval/22",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [value for value in values if isinstance(value, int)]",
+      "extracted_body": "    return [value for value in values if isinstance(value, int)]",
+      "latency_ms": 1161
+    },
+    {
+      "task_id": "HumanEval/23",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return len(string)",
+      "extracted_body": "    return len(string)",
+      "latency_ms": 577
+    },
+    {
+      "task_id": "HumanEval/24",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "for i in range(n - 1, 0, -1):\n    if n % i == 0:\n        return i",
+      "extracted_body": "    for i in range(n - 1, 0, -1):\n        if n % i == 0:\n            return i",
+      "latency_ms": 1593
+    },
+    {
+      "task_id": "HumanEval/25",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def factorize(n: int) -> List[int]:\n    factors = []\n    divisor = 2\n    while n >= divisor:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors",
+      "extracted_body": "    factors = []\n    divisor = 2\n    while n >= divisor:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors",
+      "latency_ms": 3197
+    },
+    {
+      "task_id": "HumanEval/26",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "seen = set()\nduplicates = set()\nresult = []\nfor number in numbers:\n    if number in seen:\n        duplicates.add(number)\n    seen.add(number)\nfor number in numbers:\n    if number not in duplicates:\n        result.append(number)\nreturn result",
+      "extracted_body": "    seen = set()\n    duplicates = set()\n    result = []\n    for number in numbers:\n        if number in seen:\n            duplicates.add(number)\n        seen.add(number)\n    for number in numbers:\n        if number not in duplicates:\n            result.append(number)\n    return result",
+      "latency_ms": 2875
+    },
+    {
+      "task_id": "HumanEval/27",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return ''.join(c.lower() if c.isupper() else c.upper() for c in string)",
+      "extracted_body": "    return ''.join(c.lower() if c.isupper() else c.upper() for c in string)",
+      "latency_ms": 1285
+    },
+    {
+      "task_id": "HumanEval/28",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return ''.join(strings)",
+      "extracted_body": "    return ''.join(strings)",
+      "latency_ms": 615
+    },
+    {
+      "task_id": "HumanEval/29",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [s for s in strings if s.startswith(prefix)]",
+      "extracted_body": "    return [s for s in strings if s.startswith(prefix)]",
+      "latency_ms": 1108
+    },
+    {
+      "task_id": "HumanEval/30",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [num for num in l if num > 0]",
+      "extracted_body": "    return [num for num in l if num > 0]",
+      "latency_ms": 1283
+    },
+    {
+      "task_id": "HumanEval/31",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if n <= 1:\n    return False\nif n <= 3:\n    return True\nif n % 2 == 0 or n % 3 == 0:\n    return False\ni = 5\nwhile i * i <= n:\n    if n % i == 0 or n % (i + 2) == 0:\n        return False\n    i += 6\nreturn True",
+      "extracted_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True",
+      "latency_ms": 4525
+    },
+    {
+      "task_id": "HumanEval/32",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def find_zero(xs: list):\n    def poly(x):\n        return sum(coeff * (x ** i) for i, coeff in enumerate(xs))\n\n    a, b = -100, 100  # Initial range for bisection method\n    while poly(a) * poly(b) > 0:\n        a *= 2\n        b *= 2\n\n    while b - a > 1e-10:\n        mid = (a + b) / 2\n        if poly(mid) * poly(a) > 0:\n            a = mid\n        else:\n            b = mid\n\n    return (a + b) / 2",
+      "extracted_body": "    def poly(x):\n        return sum(coeff * (x ** i) for i, coeff in enumerate(xs))\n\n    a, b = -100, 100  # Initial range for bisection method\n    while poly(a) * poly(b) > 0:\n        a *= 2\n        b *= 2\n\n    while b - a > 1e-10:\n        mid = (a + b) / 2\n        if poly(mid) * poly(a) > 0:\n            a = mid\n        else:\n            b = mid\n\n    return (a + b) / 2",
+      "latency_ms": 7749
+    },
+    {
+      "task_id": "HumanEval/33",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "indices = [i for i in range(len(l)) if i % 3 == 0]\nsorted_values = sorted(l[i] for i in indices)\nresult = l[:]\nfor idx, value in zip(indices, sorted_values):\n    result[idx] = value\nreturn result",
+      "extracted_body": "    indices = [i for i in range(len(l)) if i % 3 == 0]\n    sorted_values = sorted(l[i] for i in indices)\n    result = l[:]\n    for idx, value in zip(indices, sorted_values):\n        result[idx] = value\n    return result",
+      "latency_ms": 3379
+    },
+    {
+      "task_id": "HumanEval/34",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return sorted(set(l))",
+      "extracted_body": "    return sorted(set(l))",
+      "latency_ms": 803
+    },
+    {
+      "task_id": "HumanEval/35",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not l:\n    return None\nmax_val = l[0]\nfor num in l:\n    if num > max_val:\n        max_val = num\nreturn max_val",
+      "extracted_body": "    if not l:\n        return None\n    max_val = l[0]\n    for num in l:\n        if num > max_val:\n            max_val = num\n    return max_val",
+      "latency_ms": 2167
+    },
+    {
+      "task_id": "HumanEval/36",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "count = 0\nfor i in range(n):\n    if i % 11 == 0 or i % 13 == 0:\n        count += str(i).count('7')\nreturn count",
+      "extracted_body": "    count = 0\n    for i in range(n):\n        if i % 11 == 0 or i % 13 == 0:\n            count += str(i).count('7')\n    return count",
+      "latency_ms": 2486
+    },
+    {
+      "task_id": "HumanEval/37",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "even_indices = [l[i] for i in range(0, len(l), 2)]\neven_indices.sort()\nresult = l[:]\nfor i, value in enumerate(even_indices):\n    result[i * 2] = value\nreturn result",
+      "extracted_body": "    even_indices = [l[i] for i in range(0, len(l), 2)]\n    even_indices.sort()\n    result = l[:]\n    for i, value in enumerate(even_indices):\n        result[i * 2] = value\n    return result",
+      "latency_ms": 2939
+    },
+    {
+      "task_id": "HumanEval/38",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\ngroups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]\nreturn \"\".join(groups)",
+      "extracted_body": "    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    groups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)",
+      "latency_ms": 3908
+    },
+    {
+      "task_id": "HumanEval/39",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp_021oohc.py\", line 43, in <module>\n    check(prime_fib)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp_021oohc.py\", line 30, in check\n    assert candidate(1) == 2\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp_021oohc.py\", line 17, in prime_fib\n    if num < 2:\nNameError: name 'num' is not defined\n",
+      "raw_output": "def is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef prime_fib(n: int):\n    fib1, fib2 = 0, 1\n    count = 0\n    while True:\n        fib = fib1 + fib2\n        fib1, fib2 = fib2, fib\n        if is_prime(fib):\n            count += 1\n            if count == n:\n                return fib",
+      "extracted_body": "    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True",
+      "latency_ms": 6285
+    },
+    {
+      "task_id": "HumanEval/40",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def triples_sum_to_zero(l: list):\n    l.sort()\n    n = len(l)\n    for i in range(n - 2):\n        if i > 0 and l[i] == l[i - 1]:\n            continue\n        left, right = i + 1, n - 1\n        while left < right:\n            total = l[i] + l[left] + l[right]\n            if total == 0:\n                return True\n            elif total < 0:\n                left += 1\n            else:\n                right -= 1\n    return False",
+      "extracted_body": "    l.sort()\n    n = len(l)\n    for i in range(n - 2):\n        if i > 0 and l[i] == l[i - 1]:\n            continue\n        left, right = i + 1, n - 1\n        while left < right:\n            total = l[i] + l[left] + l[right]\n            if total == 0:\n                return True\n            elif total < 0:\n                left += 1\n            else:\n                right -= 1\n    return False",
+      "latency_ms": 6208
+    },
+    {
+      "task_id": "HumanEval/41",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def car_race_collision(n: int):\n    return n * n",
+      "extracted_body": "    return n * n",
+      "latency_ms": 1476
+    },
+    {
+      "task_id": "HumanEval/42",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return [x + 1 for x in l]",
+      "extracted_body": "    return [x + 1 for x in l]",
+      "latency_ms": 1206
+    },
+    {
+      "task_id": "HumanEval/43",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def pairs_sum_to_zero(l):\n    seen = set()\n    for num in l:\n        if -num in seen:\n            return True\n        seen.add(num)\n    return False",
+      "extracted_body": "    seen = set()\n    for num in l:\n        if -num in seen:\n            return True\n        seen.add(num)\n    return False",
+      "latency_ms": 2558
+    },
+    {
+      "task_id": "HumanEval/44",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if x == 0:\n    return '0'\ndigits = []\nwhile x:\n    digits.append(int(x % base))\n    x //= base\nreturn ''.join(str(x) for x in digits[::-1])",
+      "extracted_body": "    if x == 0:\n        return '0'\n    digits = []\n    while x:\n        digits.append(int(x % base))\n        x //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "latency_ms": 2496
+    },
+    {
+      "task_id": "HumanEval/45",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return 0.5 * a * h",
+      "extracted_body": "    return 0.5 * a * h",
+      "latency_ms": 800
+    },
+    {
+      "task_id": "HumanEval/46",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def fib4(n: int):\n    if n == 0 or n == 1 or n == 3:\n        return 0\n    if n == 2:\n        return 2\n    a, b, c, d = 0, 0, 2, 0\n    for _ in range(4, n + 1):\n        a, b, c, d = b, c, d, a + b + c + d\n    return d",
+      "extracted_body": "    if n == 0 or n == 1 or n == 3:\n        return 0\n    if n == 2:\n        return 2\n    a, b, c, d = 0, 0, 2, 0\n    for _ in range(4, n + 1):\n        a, b, c, d = b, c, d, a + b + c + d\n    return d",
+      "latency_ms": 5472
+    },
+    {
+      "task_id": "HumanEval/47",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "l.sort()\nn = len(l)\nif n % 2 == 1:\n    return l[n // 2]\nelse:\n    return (l[n // 2 - 1] + l[n // 2]) / 2",
+      "extracted_body": "    l.sort()\n    n = len(l)\n    if n % 2 == 1:\n        return l[n // 2]\n    else:\n        return (l[n // 2 - 1] + l[n // 2]) / 2",
+      "latency_ms": 2774
+    },
+    {
+      "task_id": "HumanEval/48",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def is_palindrome(text: str):\n    return text == text[::-1]",
+      "extracted_body": "    return text == text[::-1]",
+      "latency_ms": 1279
+    },
+    {
+      "task_id": "HumanEval/49",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return pow(2, n, p)",
+      "extracted_body": "    return pow(2, n, p)",
+      "latency_ms": 1119
+    },
+    {
+      "task_id": "HumanEval/50",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return \"\".join([chr(((ord(ch) - 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])",
+      "extracted_body": "    return \"\".join([chr(((ord(ch) - 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])",
+      "latency_ms": 2018
+    },
+    {
+      "task_id": "HumanEval/51",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def remove_vowels(text):\n    vowels = \"aeiouAEIOU\"\n    return ''.join(char for char in text if char not in vowels)",
+      "extracted_body": "    vowels = \"aeiouAEIOU\"\n    return ''.join(char for char in text if char not in vowels)",
+      "latency_ms": 2147
+    },
+    {
+      "task_id": "HumanEval/52",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "for num in l:\n    if num >= t:\n        return False\nreturn True",
+      "extracted_body": "    for num in l:\n        if num >= t:\n            return False\n    return True",
+      "latency_ms": 1335
+    },
+    {
+      "task_id": "HumanEval/53",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return x + y",
+      "extracted_body": "    return x + y",
+      "latency_ms": 576
+    },
+    {
+      "task_id": "HumanEval/54",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def same_chars(s0: str, s1: str) -> bool:\n    return set(s0) == set(s1)",
+      "extracted_body": "    return set(s0) == set(s1)",
+      "latency_ms": 2109
+    },
+    {
+      "task_id": "HumanEval/55",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if n <= 0:\n    return 0\nelif n == 1:\n    return 1\nelse:\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+      "extracted_body": "    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b",
+      "latency_ms": 3147
+    },
+    {
+      "task_id": "HumanEval/56",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "balance = 0\nfor bracket in brackets:\n    if bracket == '<':\n        balance += 1\n    elif bracket == '>':\n        balance -= 1\n    if balance < 0:\n        return False\nreturn balance == 0",
+      "extracted_body": "    balance = 0\n    for bracket in brackets:\n        if bracket == '<':\n            balance += 1\n        elif bracket == '>':\n            balance -= 1\n        if balance < 0:\n            return False\n    return balance == 0",
+      "latency_ms": 2781
+    },
+    {
+      "task_id": "HumanEval/57",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not l:\n    return True\nincreasing = decreasing = True\nfor i in range(1, len(l)):\n    if l[i] > l[i - 1]:\n        decreasing = False\n    elif l[i] < l[i - 1]:\n        increasing = False\nreturn increasing or decreasing",
+      "extracted_body": "    if not l:\n        return True\n    increasing = decreasing = True\n    for i in range(1, len(l)):\n        if l[i] > l[i - 1]:\n            decreasing = False\n        elif l[i] < l[i - 1]:\n            increasing = False\n    return increasing or decreasing",
+      "latency_ms": 3349
+    },
+    {
+      "task_id": "HumanEval/58",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return sorted(set(l1) & set(l2))",
+      "extracted_body": "    return sorted(set(l1) & set(l2))",
+      "latency_ms": 1196
+    },
+    {
+      "task_id": "HumanEval/59",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def largest_prime_factor(n: int):\n    factor = 2\n    while n > 1:\n        while n % factor == 0:\n            n //= factor\n        factor += 1\n    return factor - 1",
+      "extracted_body": "    factor = 2\n    while n > 1:\n        while n % factor == 0:\n            n //= factor\n        factor += 1\n    return factor - 1",
+      "latency_ms": 2646
+    },
+    {
+      "task_id": "HumanEval/60",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "return n * (n + 1) // 2",
+      "extracted_body": "    return n * (n + 1) // 2",
+      "latency_ms": 1233
+    },
+    {
+      "task_id": "HumanEval/61",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "balance = 0\nfor bracket in brackets:\n    if bracket == '(':\n        balance += 1\n    elif bracket == ')':\n        balance -= 1\n    if balance < 0:\n        return False\nreturn balance == 0",
+      "extracted_body": "    balance = 0\n    for bracket in brackets:\n        if bracket == '(':\n            balance += 1\n        elif bracket == ')':\n            balance -= 1\n        if balance < 0:\n            return False\n    return balance == 0",
+      "latency_ms": 2788
+    },
+    {
+      "task_id": "HumanEval/62",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def derivative(xs: list):\n    return [i * xs[i] for i in range(1, len(xs))]",
+      "extracted_body": "    return [i * xs[i] for i in range(1, len(xs))]",
+      "latency_ms": 1774
+    },
+    {
+      "task_id": "HumanEval/63",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def fibfib(n: int):\n    if n == 0 or n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    a, b, c = 0, 0, 1\n    for _ in range(3, n + 1):\n        a, b, c = b, c, a + b + c\n    return c",
+      "extracted_body": "    if n == 0 or n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    a, b, c = 0, 0, 1\n    for _ in range(3, n + 1):\n        a, b, c = b, c, a + b + c\n    return c",
+      "latency_ms": 4674
+    },
+    {
+      "task_id": "HumanEval/64",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def vowels_count(s):\n    vowels = \"aeiou\"\n    count = sum(1 for char in s.lower() if char in vowels)\n    if s.lower().endswith('y'):\n        count += 1\n    return count\n\n# Test cases\nprint(vowels_count(\"abcde\"))  # 2\nprint(vowels_count(\"ACEDY\"))  # 3\nprint(vowels_count(\"rhythm\"))  # 0\nprint(vowels_count(\"SYZYGY\"))  # 1\nprint(vowels_count(\"encyclopedia\"))  # 6\nprint(vowels_count(\"queue\"))  # 4\nprint(vowels_count(\"sky\"))  # 0\nprint(vowels_count(\"day\"))  # 2\nprint(vowels_count(\"AEIOUY\"))  # 6\nprint(vowels_count(\"\"))  # 0",
+      "extracted_body": "    vowels = \"aeiou\"\n    count = sum(1 for char in s.lower() if char in vowels)\n    if s.lower().endswith('y'):\n        count += 1\n    return count",
+      "latency_ms": 9090
+    },
+    {
+      "task_id": "HumanEval/65",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpadbbv7d7.py\", line 30, in <module>\n    check(circular_shift)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpadbbv7d7.py\", line 21, in check\n    assert candidate(12, 2) == \"12\"\nAssertionError\n",
+      "raw_output": "def circular_shift(x, shift):\n    s = str(x)\n    n = len(s)\n    if shift >= n:\n        return s[::-1]\n    return s[-shift:] + s[:-shift]",
+      "extracted_body": "    s = str(x)\n    n = len(s)\n    if shift >= n:\n        return s[::-1]\n    return s[-shift:] + s[:-shift]",
+      "latency_ms": 2433
+    },
+    {
+      "task_id": "HumanEval/66",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def digitSum(s):\n    return sum(ord(char) for char in s if char.isupper())",
+      "extracted_body": "    return sum(ord(char) for char in s if char.isupper())",
+      "latency_ms": 1585
+    },
+    {
+      "task_id": "HumanEval/67",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def fruit_distribution(s, n):\n    parts = s.split()\n    apples = int(parts[0])\n    oranges = int(parts[3])\n    return n - apples - oranges",
+      "extracted_body": "    parts = s.split()\n    apples = int(parts[0])\n    oranges = int(parts[3])\n    return n - apples - oranges",
+      "latency_ms": 2796
+    },
+    {
+      "task_id": "HumanEval/68",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def pluck(arr):\n    smallest_even = float('inf')\n    index_of_smallest = -1\n    for index, value in enumerate(arr):\n        if value % 2 == 0 and value < smallest_even:\n            smallest_even = value\n            index_of_smallest = index\n    return [smallest_even, index_of_smallest] if index_of_smallest != -1 else []",
+      "extracted_body": "    smallest_even = float('inf')\n    index_of_smallest = -1\n    for index, value in enumerate(arr):\n        if value % 2 == 0 and value < smallest_even:\n            smallest_even = value\n            index_of_smallest = index\n    return [smallest_even, index_of_smallest] if index_of_smallest != -1 else []",
+      "latency_ms": 5301
+    },
+    {
+      "task_id": "HumanEval/69",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "from collections import Counter\n\ncount = Counter(lst)\nresult = -1\nfor num, freq in count.items():\n    if freq >= num:\n        result = max(result, num)\nreturn result",
+      "extracted_body": "    from collections import Counter\n    \n    count = Counter(lst)\n    result = -1\n    for num, freq in count.items():\n        if freq >= num:\n            result = max(result, num)\n    return result",
+      "latency_ms": 2748
+    },
+    {
+      "task_id": "HumanEval/70",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop())\n    return result",
+      "extracted_body": "    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop())\n    return result",
+      "latency_ms": 2421
+    },
+    {
+      "task_id": "HumanEval/71",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if a + b > c and a + c > b and b + c > a:\n    s = (a + b + c) / 2\n    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n    return round(area, 2)\nelse:\n    return -1",
+      "extracted_body": "    if a + b > c and a + c > b and b + c > a:\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    else:\n        return -1",
+      "latency_ms": 4052
+    },
+    {
+      "task_id": "HumanEval/72",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def will_it_fly(q, w):\n    return q == q[::-1] and sum(q) <= w",
+      "extracted_body": "    return q == q[::-1] and sum(q) <= w",
+      "latency_ms": 2352
+    },
+    {
+      "task_id": "HumanEval/73",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def smallest_change(arr):\n    changes = 0\n    left = 0\n    right = len(arr) - 1\n    while left < right:\n        if arr[left] != arr[right]:\n            changes += 1\n        left += 1\n        right -= 1\n    return changes",
+      "extracted_body": "    changes = 0\n    left = 0\n    right = len(arr) - 1\n    while left < right:\n        if arr[left] != arr[right]:\n            changes += 1\n        left += 1\n        right -= 1\n    return changes",
+      "latency_ms": 3671
+    },
+    {
+      "task_id": "HumanEval/74",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+      "extracted_body": "    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+      "latency_ms": 4641
+    },
+    {
+      "task_id": "HumanEval/75",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def is_multiply_prime(a):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+      "extracted_body": "    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+      "latency_ms": 6527
+    },
+    {
+      "task_id": "HumanEval/76",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if n <= 1:\n        return x == 1\npower = 1\nwhile power < x:\n    power *= n\nreturn power == x",
+      "extracted_body": "    if n <= 1:\n            return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x",
+      "latency_ms": 2300
+    },
+    {
+      "task_id": "HumanEval/77",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpit4k_8z1.py\", line 35, in <module>\n    check(iscube)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpit4k_8z1.py\", line 23, in check\n    assert candidate(-1) == True, \"Third test error: \" + str(candidate(-1))\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpit4k_8z1.py\", line 15, in iscube\n    cube_root = round(a ** (1/3))\nTypeError: type complex doesn't define __round__ method\n",
+      "raw_output": "def iscube(a):\n    cube_root = round(a ** (1/3))\n    return cube_root ** 3 == a",
+      "extracted_body": "    cube_root = round(a ** (1/3))\n    return cube_root ** 3 == a",
+      "latency_ms": 1848
+    },
+    {
+      "task_id": "HumanEval/78",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def hex_key(num):\n    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}\n    return sum(1 for digit in num if digit in prime_hex_digits)",
+      "extracted_body": "    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}\n    return sum(1 for digit in num if digit in prime_hex_digits)",
+      "latency_ms": 3585
+    },
+    {
+      "task_id": "HumanEval/79",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "binary = bin(decimal)[2:]\nreturn f\"db{binary}db\"",
+      "extracted_body": "    binary = bin(decimal)[2:]\n    return f\"db{binary}db\"",
+      "latency_ms": 1599
+    },
+    {
+      "task_id": "HumanEval/80",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def is_happy(s):\n    if len(s) < 3:\n        return False\n    for i in range(len(s) - 2):\n        if s[i] == s[i+1] or s[i] == s[i+2] or s[i+1] == s[i+2]:\n            return False\n    return True",
+      "extracted_body": "    if len(s) < 3:\n        return False\n    for i in range(len(s) - 2):\n        if s[i] == s[i+1] or s[i] == s[i+2] or s[i+1] == s[i+2]:\n            return False\n    return True",
+      "latency_ms": 3833
+    },
+    {
+      "task_id": "HumanEval/81",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def numerical_letter_grade(grades):\n    letter_grades = []\n    for gpa in grades:\n        if gpa == 4.0:\n            letter_grades.append('A+')\n        elif gpa > 3.7:\n            letter_grades.append('A')\n        elif gpa > 3.3:\n            letter_grades.append('A-')\n        elif gpa > 3.0:\n            letter_grades.append('B+')\n        elif gpa > 2.7:\n            letter_grades.append('B')\n        elif gpa > 2.3:\n            letter_grades.append('B-')\n        elif gpa > 2.0:\n            letter_grades.append('C+')\n        elif gpa > 1.7:\n            letter_grades.append('C')\n        elif gpa > 1.3:\n            letter_grades.append('C-')\n        elif gpa > 1.0:\n            letter_grades.append('D+')\n        elif gpa > 0.7:\n            letter_grades.append('D')\n        elif gpa > 0.0:\n            letter_grades.append('D-')\n        else:\n            letter_grades.append('E')\n    return letter_grades",
+      "extracted_body": "    letter_grades = []\n    for gpa in grades:\n        if gpa == 4.0:\n            letter_grades.append('A+')\n        elif gpa > 3.7:\n            letter_grades.append('A')\n        elif gpa > 3.3:\n            letter_grades.append('A-')\n        elif gpa > 3.0:\n            letter_grades.append('B+')\n        elif gpa > 2.7:\n            letter_grades.append('B')\n        elif gpa > 2.3:\n            letter_grades.append('B-')\n        elif gpa > 2.0:\n            letter_grades.append('C+')\n        elif gpa > 1.7:\n            letter_grades.append('C')\n        elif gpa > 1.3:\n            letter_grades.append('C-')\n        elif gpa > 1.0:\n            letter_grades.append('D+')\n        elif gpa > 0.7:\n            letter_grades.append('D')\n        elif gpa > 0.0:\n            letter_grades.append('D-')\n        else:\n            letter_grades.append('E')\n    return letter_grades",
+      "latency_ms": 13019
+    },
+    {
+      "task_id": "HumanEval/82",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpthoypcqi.py\", line 24\n    return is_prime(len(string))\n    ^\nSyntaxError: 'return' outside function\n",
+      "raw_output": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nreturn is_prime(len(string))",
+      "extracted_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nreturn is_prime(len(string))",
+      "latency_ms": 5161
+    },
+    {
+      "task_id": "HumanEval/83",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if n == 1:\n    return 1\nelse:\n    return 18 * 10 ** (n - 2)",
+      "extracted_body": "    if n == 1:\n        return 1\n    else:\n        return 18 * 10 ** (n - 2)",
+      "latency_ms": 1669
+    },
+    {
+      "task_id": "HumanEval/84",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpbexigam2.py\", line 34, in <module>\n    check(solve)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpbexigam2.py\", line 23, in check\n    assert candidate(1000) == \"1\", \"Error\"\nAssertionError: Error\n",
+      "raw_output": "sum_of_digits = sum(int(digit) for digit in bin(N)[2:])\nreturn bin(sum_of_digits)[2:]",
+      "extracted_body": "    sum_of_digits = sum(int(digit) for digit in bin(N)[2:])\n    return bin(sum_of_digits)[2:]",
+      "latency_ms": 1994
+    },
+    {
+      "task_id": "HumanEval/85",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "total = 0\nfor i in range(1, len(lst), 2):\n    if lst[i] % 2 == 0:\n        total += lst[i]\nreturn total",
+      "extracted_body": "    total = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 0:\n            total += lst[i]\n    return total",
+      "latency_ms": 2064
+    },
+    {
+      "task_id": "HumanEval/86",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def anti_shuffle(s):\n    return ' '.join(''.join(sorted(word)) for word in s.split(' '))",
+      "extracted_body": "    return ' '.join(''.join(sorted(word)) for word in s.split(' '))",
+      "latency_ms": 1769
+    },
+    {
+      "task_id": "HumanEval/87",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def get_row(lst, x):\n    result = []\n    for i, row in enumerate(lst):\n        cols = [j for j, val in enumerate(row) if val == x]\n        cols.sort(reverse=True)\n        result.extend([(i, j) for j in cols])\n    return result",
+      "extracted_body": "    result = []\n    for i, row in enumerate(lst):\n        cols = [j for j, val in enumerate(row) if val == x]\n        cols.sort(reverse=True)\n        result.extend([(i, j) for j in cols])\n    return result",
+      "latency_ms": 4162
+    },
+    {
+      "task_id": "HumanEval/88",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not array:\n    return []\nsum_first_last = array[0] + array[-1]\nif sum_first_last % 2 == 0:\n    return sorted(array, reverse=True)\nelse:\n    return sorted(array)",
+      "extracted_body": "    if not array:\n        return []\n    sum_first_last = array[0] + array[-1]\n    if sum_first_last % 2 == 0:\n        return sorted(array, reverse=True)\n    else:\n        return sorted(array)",
+      "latency_ms": 3236
+    },
+    {
+      "task_id": "HumanEval/89",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def encrypt(s):\n    result = []\n    for char in s:\n        if char.isalpha():\n            shift = 2 * 2\n            base = ord('a') if char.islower() else ord('A')\n            rotated_char = chr((ord(char) - base + shift) % 26 + base)\n            result.append(rotated_char)\n        else:\n            result.append(char)\n    return ''.join(result)",
+      "extracted_body": "    result = []\n    for char in s:\n        if char.isalpha():\n            shift = 2 * 2\n            base = ord('a') if char.islower() else ord('A')\n            rotated_char = chr((ord(char) - base + shift) % 26 + base)\n            result.append(rotated_char)\n        else:\n            result.append(char)\n    return ''.join(result)",
+      "latency_ms": 4608
+    },
+    {
+      "task_id": "HumanEval/90",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if len(lst) < 2:\n    return None\nunique_elements = sorted(set(lst))\nreturn unique_elements[1] if len(unique_elements) > 1 else None",
+      "extracted_body": "    if len(lst) < 2:\n        return None\n    unique_elements = sorted(set(lst))\n    return unique_elements[1] if len(unique_elements) > 1 else None",
+      "latency_ms": 2265
+    },
+    {
+      "task_id": "HumanEval/91",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5_7twali.py\", line 39, in <module>\n    check(is_bored)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp5_7twali.py\", line 29, in check\n    assert candidate(\"I love It !\") == 1, \"Test 3\"\nAssertionError: Test 3\n",
+      "raw_output": "def is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        stripped_sentence = sentence.strip()\n        if stripped_sentence.startswith(\"I \"):\n            count += 1\n    return count",
+      "extracted_body": "    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        stripped_sentence = sentence.strip()\n        if stripped_sentence.startswith(\"I \"):\n            count += 1\n    return count",
+      "latency_ms": 3488
+    },
+    {
+      "task_id": "HumanEval/92",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def any_int(x, y, z):\n    if all(isinstance(i, int) for i in (x, y, z)):\n        return x + y == z or x + z == y or y + z == x\n    return False",
+      "extracted_body": "    if all(isinstance(i, int) for i in (x, y, z)):\n        return x + y == z or x + z == y or y + z == x\n    return False",
+      "latency_ms": 3098
+    },
+    {
+      "task_id": "HumanEval/93",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def encode(message):\n    vowels = 'aeiou'\n    shifted_vowels = {v: chr(ord(v) + 2) for v in vowels}\n    shifted_vowels.update({v.upper(): shifted_vowels[v].upper() for v in vowels})\n    \n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            if char in shifted_vowels:\n                char = shifted_vowels[char]\n            char = char.swapcase()\n        encoded_message.append(char)\n    \n    return ''.join(encoded_message)",
+      "extracted_body": "    vowels = 'aeiou'\n    shifted_vowels = {v: chr(ord(v) + 2) for v in vowels}\n    shifted_vowels.update({v.upper(): shifted_vowels[v].upper() for v in vowels})\n    \n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            if char in shifted_vowels:\n                char = shifted_vowels[char]\n            char = char.swapcase()\n        encoded_message.append(char)\n    \n    return ''.join(encoded_message)",
+      "latency_ms": 5685
+    },
+    {
+      "task_id": "HumanEval/94",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpxck7m4mk.py\", line 33\n    return sum(int(digit) for digit in str(largest_prime))\n    ^\nSyntaxError: 'return' outside function\n",
+      "raw_output": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nlargest_prime = 0\nfor num in lst:\n    if is_prime(num) and num > largest_prime:\n        largest_prime = num\n\nreturn sum(int(digit) for digit in str(largest_prime))",
+      "extracted_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nlargest_prime = 0\nfor num in lst:\n    if is_prime(num) and num > largest_prime:\n        largest_prime = num\n\nreturn sum(int(digit) for digit in str(largest_prime))",
+      "latency_ms": 8083
+    },
+    {
+      "task_id": "HumanEval/95",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not dict:\n    return False\n\nall_lower = all_upper = True\n\nfor key in dict.keys():\n    if not isinstance(key, str):\n        return False\n    if not key.islower():\n        all_lower = False\n    if not key.isupper():\n        all_upper = False\n\nreturn all_lower or all_upper",
+      "extracted_body": "    if not dict:\n        return False\n    \n    all_lower = all_upper = True\n    \n    for key in dict.keys():\n        if not isinstance(key, str):\n            return False\n        if not key.islower():\n            all_lower = False\n        if not key.isupper():\n            all_upper = False\n    \n    return all_lower or all_upper",
+      "latency_ms": 3939
+    },
+    {
+      "task_id": "HumanEval/96",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def count_up_to(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    primes = []\n    for i in range(2, n):\n        if is_prime(i):\n            primes.append(i)\n    return primes",
+      "extracted_body": "    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    primes = []\n    for i in range(2, n):\n        if is_prime(i):\n            primes.append(i)\n    return primes",
+      "latency_ms": 4745
+    },
+    {
+      "task_id": "HumanEval/97",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def multiply(a, b):\n    return (a % 10) * (b % 10)",
+      "extracted_body": "    return (a % 10) * (b % 10)",
+      "latency_ms": 1728
+    },
+    {
+      "task_id": "HumanEval/98",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "count = 0\nfor i in range(0, len(s), 2):\n    if s[i] in 'AEIOU':\n        count += 1\nreturn count",
+      "extracted_body": "    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in 'AEIOU':\n            count += 1\n    return count",
+      "latency_ms": 2219
+    },
+    {
+      "task_id": "HumanEval/99",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def closest_integer(value):\n    num = float(value)\n    if num > 0:\n        return int(num + 0.5)\n    else:\n        return int(num - 0.5)",
+      "extracted_body": "    num = float(value)\n    if num > 0:\n        return int(num + 0.5)\n    else:\n        return int(num - 0.5)",
+      "latency_ms": 2831
+    },
+    {
+      "task_id": "HumanEval/100",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def make_a_pile(n):\n    pile = []\n    current_stones = n\n    for _ in range(n):\n        pile.append(current_stones)\n        if n % 2 == 0:\n            current_stones += 2\n        else:\n            current_stones += 2\n    return pile",
+      "extracted_body": "    pile = []\n    current_stones = n\n    for _ in range(n):\n        pile.append(current_stones)\n        if n % 2 == 0:\n            current_stones += 2\n        else:\n            current_stones += 2\n    return pile",
+      "latency_ms": 3725
+    },
+    {
+      "task_id": "HumanEval/101",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def words_string(s):\n    return [word.strip() for word in s.replace(',', ' ').split() if word]",
+      "extracted_body": "    return [word.strip() for word in s.replace(',', ' ').split() if word]",
+      "latency_ms": 1769
+    },
+    {
+      "task_id": "HumanEval/102",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if x > y:\n    return -1\nfor num in range(y, x - 1, -1):\n    if num % 2 == 0:\n        return num\nreturn -1",
+      "extracted_body": "    if x > y:\n        return -1\n    for num in range(y, x - 1, -1):\n        if num % 2 == 0:\n            return num\n    return -1",
+      "latency_ms": 2515
+    },
+    {
+      "task_id": "HumanEval/103",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if n > m:\n    return -1\navg = round((n + m) / 2)\nreturn bin(avg)",
+      "extracted_body": "    if n > m:\n        return -1\n    avg = round((n + m) / 2)\n    return bin(avg)",
+      "latency_ms": 2042
+    },
+    {
+      "task_id": "HumanEval/104",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def unique_digits(x):\n    def has_no_even_digit(n):\n        return all(int(digit) % 2 != 0 for digit in str(n))\n    \n    result = [num for num in x if has_no_even_digit(num)]\n    return sorted(result)",
+      "extracted_body": "    def has_no_even_digit(n):\n        return all(int(digit) % 2 != 0 for digit in str(n))\n    \n    result = [num for num in x if has_no_even_digit(num)]\n    return sorted(result)",
+      "latency_ms": 3100
+    },
+    {
+      "task_id": "HumanEval/105",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def by_length(arr):\n    num_to_name = {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\",\n        5: \"Five\",\n        6: \"Six\",\n        7: \"Seven\",\n        8: \"Eight\",\n        9: \"Nine\"\n    }\n    filtered_sorted_reversed = sorted((x for x in arr if 1 <= x <= 9), reverse=True)\n    return [num_to_name[num] for num in filtered_sorted_reversed]",
+      "extracted_body": "    num_to_name = {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\",\n        5: \"Five\",\n        6: \"Six\",\n        7: \"Seven\",\n        8: \"Eight\",\n        9: \"Nine\"\n    }\n    filtered_sorted_reversed = sorted((x for x in arr if 1 <= x <= 9), reverse=True)\n    return [num_to_name[num] for num in filtered_sorted_reversed]",
+      "latency_ms": 6734
+    },
+    {
+      "task_id": "HumanEval/106",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def f(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            # Calculate factorial for even i\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # Calculate sum for odd i\n            summation = sum(range(1, i + 1))\n            result.append(summation)\n    return result",
+      "extracted_body": "    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            # Calculate factorial for even i\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # Calculate sum for odd i\n            summation = sum(range(1, i + 1))\n            result.append(summation)\n    return result",
+      "latency_ms": 5312
+    },
+    {
+      "task_id": "HumanEval/107",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def even_odd_palindrome(n):\n    even_count = 0\n    odd_count = 0\n    for i in range(1, n + 1):\n        if str(i) == str(i)[::-1]:\n            if i % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n    return (even_count, odd_count)",
+      "extracted_body": "    even_count = 0\n    odd_count = 0\n    for i in range(1, n + 1):\n        if str(i) == str(i)[::-1]:\n            if i % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n    return (even_count, odd_count)",
+      "latency_ms": 4837
+    },
+    {
+      "task_id": "HumanEval/108",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def count_nums(arr):\n    def sum_of_digits(num):\n        if num < 0:\n            return sum(int(d) for d in str(num)[1:]) - int(str(num)[1])\n        else:\n            return sum(int(d) for d in str(num))\n    \n    return sum(1 for x in arr if sum_of_digits(x) > 0)",
+      "extracted_body": "    def sum_of_digits(num):\n        if num < 0:\n            return sum(int(d) for d in str(num)[1:]) - int(str(num)[1])\n        else:\n            return sum(int(d) for d in str(num))\n    \n    return sum(1 for x in arr if sum_of_digits(x) > 0)",
+      "latency_ms": 4029
+    },
+    {
+      "task_id": "HumanEval/109",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8_tasz2c.py\", line 51, in <module>\n    check(move_one_ball)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp8_tasz2c.py\", line 43, in check\n    assert candidate([3, 4, 5, 1, 2])==True, \"This prints if this assert fails 1 (good for debugging!)\"\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+      "raw_output": "def move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    count = 0\n    for i in range(1, n):\n        if arr[i] < arr[i - 1]:\n            count += 1\n    if arr[0] > arr[-1]:\n        count += 1\n    return count <= 1",
+      "extracted_body": "    if not arr:\n        return True\n    n = len(arr)\n    count = 0\n    for i in range(1, n):\n        if arr[i] < arr[i - 1]:\n            count += 1\n    if arr[0] > arr[-1]:\n        count += 1\n    return count <= 1",
+      "latency_ms": 5099
+    },
+    {
+      "task_id": "HumanEval/110",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpidx7acrz.py\", line 34, in <module>\n    check(exchange)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpidx7acrz.py\", line 23, in check\n    assert candidate([1, 2, 3, 4], [1, 5, 3, 4]) == \"NO\"\nAssertionError\n",
+      "raw_output": "def exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or (odd_in_lst1 and even_in_lst2) else \"NO\"",
+      "extracted_body": "    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or (odd_in_lst1 and even_in_lst2) else \"NO\"",
+      "latency_ms": 4512
+    },
+    {
+      "task_id": "HumanEval/111",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def histogram(test):\n    if not test:\n        return {}\n    letters = test.split()\n    count = {}\n    for letter in letters:\n        count[letter] = count.get(letter, 0) + 1\n    max_count = max(count.values())\n    return {k: v for k, v in count.items() if v == max_count}",
+      "extracted_body": "    if not test:\n        return {}\n    letters = test.split()\n    count = {}\n    for letter in letters:\n        count[letter] = count.get(letter, 0) + 1\n    max_count = max(count.values())\n    return {k: v for k, v in count.items() if v == max_count}",
+      "latency_ms": 4099
+    },
+    {
+      "task_id": "HumanEval/112",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "result = ''.join([char for char in s if char not in c])\nis_palindrome = result == result[::-1]\nreturn (result, is_palindrome)",
+      "extracted_body": "    result = ''.join([char for char in s if char not in c])\n    is_palindrome = result == result[::-1]\n    return (result, is_palindrome)",
+      "latency_ms": 2376
+    },
+    {
+      "task_id": "HumanEval/113",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def odd_count(lst):\n    result = []\n    for s in lst:\n        odd_count = sum(1 for char in s if int(char) % 2 != 0)\n        result.append(f\"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.\")\n    return result",
+      "extracted_body": "    result = []\n    for s in lst:\n        odd_count = sum(1 for char in s if int(char) % 2 != 0)\n        result.append(f\"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.\")\n    return result",
+      "latency_ms": 4298
+    },
+    {
+      "task_id": "HumanEval/114",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "min_sum = float('inf')\ncurrent_sum = 0\nfor num in nums:\n    current_sum = min(num, current_sum + num)\n    min_sum = min(min_sum, current_sum)\nreturn min_sum",
+      "extracted_body": "    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    return min_sum",
+      "latency_ms": 2520
+    },
+    {
+      "task_id": "HumanEval/115",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpykae_lo2.py\", line 56, in <module>\n    check(max_fill)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpykae_lo2.py\", line 52, in check\n    assert candidate([[1,1,1,1], [1,1,1,1]], 9) == 2, \"Error\"\nAssertionError: Error\n",
+      "raw_output": "total_water = sum(sum(row) for row in grid)\nreturn math.ceil(total_water / capacity)",
+      "extracted_body": "    total_water = sum(sum(row) for row in grid)\n    return math.ceil(total_water / capacity)",
+      "latency_ms": 2704
+    },
+    {
+      "task_id": "HumanEval/116",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def sort_array(arr):\n    return sorted(arr, key=lambda x: (bin(x).count('1'), x))",
+      "extracted_body": "    return sorted(arr, key=lambda x: (bin(x).count('1'), x))",
+      "latency_ms": 2070
+    },
+    {
+      "task_id": "HumanEval/117",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def select_words(s, n):\n    vowels = set('aeiouAEIOU')\n    words = s.split()\n    result = []\n\n    for word in words:\n        consonant_count = sum(1 for char in word if char not in vowels)\n        if consonant_count == n:\n            result.append(word)\n\n    return result",
+      "extracted_body": "    vowels = set('aeiouAEIOU')\n    words = s.split()\n    result = []\n\n    for word in words:\n        consonant_count = sum(1 for char in word if char not in vowels)\n        if consonant_count == n:\n            result.append(word)\n\n    return result",
+      "latency_ms": 3994
+    },
+    {
+      "task_id": "HumanEval/118",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmphmntve1p.py\", line 18\n    length = len(word)\nIndentationError: unexpected indent\n",
+      "raw_output": "vowels = \"aeiouAEIOU\"\n    length = len(word)\n    for i in range(length - 2, 0, -1):\n        if word[i] in vowels and word[i - 1] not in vowels and word[i + 1] not in vowels:\n            return word[i]\n    return \"\"",
+      "extracted_body": "    vowels = \"aeiouAEIOU\"\n        length = len(word)\n        for i in range(length - 2, 0, -1):\n            if word[i] in vowels and word[i - 1] not in vowels and word[i + 1] not in vowels:\n                return word[i]\n        return \"\"",
+      "latency_ms": 3916
+    },
+    {
+      "task_id": "HumanEval/119",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def match_parens(lst):\n    def is_balanced(s):\n        balance = 0\n        for char in s:\n            if char == '(':\n                balance += 1\n            else:\n                balance -= 1\n            if balance < 0:\n                return False\n        return balance == 0\n\n    s1, s2 = lst\n    return 'Yes' if is_balanced(s1 + s2) or is_balanced(s2 + s1) else 'No'",
+      "extracted_body": "    def is_balanced(s):\n        balance = 0\n        for char in s:\n            if char == '(':\n                balance += 1\n            else:\n                balance -= 1\n            if balance < 0:\n                return False\n        return balance == 0\n\n    s1, s2 = lst\n    return 'Yes' if is_balanced(s1 + s2) or is_balanced(s2 + s1) else 'No'",
+      "latency_ms": 5533
+    },
+    {
+      "task_id": "HumanEval/120",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppmuvs4xr.py\", line 48, in <module>\n    check(maximum)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmppmuvs4xr.py\", line 44, in check\n    assert candidate([1, 2, 3, -23, 243, -400, 0], 0) == []\nAssertionError\n",
+      "raw_output": "def maximum(arr, k):\n    return sorted(arr)[-k:]",
+      "extracted_body": "    return sorted(arr)[-k:]",
+      "latency_ms": 1766
+    },
+    {
+      "task_id": "HumanEval/121",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def solution(lst):\n    return sum(x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0)",
+      "extracted_body": "    return sum(x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0)",
+      "latency_ms": 2148
+    },
+    {
+      "task_id": "HumanEval/122",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpj5s3dwpc.py\", line 31, in <module>\n    check(add_elements)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpj5s3dwpc.py\", line 21, in check\n    assert candidate([1,-2,-3,41,57,76,87,88,99], 3) == -4\nAssertionError\n",
+      "raw_output": "sum(x for x in arr[:k] if -100 < x < 100)",
+      "extracted_body": "    sum(x for x in arr[:k] if -100 < x < 100)",
+      "latency_ms": 1851
+    },
+    {
+      "task_id": "HumanEval/123",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def get_odd_collatz(n):\n    odd_numbers = set()\n    while n != 1:\n        if n % 2 != 0:\n            odd_numbers.add(n)\n        n = 3 * n + 1 if n % 2 else n // 2\n    odd_numbers.add(1)  # Add 1 to the set as it's always the last odd number in the sequence\n    return sorted(odd_numbers)",
+      "extracted_body": "    odd_numbers = set()\n    while n != 1:\n        if n % 2 != 0:\n            odd_numbers.add(n)\n        n = 3 * n + 1 if n % 2 else n // 2\n    odd_numbers.add(1)  # Add 1 to the set as it's always the last odd number in the sequence\n    return sorted(odd_numbers)",
+      "latency_ms": 5314
+    },
+    {
+      "task_id": "HumanEval/124",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def valid_date(date):\n    if not date:\n        return False\n\n    parts = date.split('-')\n    if len(parts) != 3:\n        return False\n\n    month, day, year = parts\n\n    if not (month.isdigit() and day.isdigit() and year.isdigit()):\n        return False\n\n    month = int(month)\n    day = int(day)\n    year = int(year)\n\n    if month < 1 or month > 12:\n        return False\n\n    if month in {1, 3, 5, 7, 8, 10, 12}:\n        if day < 1 or day > 31:\n            return False\n    elif month in {4, 6, 9, 11}:\n        if day < 1 or day > 30:\n            return False\n    elif month == 2:\n        if day < 1 or day > 29:\n            return False\n\n    return True",
+      "extracted_body": "    if not date:\n        return False\n\n    parts = date.split('-')\n    if len(parts) != 3:\n        return False\n\n    month, day, year = parts\n\n    if not (month.isdigit() and day.isdigit() and year.isdigit()):\n        return False\n\n    month = int(month)\n    day = int(day)\n    year = int(year)\n\n    if month < 1 or month > 12:\n        return False\n\n    if month in {1, 3, 5, 7, 8, 10, 12}:\n        if day < 1 or day > 31:\n            return False\n    elif month in {4, 6, 9, 11}:\n        if day < 1 or day > 30:\n            return False\n    elif month == 2:\n        if day < 1 or day > 29:\n            return False\n\n    return True",
+      "latency_ms": 10483
+    },
+    {
+      "task_id": "HumanEval/125",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if ' ' in txt:\n    return txt.split()\nelif ',' in txt:\n    return txt.split(',')\nelse:\n    return sum(1 for char in txt if char.islower() and (ord(char) - ord('a')) % 2 == 1)",
+      "extracted_body": "    if ' ' in txt:\n        return txt.split()\n    elif ',' in txt:\n        return txt.split(',')\n    else:\n        return sum(1 for char in txt if char.islower() and (ord(char) - ord('a')) % 2 == 1)",
+      "latency_ms": 3247
+    },
+    {
+      "task_id": "HumanEval/126",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "for i in range(1, len(lst)):\n    if lst[i] < lst[i - 1]:\n        return False\nif any(lst.count(x) > 2 for x in set(lst)):\n    return False\nreturn True",
+      "extracted_body": "    for i in range(1, len(lst)):\n        if lst[i] < lst[i - 1]:\n            return False\n    if any(lst.count(x) > 2 for x in set(lst)):\n        return False\n    return True",
+      "latency_ms": 3380
+    },
+    {
+      "task_id": "HumanEval/127",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpuxqgpuwi.py\", line 40\n    return \"NO\"\n    ^\nSyntaxError: 'return' outside function\n",
+      "raw_output": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nstart1, end1 = interval1\nstart2, end2 = interval2\nintersection_start = max(start1, start2)\nintersection_end = min(end1, end2)\nif intersection_start > intersection_end:\n    return \"NO\"\nintersection_length = intersection_end - intersection_start + 1\nreturn \"YES\" if is_prime(intersection_length) else \"NO\"",
+      "extracted_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nstart1, end1 = interval1\nstart2, end2 = interval2\nintersection_start = max(start1, start2)\nintersection_end = min(end1, end2)\nif intersection_start > intersection_end:\n    return \"NO\"\nintersection_length = intersection_end - intersection_start + 1\nreturn \"YES\" if is_prime(intersection_length) else \"NO\"",
+      "latency_ms": 9010
+    },
+    {
+      "task_id": "HumanEval/128",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not arr:\n    return None\nproduct_of_signs = 1\nsum_of_magnitudes = 0\nfor num in arr:\n    sum_of_magnitudes += abs(num)\n    if num == 0:\n        product_of_signs = 0\n    else:\n        product_of_signs *= (1 if num > 0 else -1)\nreturn sum_of_magnitudes * product_of_signs",
+      "extracted_body": "    if not arr:\n        return None\n    product_of_signs = 1\n    sum_of_magnitudes = 0\n    for num in arr:\n        sum_of_magnitudes += abs(num)\n        if num == 0:\n            product_of_signs = 0\n        else:\n            product_of_signs *= (1 if num > 0 else -1)\n    return sum_of_magnitudes * product_of_signs",
+      "latency_ms": 4528
+    },
+    {
+      "task_id": "HumanEval/129",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpiay90ug1.py\", line 57, in <module>\n    check(minPath)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpiay90ug1.py\", line 41, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\nAssertionError\n",
+      "raw_output": "def minPath(grid, k):\n    from heapq import heappush, heappop\n    N = len(grid)\n    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n    min_path = None\n\n    def is_valid(x, y):\n        return 0 <= x < N and 0 <= y < N\n\n    for start_x in range(N):\n        for start_y in range(N):\n            pq = [(grid[start_x][start_y], [(start_x, start_y)])]\n            while pq:\n                current_value, path = heappop(pq)\n                if len(path) == k:\n                    current_path_values = [grid[x][y] for x, y in path]\n                    if min_path is None or current_path_values < min_path:\n                        min_path = current_path_values\n                    continue\n                last_x, last_y = path[-1]\n                for dx, dy in directions:\n                    new_x, new_y = last_x + dx, last_y + dy\n                    if is_valid(new_x, new_y) and (new_x, new_y) not in path:\n                        new_path = path + [(new_x, new_y)]\n                        new_value = current_value + grid[new_x][new_y]\n                        heappush(pq, (new_value, new_path))\n\n    return min_path",
+      "extracted_body": "    from heapq import heappush, heappop\n    N = len(grid)\n    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n    min_path = None",
+      "latency_ms": 14798
+    },
+    {
+      "task_id": "HumanEval/130",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpshqbhwr5.py\", line 48, in <module>\n    check(tri)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpshqbhwr5.py\", line 34, in check\n    assert candidate(3) == [1, 3, 2.0, 8.0]\nAssertionError\n",
+      "raw_output": "def tri(n):\n    if n < 0:\n        return []\n    sequence = [1] * (n + 1)\n    sequence[0] = 3\n    for i in range(2, n + 1):\n        if i % 2 == 0:\n            sequence[i] = 1 + i // 2\n        else:\n            sequence[i] = sequence[i - 1] + sequence[i - 2] + (sequence[i + 1] if i + 1 <= n else 3)\n    return sequence",
+      "extracted_body": "    if n < 0:\n        return []\n    sequence = [1] * (n + 1)\n    sequence[0] = 3\n    for i in range(2, n + 1):\n        if i % 2 == 0:\n            sequence[i] = 1 + i // 2\n        else:\n            sequence[i] = sequence[i - 1] + sequence[i - 2] + (sequence[i + 1] if i + 1 <= n else 3)\n    return sequence",
+      "latency_ms": 6375
+    },
+    {
+      "task_id": "HumanEval/131",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "product = 1\nhas_odd = False\nfor digit in str(n):\n    d = int(digit)\n    if d % 2 == 1:\n        product *= d\n        has_odd = True\nreturn product if has_odd else 0",
+      "extracted_body": "    product = 1\n    has_odd = False\n    for digit in str(n):\n        d = int(digit)\n        if d % 2 == 1:\n            product *= d\n            has_odd = True\n    return product if has_odd else 0",
+      "latency_ms": 2857
+    },
+    {
+      "task_id": "HumanEval/132",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpea77_llv.py\", line 49, in <module>\n    check(is_nested)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpea77_llv.py\", line 39, in check\n    assert candidate('[[]][[') == True\nAssertionError\n",
+      "raw_output": "def is_nested(string):\n    depth = 0\n    max_depth = 0\n    for char in string:\n        if char == '[':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif char == ']':\n            depth -= 1\n        if depth < 0:\n            return False\n    return max_depth > 1 and depth == 0",
+      "extracted_body": "    depth = 0\n    max_depth = 0\n    for char in string:\n        if char == '[':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif char == ']':\n            depth -= 1\n        if depth < 0:\n            return False\n    return max_depth > 1 and depth == 0",
+      "latency_ms": 4435
+    },
+    {
+      "task_id": "HumanEval/133",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def sum_squares(lst):\n    import math\n    return sum(math.ceil(x) ** 2 for x in lst)",
+      "extracted_body": "    import math\n    return sum(math.ceil(x) ** 2 for x in lst)",
+      "latency_ms": 2102
+    },
+    {
+      "task_id": "HumanEval/134",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not txt or txt[-1].isspace():\n    return False\nreturn txt[-1].isalpha() and (len(txt) == 1 or txt[-2].isspace())",
+      "extracted_body": "    if not txt or txt[-1].isspace():\n        return False\n    return txt[-1].isalpha() and (len(txt) == 1 or txt[-2].isspace())",
+      "latency_ms": 2503
+    },
+    {
+      "task_id": "HumanEval/135",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def can_arrange(arr):\n    for i in range(len(arr) - 1, 0, -1):\n        if arr[i] < arr[i - 1]:\n            return i\n    return -1",
+      "extracted_body": "    for i in range(len(arr) - 1, 0, -1):\n        if arr[i] < arr[i - 1]:\n            return i\n    return -1",
+      "latency_ms": 2632
+    },
+    {
+      "task_id": "HumanEval/136",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "largest_negative = None\nsmallest_positive = None\n\nfor num in lst:\n    if num < 0:\n        if largest_negative is None or num > largest_negative:\n            largest_negative = num\n    elif num > 0:\n        if smallest_positive is None or num < smallest_positive:\n            smallest_positive = num\n\nreturn (largest_negative, smallest_positive)",
+      "extracted_body": "    largest_negative = None\n    smallest_positive = None\n    \n    for num in lst:\n        if num < 0:\n            if largest_negative is None or num > largest_negative:\n                largest_negative = num\n        elif num > 0:\n            if smallest_positive is None or num < smallest_positive:\n                smallest_positive = num\n    \n    return (largest_negative, smallest_positive)",
+      "latency_ms": 4218
+    },
+    {
+      "task_id": "HumanEval/137",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def compare_one(a, b):\n    def convert_to_float(value):\n        if isinstance(value, str):\n            value = value.replace(',', '.')\n        return float(value)\n\n    float_a = convert_to_float(a)\n    float_b = convert_to_float(b)\n\n    if float_a > float_b:\n        return a\n    elif float_b > float_a:\n        return b\n    else:\n        return None",
+      "extracted_body": "    def convert_to_float(value):\n        if isinstance(value, str):\n            value = value.replace(',', '.')\n        return float(value)\n\n    float_a = convert_to_float(a)\n    float_b = convert_to_float(b)\n\n    if float_a > float_b:\n        return a\n    elif float_b > float_a:\n        return b\n    else:\n        return None",
+      "latency_ms": 4478
+    },
+    {
+      "task_id": "HumanEval/138",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def is_equal_to_sum_even(n):\n    return n >= 8 and n % 2 == 0",
+      "extracted_body": "    return n >= 8 and n % 2 == 0",
+      "latency_ms": 1545
+    },
+    {
+      "task_id": "HumanEval/139",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def special_factorial(n):\n    from math import factorial\n    result = 1\n    for i in range(1, n + 1):\n        result *= factorial(i)\n    return result",
+      "extracted_body": "    from math import factorial\n    result = 1\n    for i in range(1, n + 1):\n        result *= factorial(i)\n    return result",
+      "latency_ms": 2329
+    },
+    {
+      "task_id": "HumanEval/140",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpi3t9vujo.py\", line 44, in <module>\n    check(fix_spaces)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpi3t9vujo.py\", line 36, in check\n    assert candidate(\"Yellow Yellow  Dirty  Fellow\") == \"Yellow_Yellow__Dirty__Fellow\", \"This prints if this assert fails 3 (good for debugging!)\"\nAssertionError: This prints if this assert fails 3 (good for debugging!)\n",
+      "raw_output": "def fix_spaces(text):\n    result = []\n    space_count = 0\n    for char in text:\n        if char == ' ':\n            space_count += 1\n        else:\n            if space_count == 1:\n                result.append('_')\n            elif space_count > 1:\n                result.append('-')\n            result.append(char)\n            space_count = 0\n    if space_count == 1:\n        result.append('_')\n    elif space_count > 1:\n        result.append('-')\n    return ''.join(result)",
+      "extracted_body": "    result = []\n    space_count = 0\n    for char in text:\n        if char == ' ':\n            space_count += 1\n        else:\n            if space_count == 1:\n                result.append('_')\n            elif space_count > 1:\n                result.append('-')\n            result.append(char)\n            space_count = 0\n    if space_count == 1:\n        result.append('_')\n    elif space_count > 1:\n        result.append('-')\n    return ''.join(result)",
+      "latency_ms": 5482
+    },
+    {
+      "task_id": "HumanEval/141",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def file_name_check(file_name):\n    parts = file_name.split('.')\n    if len(parts) != 2:\n        return 'No'\n    name, extension = parts\n    if not name or not name[0].isalpha():\n        return 'No'\n    if sum(c.isdigit() for c in name) > 3:\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+      "extracted_body": "    parts = file_name.split('.')\n    if len(parts) != 2:\n        return 'No'\n    name, extension = parts\n    if not name or not name[0].isalpha():\n        return 'No'\n    if sum(c.isdigit() for c in name) > 3:\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+      "latency_ms": 5450
+    },
+    {
+      "task_id": "HumanEval/142",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def sum_squares(lst):\n    total = 0\n    for i, x in enumerate(lst):\n        if i % 3 == 0:\n            total += x ** 2\n        elif i % 4 == 0:\n            total += x ** 3\n        else:\n            total += x\n    return total",
+      "extracted_body": "    total = 0\n    for i, x in enumerate(lst):\n        if i % 3 == 0:\n            total += x ** 2\n        elif i % 4 == 0:\n            total += x ** 3\n        else:\n            total += x\n    return total",
+      "latency_ms": 3989
+    },
+    {
+      "task_id": "HumanEval/143",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp6722cey8.py\", line 37\n    return ' '.join(prime_length_words)\n    ^\nSyntaxError: 'return' outside function\n",
+      "raw_output": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nwords = sentence.split()\nprime_length_words = [word for word in words if is_prime(len(word))]\nreturn ' '.join(prime_length_words)",
+      "extracted_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nwords = sentence.split()\nprime_length_words = [word for word in words if is_prime(len(word))]\nreturn ' '.join(prime_length_words)",
+      "latency_ms": 6485
+    },
+    {
+      "task_id": "HumanEval/144",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzw1ipw_f.py\", line 39, in <module>\n    check(simplify)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzw1ipw_f.py\", line 20, in check\n    assert candidate(\"1/5\", \"5/1\") == True, 'test1'\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpzw1ipw_f.py\", line 14, in simplify\n    result = Fraction(x) * Fraction(n)\nNameError: name 'Fraction' is not defined\n",
+      "raw_output": "from fractions import Fraction\n\ndef simplify(x, n):\n    result = Fraction(x) * Fraction(n)\n    return result.denominator == 1",
+      "extracted_body": "    result = Fraction(x) * Fraction(n)\n    return result.denominator == 1",
+      "latency_ms": 2160
+    },
+    {
+      "task_id": "HumanEval/145",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp981a0qd5.py\", line 33, in <module>\n    check(order_by_points)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp981a0qd5.py\", line 21, in check\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\nAssertionError\n",
+      "raw_output": "def order_by_points(nums):\n    def digit_sum(n):\n        return sum(int(digit) for digit in str(abs(n)))\n    \n    return sorted(nums, key=lambda x: (digit_sum(x), nums.index(x)))",
+      "extracted_body": "    def digit_sum(n):\n        return sum(int(digit) for digit in str(abs(n)))\n    \n    return sorted(nums, key=lambda x: (digit_sum(x), nums.index(x)))",
+      "latency_ms": 2665
+    },
+    {
+      "task_id": "HumanEval/146",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def specialFilter(nums):\n    count = 0\n    for num in nums:\n        if num > 10:\n            str_num = str(abs(num))\n            if int(str_num[0]) % 2 != 0 and int(str_num[-1]) % 2 != 0:\n                count += 1\n    return count",
+      "extracted_body": "    count = 0\n    for num in nums:\n        if num > 10:\n            str_num = str(abs(num))\n            if int(str_num[0]) % 2 != 0 and int(str_num[-1]) % 2 != 0:\n                count += 1\n    return count",
+      "latency_ms": 3774
+    },
+    {
+      "task_id": "HumanEval/147",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpigm2foov.py\", line 37, in <module>\n    check(get_max_triples)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpigm2foov.py\", line 31, in check\n    assert candidate(5) == 1\nAssertionError\n",
+      "raw_output": "def get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    for num in a:\n        count[num % 3] += 1\n    result = (count[0] * (count[0] - 1) * (count[0] - 2) // 6) + \\\n             (count[1] * count[2] * (count[1] - 1) // 2) + \\\n             (count[2] * count[1] * (count[2] - 1) // 2) + \\\n             (count[1] * (count[1] - 1) * (count[1] - 2) // 6) + \\\n             (count[2] * (count[2] - 1) * (count[2] - 2) // 6) + \\\n             (count[0] * count[0] * (count[0] - 1) // 2) * count[1] + \\\n             (count[0] * count[0] * (count[0] - 1) // 2) * count[2]\n    return result",
+      "extracted_body": "    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    for num in a:\n        count[num % 3] += 1\n    result = (count[0] * (count[0] - 1) * (count[0] - 2) // 6) + \\\n             (count[1] * count[2] * (count[1] - 1) // 2) + \\\n             (count[2] * count[1] * (count[2] - 1) // 2) + \\\n             (count[1] * (count[1] - 1) * (count[1] - 2) // 6) + \\\n             (count[2] * (count[2] - 1) * (count[2] - 2) // 6) + \\\n             (count[0] * count[0] * (count[0] - 1) // 2) * count[1] + \\\n             (count[0] * count[0] * (count[0] - 1) // 2) * count[2]\n    return result",
+      "latency_ms": 13198
+    },
+    {
+      "task_id": "HumanEval/148",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nif planet1 not in planets or planet2 not in planets:\n    return ()\nindex1, index2 = planets.index(planet1), planets.index(planet2)\nif index1 > index2:\n    index1, index2 = index2, index1\nreturn tuple(planets[index1 + 1:index2])",
+      "extracted_body": "    planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\n    if planet1 not in planets or planet2 not in planets:\n        return ()\n    index1, index2 = planets.index(planet1), planets.index(planet2)\n    if index1 > index2:\n        index1, index2 = index2, index1\n    return tuple(planets[index1 + 1:index2])",
+      "latency_ms": 5623
+    },
+    {
+      "task_id": "HumanEval/149",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def sorted_list_sum(lst):\n    # Filter out strings with odd lengths\n    even_length_strings = [s for s in lst if len(s) % 2 == 0]\n    # Sort the list first alphabetically, then by length\n    even_length_strings.sort()\n    even_length_strings.sort(key=len)\n    return even_length_strings",
+      "extracted_body": "    # Filter out strings with odd lengths\n    even_length_strings = [s for s in lst if len(s) % 2 == 0]\n    # Sort the list first alphabetically, then by length\n    even_length_strings.sort()\n    even_length_strings.sort(key=len)\n    return even_length_strings",
+      "latency_ms": 4030
+    },
+    {
+      "task_id": "HumanEval/150",
+      "sample": 0,
+      "passed": false,
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpn_vdk4qg.py\", line 25\n    return x\n    ^\nSyntaxError: 'return' outside function\n",
+      "raw_output": "def is_prime(num):\n    if num <= 1:\n        return False\n    if num <= 3:\n        return True\n    if num % 2 == 0 or num % 3 == 0:\n        return False\n    i = 5\n    while i * i <= num:\n        if num % i == 0 or num % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nif is_prime(n):\n    return x\nelse:\n    return y",
+      "extracted_body": "    if num <= 1:\n        return False\n    if num <= 3:\n        return True\n    if num % 2 == 0 or num % 3 == 0:\n        return False\n    i = 5\n    while i * i <= num:\n        if num % i == 0 or num % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nif is_prime(n):\n    return x\nelse:\n    return y",
+      "latency_ms": 5483
+    },
+    {
+      "task_id": "HumanEval/151",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def double_the_difference(lst):\n    return sum(x**2 for x in lst if isinstance(x, int) and x >= 0 and x % 2 != 0)",
+      "extracted_body": "    return sum(x**2 for x in lst if isinstance(x, int) and x >= 0 and x % 2 != 0)",
+      "latency_ms": 2465
+    },
+    {
+      "task_id": "HumanEval/152",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def compare(game, guess):\n    return [abs(g - s) for g, s in zip(game, guess)]",
+      "extracted_body": "    return [abs(g - s) for g, s in zip(game, guess)]",
+      "latency_ms": 2365
+    },
+    {
+      "task_id": "HumanEval/153",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def Strongest_Extension(class_name, extensions):\n    strongest_extension = None\n    max_strength = float('-inf')\n    \n    for extension in extensions:\n        cap = sum(1 for c in extension if c.isupper())\n        sm = sum(1 for c in extension if c.islower())\n        strength = cap - sm\n        \n        if strength > max_strength:\n            max_strength = strength\n            strongest_extension = extension\n    \n    return f\"{class_name}.{strongest_extension}\"",
+      "extracted_body": "    strongest_extension = None\n    max_strength = float('-inf')\n    \n    for extension in extensions:\n        cap = sum(1 for c in extension if c.isupper())\n        sm = sum(1 for c in extension if c.islower())\n        strength = cap - sm\n        \n        if strength > max_strength:\n            max_strength = strength\n            strongest_extension = extension\n    \n    return f\"{class_name}.{strongest_extension}\"",
+      "latency_ms": 5798
+    },
+    {
+      "task_id": "HumanEval/154",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def cycpattern_check(a, b):\n    if len(b) > len(a):\n        return False\n    b_double = b + b\n    return any(a[i:i+len(b)] in b_double for i in range(len(a) - len(b) + 1))",
+      "extracted_body": "    if len(b) > len(a):\n        return False\n    b_double = b + b\n    return any(a[i:i+len(b)] in b_double for i in range(len(a) - len(b) + 1))",
+      "latency_ms": 3162
+    },
+    {
+      "task_id": "HumanEval/155",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "even_count = 0\nodd_count = 0\nfor digit in str(abs(num)):\n    if int(digit) % 2 == 0:\n        even_count += 1\n    else:\n        odd_count += 1\nreturn (even_count, odd_count)",
+      "extracted_body": "    even_count = 0\n    odd_count = 0\n    for digit in str(abs(num)):\n        if int(digit) % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    return (even_count, odd_count)",
+      "latency_ms": 3069
+    },
+    {
+      "task_id": "HumanEval/156",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def int_to_mini_roman(number):\n    roman_numerals = [\n        (1000, 'm'), (900, 'cm'), (500, 'd'), (400, 'cd'),\n        (100, 'c'), (90, 'xc'), (50, 'l'), (40, 'xl'),\n        (10, 'x'), (9, 'ix'), (5, 'v'), (4, 'iv'), (1, 'i')\n    ]\n    result = ''\n    for value, numeral in roman_numerals:\n        while number >= value:\n            result += numeral\n            number -= value\n    return result",
+      "extracted_body": "    roman_numerals = [\n        (1000, 'm'), (900, 'cm'), (500, 'd'), (400, 'cd'),\n        (100, 'c'), (90, 'xc'), (50, 'l'), (40, 'xl'),\n        (10, 'x'), (9, 'ix'), (5, 'v'), (4, 'iv'), (1, 'i')\n    ]\n    result = ''\n    for value, numeral in roman_numerals:\n        while number >= value:\n            result += numeral\n            number -= value\n    return result",
+      "latency_ms": 7060
+    },
+    {
+      "task_id": "HumanEval/157",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "sides = sorted([a, b, c])\nreturn sides[0]**2 + sides[1]**2 == sides[2]**2",
+      "extracted_body": "    sides = sorted([a, b, c])\n    return sides[0]**2 + sides[1]**2 == sides[2]**2",
+      "latency_ms": 1973
+    },
+    {
+      "task_id": "HumanEval/158",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def find_max(words):\n    max_unique_count = -1\n    result_word = None\n    for word in words:\n        unique_chars = set(word)\n        unique_count = len(unique_chars)\n        if unique_count > max_unique_count or (unique_count == max_unique_count and (result_word is None or word < result_word)):\n            max_unique_count = unique_count\n            result_word = word\n    return result_word",
+      "extracted_body": "    max_unique_count = -1\n    result_word = None\n    for word in words:\n        unique_chars = set(word)\n        unique_count = len(unique_chars)\n        if unique_count > max_unique_count or (unique_count == max_unique_count and (result_word is None or word < result_word)):\n            max_unique_count = unique_count\n            result_word = word\n    return result_word",
+      "latency_ms": 4469
+    },
+    {
+      "task_id": "HumanEval/159",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if need <= remaining:\n    return [number + need, remaining - need]\nelse:\n    return [number + remaining, 0]",
+      "extracted_body": "    if need <= remaining:\n        return [number + need, remaining - need]\n    else:\n        return [number + remaining, 0]",
+      "latency_ms": 2725
+    },
+    {
+      "task_id": "HumanEval/160",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp66i8lpgj.py\", line 53, in <module>\n    check(do_algebra)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp66i8lpgj.py\", line 45, in check\n    assert candidate(['+', '*', '-'], [2, 3, 4, 5]) == 9\nAssertionError\n",
+      "raw_output": "result = operand[0]\nfor i in range(len(operator)):\n    if operator[i] == '+':\n        result += operand[i + 1]\n    elif operator[i] == '-':\n        result -= operand[i + 1]\n    elif operator[i] == '*':\n        result *= operand[i + 1]\n    elif operator[i] == '//':\n        result //= operand[i + 1]\n    elif operator[i] == '**':\n        result **= operand[i + 1]\nreturn result",
+      "extracted_body": "    result = operand[0]\n    for i in range(len(operator)):\n        if operator[i] == '+':\n            result += operand[i + 1]\n        elif operator[i] == '-':\n            result -= operand[i + 1]\n        elif operator[i] == '*':\n            result *= operand[i + 1]\n        elif operator[i] == '//':\n            result //= operand[i + 1]\n        elif operator[i] == '**':\n            result **= operand[i + 1]\n    return result",
+      "latency_ms": 5626
+    },
+    {
+      "task_id": "HumanEval/161",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "def solve(s):\n    if any(c.isalpha() for c in s):\n        return ''.join(c.swapcase() if c.isalpha() else c for c in s)\n    else:\n        return s[::-1]",
+      "extracted_body": "    if any(c.isalpha() for c in s):\n        return ''.join(c.swapcase() if c.isalpha() else c for c in s)\n    else:\n        return s[::-1]",
+      "latency_ms": 2674
+    },
+    {
+      "task_id": "HumanEval/162",
+      "sample": 0,
+      "passed": true,
+      "error": "",
+      "raw_output": "if not text:\n    return None\nimport hashlib\nreturn hashlib.md5(text.encode()).hexdigest()",
+      "extracted_body": "    if not text:\n        return None\n    import hashlib\n    return hashlib.md5(text.encode()).hexdigest()",
+      "latency_ms": 1455
+    },
+    {
+      "task_id": "HumanEval/163",
+      "sample": 0,
+      "passed": false,
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpln10g6g0.py\", line 29, in <module>\n    check(generate_integers)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpln10g6g0.py\", line 19, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\nAssertionError: Test 1\n",
+      "raw_output": "if a > b:\n    a, b = b, a\nreturn [x for x in range(a, b + 1) if x % 2 == 0]",
+      "extracted_body": "    if a > b:\n        a, b = b, a\n    return [x for x in range(a, b + 1) if x % 2 == 0]",
+      "latency_ms": 2323
+    }
+  ]
+}

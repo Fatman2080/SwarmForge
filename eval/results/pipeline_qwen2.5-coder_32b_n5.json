@@ -1,0 +1,2312 @@
+{
+  "model": "qwen2.5-coder:32b",
+  "pipeline": "6-stage",
+  "candidates": 5,
+  "gen_temp": 0.6,
+  "tests_enabled": true,
+  "repair_enabled": true,
+  "total_tasks": 164,
+  "passed": 156,
+  "pass_rate": 95.12,
+  "direct_pass": 149,
+  "repaired_pass": 7,
+  "elapsed_s": 7092.4,
+  "task_results": [
+    {
+      "task_id": "HumanEval/0",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+      "error": "",
+      "elapsed_s": 40.2
+    },
+    {
+      "task_id": "HumanEval/1",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    current_group = []\n    balance = 0\n\n    for char in paren_string.replace(' ', ''):\n        if char == '(':\n            balance += 1\n        elif char == ')':\n            balance -= 1\n\n        current_group.append(char)\n\n        if balance == 0 and current_group:\n            result.append(''.join(current_group))\n            current_group = []\n\n    return result",
+      "error": "",
+      "elapsed_s": 58.5
+    },
+    {
+      "task_id": "HumanEval/2",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return number - int(number)",
+      "error": "",
+      "elapsed_s": 48.7
+    },
+    {
+      "task_id": "HumanEval/3",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False",
+      "error": "",
+      "elapsed_s": 51.2
+    },
+    {
+      "task_id": "HumanEval/4",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+      "error": "",
+      "elapsed_s": 25.1
+    },
+    {
+      "task_id": "HumanEval/5",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.extend([delimeter, number])\n    return result",
+      "error": "",
+      "elapsed_s": 28.9
+    },
+    {
+      "task_id": "HumanEval/6",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for group in paren_string.split():\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    return result",
+      "error": "",
+      "elapsed_s": 47.1
+    },
+    {
+      "task_id": "HumanEval/7",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [s for s in strings if substring in s]",
+      "error": "",
+      "elapsed_s": 28.3
+    },
+    {
+      "task_id": "HumanEval/8",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 1
+      },
+      "selected_body": "    total_sum = 0\n    total_product = 1\n    for number in numbers:\n        total_sum += number\n        total_product *= number\n    return total_sum, total_product",
+      "error": "",
+      "elapsed_s": 23.9
+    },
+    {
+      "task_id": "HumanEval/9",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    current_max = float('-inf')\n    result = []\n    for number in numbers:\n        current_max = max(current_max, number)\n        result.append(current_max)\n    return result",
+      "error": "",
+      "elapsed_s": 48.4
+    },
+    {
+      "task_id": "HumanEval/10",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not string:\n        return string\n    for i in range(len(string)):\n        if is_palindrome(string[i:]):\n            return string + string[:i][::-1]\n    return string + string[::-1]",
+      "error": "",
+      "elapsed_s": 37.6
+    },
+    {
+      "task_id": "HumanEval/11",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for i in range(len(a)):\n        result.append('1' if a[i] != b[i] else '0')\n    return ''.join(result)",
+      "error": "",
+      "elapsed_s": 23.1
+    },
+    {
+      "task_id": "HumanEval/12",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not strings:\n        return None\n    return max(strings, key=len)",
+      "error": "",
+      "elapsed_s": 21.7
+    },
+    {
+      "task_id": "HumanEval/13",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    while b:\n        a, b = b, a % b\n    return a",
+      "error": "",
+      "elapsed_s": 24.0
+    },
+    {
+      "task_id": "HumanEval/14",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [string[:i] for i in range(1, len(string) + 1)]",
+      "error": "",
+      "elapsed_s": 25.5
+    },
+    {
+      "task_id": "HumanEval/15",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return ' '.join(str(i) for i in range(n + 1))",
+      "error": "",
+      "elapsed_s": 21.8
+    },
+    {
+      "task_id": "HumanEval/16",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return len(set(string.lower()))",
+      "error": "",
+      "elapsed_s": 13.9
+    },
+    {
+      "task_id": "HumanEval/17",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+      "error": "",
+      "elapsed_s": 36.5
+    },
+    {
+      "task_id": "HumanEval/18",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    count = 0\n    start = 0\n    \n    while start <= len(string) - len(substring):\n        pos = string.find(substring, start)\n        if pos != -1:\n            count += 1\n            start = pos + 1\n        else:\n            break\n    \n    return count",
+      "error": "",
+      "elapsed_s": 38.0
+    },
+    {
+      "task_id": "HumanEval/19",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    num_to_word = {\n        0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four',\n        5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'\n    }\n    word_to_num = {word: num for num, word in num_to_word.items()}\n    \n    words = numbers.split()\n    sorted_numbers = sorted(words, key=lambda word: word_to_num[word])\n    return ' '.join(sorted_numbers)",
+      "error": "",
+      "elapsed_s": 48.4
+    },
+    {
+      "task_id": "HumanEval/20",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    numbers.sort()\n    min_diff = float('inf')\n    closest_pair = (None, None)\n    for i in range(len(numbers) - 1):\n        diff = numbers[i + 1] - numbers[i]\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (numbers[i], numbers[i + 1])\n    return closest_pair",
+      "error": "",
+      "elapsed_s": 53.4
+    },
+    {
+      "task_id": "HumanEval/21",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    return [(num - min_val) / range_val for num in numbers]",
+      "error": "",
+      "elapsed_s": 36.4
+    },
+    {
+      "task_id": "HumanEval/22",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [v for v in values if isinstance(v, int)]",
+      "error": "",
+      "elapsed_s": 43.9
+    },
+    {
+      "task_id": "HumanEval/23",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return len(string)",
+      "error": "",
+      "elapsed_s": 16.4
+    },
+    {
+      "task_id": "HumanEval/24",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    for i in range(n - 1, 0, -1):\n        if n % i == 0:\n            return i",
+      "error": "",
+      "elapsed_s": 28.8
+    },
+    {
+      "task_id": "HumanEval/25",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    factors = []\n    divisor = 2\n    while n >= 2:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors",
+      "error": "",
+      "elapsed_s": 34.3
+    },
+    {
+      "task_id": "HumanEval/26",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    seen = set()\n    duplicates = set()\n    for number in numbers:\n        if number in seen:\n            duplicates.add(number)\n        seen.add(number)\n    return [number for number in numbers if number not in duplicates]",
+      "error": "",
+      "elapsed_s": 46.1
+    },
+    {
+      "task_id": "HumanEval/27",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for char in string:\n        if char.islower():\n            result.append(char.upper())\n        else:\n            result.append(char.lower())\n    return ''.join(result)",
+      "error": "",
+      "elapsed_s": 57.5
+    },
+    {
+      "task_id": "HumanEval/28",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return ''.join(strings)",
+      "error": "",
+      "elapsed_s": 25.0
+    },
+    {
+      "task_id": "HumanEval/29",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [s for s in strings if s.startswith(prefix)]",
+      "error": "",
+      "elapsed_s": 30.2
+    },
+    {
+      "task_id": "HumanEval/30",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [num for num in l if num > 0]",
+      "error": "",
+      "elapsed_s": 32.1
+    },
+    {
+      "task_id": "HumanEval/31",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True",
+      "error": "",
+      "elapsed_s": 57.3
+    },
+    {
+      "task_id": "HumanEval/32",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def poly(x: float):\n        return sum(coeff * math.pow(x, i) for i, coeff in enumerate(xs))\n    \n    low, high = -1000, 1000\n    while poly(low) * poly(high) > 0:\n        low *= 2\n        high *= 2\n    \n    while high - low > 1e-10:\n        mid = (low + high) / 2\n        if poly(mid) * poly(low) <= 0:\n            high = mid\n        else:\n            low = mid\n    \n    return (low + high) / 2",
+      "error": "",
+      "elapsed_s": 67.2
+    },
+    {
+      "task_id": "HumanEval/33",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    indices = [i for i in range(len(l)) if i % 3 == 0]\n    sorted_values = sorted(l[i] for i in indices)\n    result = l[:]\n    for idx, value in zip(indices, sorted_values):\n        result[idx] = value\n    return result",
+      "error": "",
+      "elapsed_s": 51.8
+    },
+    {
+      "task_id": "HumanEval/34",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sorted(set(l))",
+      "error": "",
+      "elapsed_s": 38.3
+    },
+    {
+      "task_id": "HumanEval/35",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not l:\n        return None\n    max_val = l[0]\n    for num in l:\n        if num > max_val:\n            max_val = num\n    return max_val",
+      "error": "",
+      "elapsed_s": 35.6
+    },
+    {
+      "task_id": "HumanEval/36",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    count = 0\n    for i in range(n):\n        if i % 11 == 0 or i % 13 == 0:\n            count += str(i).count('7')\n    return count",
+      "error": "",
+      "elapsed_s": 38.5
+    },
+    {
+      "task_id": "HumanEval/37",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    even_indices = [l[i] for i in range(0, len(l), 2)]\n    even_indices.sort()\n    result = l[:]\n    for i, value in enumerate(even_indices):\n        result[i * 2] = value\n    return result",
+      "error": "",
+      "elapsed_s": 49.4
+    },
+    {
+      "task_id": "HumanEval/38",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    groups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)",
+      "error": "",
+      "elapsed_s": 56.0
+    },
+    {
+      "task_id": "HumanEval/39",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib1, fib2 = 0, 1\n    count = 0\n    while True:\n        fib = fib1 + fib2\n        fib1, fib2 = fib2, fib\n        if is_prime(fib):\n            count += 1\n            if count == n:\n                return fib",
+      "error": "",
+      "elapsed_s": 69.9
+    },
+    {
+      "task_id": "HumanEval/40",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    l.sort()\n    n = len(l)\n    for i in range(n - 2):\n        if i > 0 and l[i] == l[i - 1]:\n            continue\n        left, right = i + 1, n - 1\n        while left < right:\n            total = l[i] + l[left] + l[right]\n            if total == 0:\n                return True\n            elif total < 0:\n                left += 1\n            else:\n                right -= 1\n    return False",
+      "error": "",
+      "elapsed_s": 51.0
+    },
+    {
+      "task_id": "HumanEval/41",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return n * n",
+      "error": "",
+      "elapsed_s": 31.0
+    },
+    {
+      "task_id": "HumanEval/42",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [x + 1 for x in l]",
+      "error": "",
+      "elapsed_s": 25.8
+    },
+    {
+      "task_id": "HumanEval/43",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    seen = set()\n    for num in l:\n        if -num in seen:\n            return True\n        seen.add(num)\n    return False",
+      "error": "",
+      "elapsed_s": 39.0
+    },
+    {
+      "task_id": "HumanEval/44",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if x == 0:\n        return '0'\n    digits = []\n    while x:\n        digits.append(int(x % base))\n        x //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "error": "",
+      "elapsed_s": 85.7
+    },
+    {
+      "task_id": "HumanEval/45",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return 0.5 * a * h",
+      "error": "",
+      "elapsed_s": 38.7
+    },
+    {
+      "task_id": "HumanEval/46",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n == 0 or n == 1 or n == 3:\n        return 0\n    if n == 2:\n        return 2\n    a, b, c, d = 0, 0, 2, 0\n    for _ in range(4, n + 1):\n        a, b, c, d = b, c, d, a + b + c + d\n    return d",
+      "error": "",
+      "elapsed_s": 56.6
+    },
+    {
+      "task_id": "HumanEval/47",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    l.sort()\n    n = len(l)\n    mid = n // 2\n    if n % 2 == 0:\n        return (l[mid - 1] + l[mid]) / 2\n    else:\n        return l[mid]",
+      "error": "",
+      "elapsed_s": 34.6
+    },
+    {
+      "task_id": "HumanEval/48",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return text == text[::-1]",
+      "error": "",
+      "elapsed_s": 26.1
+    },
+    {
+      "task_id": "HumanEval/49",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return pow(2, n, p)",
+      "error": "",
+      "elapsed_s": 26.5
+    },
+    {
+      "task_id": "HumanEval/50",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return \"\".join([chr(((ord(ch) - 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])",
+      "error": "",
+      "elapsed_s": 30.4
+    },
+    {
+      "task_id": "HumanEval/51",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    vowels = \"aeiouAEIOU\"\n    return ''.join(char for char in text if char not in vowels)",
+      "error": "",
+      "elapsed_s": 47.0
+    },
+    {
+      "task_id": "HumanEval/52",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return all(x < t for x in l)",
+      "error": "",
+      "elapsed_s": 37.1
+    },
+    {
+      "task_id": "HumanEval/53",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return x + y",
+      "error": "",
+      "elapsed_s": 31.8
+    },
+    {
+      "task_id": "HumanEval/54",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return set(s0) == set(s1)",
+      "error": "",
+      "elapsed_s": 32.8
+    },
+    {
+      "task_id": "HumanEval/55",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b",
+      "error": "",
+      "elapsed_s": 42.7
+    },
+    {
+      "task_id": "HumanEval/56",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    balance = 0\n    for bracket in brackets:\n        if bracket == '<':\n            balance += 1\n        elif bracket == '>':\n            balance -= 1\n        if balance < 0:\n            return False\n    return balance == 0",
+      "error": "",
+      "elapsed_s": 37.1
+    },
+    {
+      "task_id": "HumanEval/57",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not l:\n        return True\n    increasing = decreasing = True\n    for i in range(1, len(l)):\n        if l[i] > l[i - 1]:\n            decreasing = False\n        elif l[i] < l[i - 1]:\n            increasing = False\n    return increasing or decreasing",
+      "error": "",
+      "elapsed_s": 55.6
+    },
+    {
+      "task_id": "HumanEval/58",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sorted(set(l1) & set(l2))",
+      "error": "",
+      "elapsed_s": 67.5
+    },
+    {
+      "task_id": "HumanEval/59",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    factor = 2\n    while n > 1:\n        if n % factor == 0:\n            n //= factor\n        else:\n            factor += 1\n    return factor",
+      "error": "",
+      "elapsed_s": 45.0
+    },
+    {
+      "task_id": "HumanEval/60",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return n * (n + 1) // 2",
+      "error": "",
+      "elapsed_s": 39.4
+    },
+    {
+      "task_id": "HumanEval/61",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    balance = 0\n    for bracket in brackets:\n        if bracket == '(':\n            balance += 1\n        elif bracket == ')':\n            balance -= 1\n        if balance < 0:\n            return False\n    return balance == 0",
+      "error": "",
+      "elapsed_s": 31.6
+    },
+    {
+      "task_id": "HumanEval/62",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [i * xs[i] for i in range(1, len(xs))]",
+      "error": "",
+      "elapsed_s": 30.4
+    },
+    {
+      "task_id": "HumanEval/63",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n == 0 or n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    a, b, c = 0, 0, 1\n    for _ in range(3, n + 1):\n        a, b, c = b, c, a + b + c\n    return c",
+      "error": "",
+      "elapsed_s": 44.3
+    },
+    {
+      "task_id": "HumanEval/64",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    vowels = \"aeiou\"\n    count = sum(1 for char in s.lower() if char in vowels)\n    if s.endswith('y') or s.endswith('Y'):\n        count += 1\n    return count",
+      "error": "",
+      "elapsed_s": 75.6
+    },
+    {
+      "task_id": "HumanEval/65",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    \"\"\"Circular shift the digits of the integer x, shift the digits right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n    x_str = str(x)\n    n = len(x_str)\n    if shift > n:\n        return x_str[::-1]\n    shift = shift % n\n    return x_str[-shift:] + x_str[:-shift]",
+      "error": "",
+      "elapsed_s": 54.6
+    },
+    {
+      "task_id": "HumanEval/66",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sum(ord(c) for c in s if c.isupper())",
+      "error": "",
+      "elapsed_s": 28.5
+    },
+    {
+      "task_id": "HumanEval/67",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    parts = s.split()\n    apples = int(parts[0])\n    oranges = int(parts[3])\n    return n - apples - oranges",
+      "error": "",
+      "elapsed_s": 37.8
+    },
+    {
+      "task_id": "HumanEval/68",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    smallest_even = None\n    smallest_index = -1\n    for index, value in enumerate(arr):\n        if value % 2 == 0:\n            if smallest_even is None or value < smallest_even:\n                smallest_even = value\n                smallest_index = index\n    if smallest_even is not None:\n        return [smallest_even, smallest_index]\n    else:\n        return []",
+      "error": "",
+      "elapsed_s": 57.2
+    },
+    {
+      "task_id": "HumanEval/69",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    from collections import Counter\n    freq = Counter(lst)\n    max_val = -1\n    for num, count in freq.items():\n        if num <= count and num > max_val:\n            max_val = num\n    return max_val",
+      "error": "",
+      "elapsed_s": 62.2
+    },
+    {
+      "task_id": "HumanEval/70",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    while lst:\n        result.append(min(lst))\n        lst.remove(min(lst))\n        if lst:\n            result.append(max(lst))\n            lst.remove(max(lst))\n    return result",
+      "error": "",
+      "elapsed_s": 50.7
+    },
+    {
+      "task_id": "HumanEval/71",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if a + b > c and a + c > b and b + c > a:\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    else:\n        return -1",
+      "error": "",
+      "elapsed_s": 55.5
+    },
+    {
+      "task_id": "HumanEval/72",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return q == q[::-1] and sum(q) <= w",
+      "error": "",
+      "elapsed_s": 44.2
+    },
+    {
+      "task_id": "HumanEval/73",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    changes = 0\n    left = 0\n    right = len(arr) - 1\n    while left < right:\n        if arr[left] != arr[right]:\n            changes += 1\n        left += 1\n        right -= 1\n    return changes",
+      "error": "",
+      "elapsed_s": 54.2
+    },
+    {
+      "task_id": "HumanEval/74",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+      "error": "",
+      "elapsed_s": 57.9
+    },
+    {
+      "task_id": "HumanEval/75",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+      "error": "",
+      "elapsed_s": 54.8
+    },
+    {
+      "task_id": "HumanEval/76",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x",
+      "error": "",
+      "elapsed_s": 35.8
+    },
+    {
+      "task_id": "HumanEval/77",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if a == 0:\n        return True\n    abs_a = abs(a)\n    cube_root = round(abs_a ** (1/3))\n    return cube_root ** 3 == abs_a",
+      "error": "",
+      "elapsed_s": 50.4
+    },
+    {
+      "task_id": "HumanEval/78",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}\n    return sum(1 for digit in num if digit in prime_hex_digits)",
+      "error": "",
+      "elapsed_s": 43.7
+    },
+    {
+      "task_id": "HumanEval/79",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    binary = bin(decimal)[2:]\n    return f\"db{binary}db\"",
+      "error": "",
+      "elapsed_s": 37.6
+    },
+    {
+      "task_id": "HumanEval/80",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if len(s) < 3:\n        return False\n    for i in range(len(s) - 2):\n        if len(set(s[i:i+3])) != 3:\n            return False\n    return True",
+      "error": "",
+      "elapsed_s": 42.8
+    },
+    {
+      "task_id": "HumanEval/81",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    letter_grades = []\n    for gpa in grades:\n        if gpa == 4.0:\n            letter_grades.append('A+')\n        elif gpa > 3.7:\n            letter_grades.append('A')\n        elif gpa > 3.3:\n            letter_grades.append('A-')\n        elif gpa > 3.0:\n            letter_grades.append('B+')\n        elif gpa > 2.7:\n            letter_grades.append('B')\n        elif gpa > 2.3:\n            letter_grades.append('B-')\n        elif gpa > 2.0:\n            letter_grades.append('C+')\n        elif gpa > 1.7:\n            letter_grades.append('C')\n        elif gpa > 1.3:\n            letter_grades.append('C-')\n        elif gpa > 1.0:\n            letter_grades.append('D+')\n        elif gpa > 0.7:\n            letter_grades.append('D')\n        elif gpa > 0.0:\n            letter_grades.append('D-')\n        else:\n            letter_grades.append('E')\n    return letter_grades",
+      "error": "",
+      "elapsed_s": 97.0
+    },
+    {
+      "task_id": "HumanEval/82",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 4
+      },
+      "selected_body": "    def is_prime(n):\n        if n <= 1:\n            return False\n        if n <= 3:\n            return True\n        if n % 2 == 0 or n % 3 == 0:\n            return False\n        i = 5\n        while i * i <= n:\n            if n % i == 0 or n % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n\n    return is_prime(len(string))",
+      "error": "",
+      "elapsed_s": 55.6
+    },
+    {
+      "task_id": "HumanEval/83",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n == 1:\n        return 1\n    else:\n        return 18 * 10 ** (n - 2)",
+      "error": "",
+      "elapsed_s": 40.6
+    },
+    {
+      "task_id": "HumanEval/84",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    binary_sum = sum(int(digit) for digit in bin(N)[2:])\n    return bin(binary_sum)[2:]",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpu_nz_b2v.py\", line 34, in <module>\n    check(solve)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpu_nz_b2v.py\", line 23, in check\n    assert candidate(1000) == \"1\", \"Error\"\nAssertionError: Error\n",
+      "elapsed_s": 53.4
+    },
+    {
+      "task_id": "HumanEval/85",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 0)",
+      "error": "",
+      "elapsed_s": 33.5
+    },
+    {
+      "task_id": "HumanEval/86",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return ' '.join([''.join(sorted(word)) for word in s.split(' ')])",
+      "error": "",
+      "elapsed_s": 38.6
+    },
+    {
+      "task_id": "HumanEval/87",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for row_index, row in enumerate(lst):\n        col_indices = [col_index for col_index, value in enumerate(row) if value == x]\n        col_indices.sort(reverse=True)\n        result.extend([(row_index, col_index) for col_index in col_indices])\n    return result",
+      "error": "",
+      "elapsed_s": 75.5
+    },
+    {
+      "task_id": "HumanEval/88",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not array:\n        return []\n    sum_first_last = array[0] + array[-1]\n    if sum_first_last % 2 == 0:\n        return sorted(array, reverse=True)\n    else:\n        return sorted(array)",
+      "error": "",
+      "elapsed_s": 66.0
+    },
+    {
+      "task_id": "HumanEval/89",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for char in s:\n        if char.isalpha():\n            shift = 2 * 2\n            base = ord('a') if char.islower() else ord('A')\n            new_char = chr((ord(char) - base + shift) % 26 + base)\n            result.append(new_char)\n        else:\n            result.append(char)\n    return ''.join(result)",
+      "error": "",
+      "elapsed_s": 52.5
+    },
+    {
+      "task_id": "HumanEval/90",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if len(lst) < 2:\n        return None\n    unique_elements = set(lst)\n    if len(unique_elements) < 2:\n        return None\n    sorted_elements = sorted(unique_elements)\n    return sorted_elements[1]",
+      "error": "",
+      "elapsed_s": 52.8
+    },
+    {
+      "task_id": "HumanEval/91",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    import re\n    sentences = re.split(r'[.?!]', S)\n    count = 0\n    for sentence in sentences:\n        stripped_sentence = sentence.strip()\n        if stripped_sentence.startswith(\"I \"):\n            count += 1\n    return count",
+      "error": "",
+      "elapsed_s": 87.9
+    },
+    {
+      "task_id": "HumanEval/92",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if all(isinstance(i, int) for i in (x, y, z)):\n        return x + y == z or x + z == y or y + z == x\n    return False",
+      "error": "",
+      "elapsed_s": 56.8
+    },
+    {
+      "task_id": "HumanEval/93",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    vowels = 'aeiou'\n    shifted_vowels = {v: chr(ord(v) + 2) for v in vowels}\n    shifted_vowels.update({v.upper(): shifted_vowels[v].upper() for v in vowels})\n    \n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            if char in shifted_vowels:\n                char = shifted_vowels[char]\n            char = char.swapcase()\n        encoded_message.append(char)\n    \n    return ''.join(encoded_message)",
+      "error": "",
+      "elapsed_s": 116.0
+    },
+    {
+      "task_id": "HumanEval/94",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    def is_prime(n):\n        if n <= 1:\n            return False\n        if n <= 3:\n            return True\n        if n % 2 == 0 or n % 3 == 0:\n            return False\n        i = 5\n        while i * i <= n:\n            if n % i == 0 or n % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n\n    largest_prime = 0\n    for num in lst:\n        if is_prime(num) and num > largest_prime:\n            largest_prime = num\n\n    return sum(int(digit) for digit in str(largest_prime))",
+      "error": "",
+      "elapsed_s": 119.2
+    },
+    {
+      "task_id": "HumanEval/95",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not dict:\n        return False\n    \n    all_lower = all_upper = True\n    \n    for key in dict.keys():\n        if not isinstance(key, str):\n            return False\n        if not key.islower():\n            all_lower = False\n        if not key.isupper():\n            all_upper = False\n    \n    return all_lower or all_upper",
+      "error": "",
+      "elapsed_s": 55.7
+    },
+    {
+      "task_id": "HumanEval/96",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    primes = []\n    for i in range(2, n):\n        if is_prime(i):\n            primes.append(i)\n    return primes",
+      "error": "",
+      "elapsed_s": 53.8
+    },
+    {
+      "task_id": "HumanEval/97",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return (a % 10) * (b % 10)",
+      "error": "",
+      "elapsed_s": 35.5
+    },
+    {
+      "task_id": "HumanEval/98",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in 'AEIOU':\n            count += 1\n    return count",
+      "error": "",
+      "elapsed_s": 30.1
+    },
+    {
+      "task_id": "HumanEval/99",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    num = float(value)\n    if num > 0:\n        return int(num + 0.5)\n    else:\n        return int(num - 0.5)",
+      "error": "",
+      "elapsed_s": 36.1
+    },
+    {
+      "task_id": "HumanEval/100",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    pile = [n]\n    current_stones = n\n    for _ in range(1, n):\n        if current_stones % 2 == 0:\n            current_stones += 2\n        else:\n            current_stones += 2\n        pile.append(current_stones)\n    return pile",
+      "error": "",
+      "elapsed_s": 46.0
+    },
+    {
+      "task_id": "HumanEval/101",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [word.strip() for word in s.replace(',', ' ').split() if word]",
+      "error": "",
+      "elapsed_s": 41.9
+    },
+    {
+      "task_id": "HumanEval/102",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if x > y:\n        return -1\n    for num in range(y, x - 1, -1):\n        if num % 2 == 0:\n            return num\n    return -1",
+      "error": "",
+      "elapsed_s": 38.8
+    },
+    {
+      "task_id": "HumanEval/103",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n > m:\n        return -1\n    avg = round((n + m) / 2)\n    return bin(avg)",
+      "error": "",
+      "elapsed_s": 29.2
+    },
+    {
+      "task_id": "HumanEval/104",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def has_no_even_digit(n):\n        return all(int(digit) % 2 != 0 for digit in str(n))\n    \n    return sorted(filter(has_no_even_digit, x))",
+      "error": "",
+      "elapsed_s": 43.2
+    },
+    {
+      "task_id": "HumanEval/105",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    num_to_name = {1: \"One\", 2: \"Two\", 3: \"Three\", 4: \"Four\", 5: \"Five\", 6: \"Six\", 7: \"Seven\", 8: \"Eight\", 9: \"Nine\"}\n    filtered_sorted_reversed = sorted((x for x in arr if 1 <= x <= 9), reverse=True)\n    return [num_to_name[x] for x in filtered_sorted_reversed]",
+      "error": "",
+      "elapsed_s": 70.5
+    },
+    {
+      "task_id": "HumanEval/106",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            # Calculate factorial for even i\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # Calculate sum for odd i\n            summation = sum(range(1, i + 1))\n            result.append(summation)\n    return result",
+      "error": "",
+      "elapsed_s": 59.1
+    },
+    {
+      "task_id": "HumanEval/107",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def is_palindrome(x):\n        return str(x) == str(x)[::-1]\n\n    even_count = 0\n    odd_count = 0\n\n    for i in range(1, n + 1):\n        if is_palindrome(i):\n            if i % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n\n    return (even_count, odd_count)",
+      "error": "",
+      "elapsed_s": 61.8
+    },
+    {
+      "task_id": "HumanEval/108",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def sum_of_digits(num):\n        is_negative = num < 0\n        num = abs(num)\n        digits = [int(d) for d in str(num)]\n        if is_negative:\n            digits[0] = -digits[0]\n        return sum(digits)\n\n    return sum(1 for x in arr if sum_of_digits(x) > 0)",
+      "error": "",
+      "elapsed_s": 60.2
+    },
+    {
+      "task_id": "HumanEval/109",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 1
+      },
+      "selected_body": "    if not arr:\n        return True\n    n = len(arr)\n    count = 0\n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n        if count > 1:\n            return False\n    return True",
+      "error": "",
+      "elapsed_s": 46.0
+    },
+    {
+      "task_id": "HumanEval/110",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_in_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    return \"YES\" if even_count_in_lst2 >= odd_count else \"NO\"",
+      "error": "",
+      "elapsed_s": 41.5
+    },
+    {
+      "task_id": "HumanEval/111",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not test:\n        return {}\n    letters = test.split()\n    count = {}\n    for letter in letters:\n        count[letter] = count.get(letter, 0) + 1\n    max_count = max(count.values())\n    return {letter: cnt for letter, cnt in count.items() if cnt == max_count}",
+      "error": "",
+      "elapsed_s": 58.3
+    },
+    {
+      "task_id": "HumanEval/112",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = ''.join([char for char in s if char not in c])\n    is_palindrome = result == result[::-1]\n    return (result, is_palindrome)",
+      "error": "",
+      "elapsed_s": 70.9
+    },
+    {
+      "task_id": "HumanEval/113",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    for s in lst:\n        odd_count = sum(1 for char in s if int(char) % 2 != 0)\n        result.append(f\"the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput.\")\n    return result",
+      "error": "",
+      "elapsed_s": 82.2
+    },
+    {
+      "task_id": "HumanEval/114",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    return min_sum",
+      "error": "",
+      "elapsed_s": 44.4
+    },
+    {
+      "task_id": "HumanEval/115",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 1
+      },
+      "selected_body": "    total_drops = 0\n    for well in grid:\n        total_water = sum(well)\n        total_drops += math.ceil(total_water / capacity)\n    return total_drops",
+      "error": "",
+      "elapsed_s": 53.5
+    },
+    {
+      "task_id": "HumanEval/116",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 2,
+        "s4_repaired": false,
+        "s5_selected_idx": 3
+      },
+      "selected_body": "    return sorted(arr, key=lambda x: (bin(x).count('1'), x))",
+      "error": "",
+      "elapsed_s": 53.3
+    },
+    {
+      "task_id": "HumanEval/117",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    vowels = set('aeiouAEIOU')\n    words = s.split()\n    result = []\n\n    for word in words:\n        consonant_count = sum(1 for char in word if char not in vowels)\n        if consonant_count == n:\n            result.append(word)\n\n    return result",
+      "error": "",
+      "elapsed_s": 41.3
+    },
+    {
+      "task_id": "HumanEval/118",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 3
+      },
+      "selected_body": "    vowels = \"AEIOUaeiou\"\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels and word[i - 1] not in vowels and word[i + 1] not in vowels:\n            return word[i]\n    return \"\"",
+      "error": "",
+      "elapsed_s": 48.7
+    },
+    {
+      "task_id": "HumanEval/119",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def is_balanced(s):\n        balance = 0\n        for char in s:\n            if char == '(':\n                balance += 1\n            else:\n                balance -= 1\n            if balance < 0:\n                return False\n        return balance == 0\n\n    s1, s2 = lst\n    return 'Yes' if is_balanced(s1 + s2) or is_balanced(s2 + s1) else 'No'",
+      "error": "",
+      "elapsed_s": 66.0
+    },
+    {
+      "task_id": "HumanEval/120",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 2,
+        "s4_repaired": false,
+        "s5_selected_idx": 1
+      },
+      "selected_body": "    return sorted(arr, reverse=True)[:k][::-1]",
+      "error": "",
+      "elapsed_s": 33.5
+    },
+    {
+      "task_id": "HumanEval/121",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sum(x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0)",
+      "error": "",
+      "elapsed_s": 40.9
+    },
+    {
+      "task_id": "HumanEval/122",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    return sum(x for x in arr[:k] if -99 <= x <= 99)",
+      "error": "",
+      "elapsed_s": 56.9
+    },
+    {
+      "task_id": "HumanEval/123",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    odd_numbers = set()\n    while n != 1:\n        if n % 2 != 0:\n            odd_numbers.add(n)\n        n = 3 * n + 1 if n % 2 != 0 else n // 2\n    odd_numbers.add(1)  # Add 1 to the set as the sequence always ends with 1\n    return sorted(odd_numbers)",
+      "error": "",
+      "elapsed_s": 50.6
+    },
+    {
+      "task_id": "HumanEval/124",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not date:\n        return False\n\n    parts = date.split('-')\n    if len(parts) != 3:\n        return False\n\n    try:\n        month, day, year = map(int, parts)\n    except ValueError:\n        return False\n\n    if month < 1 or month > 12:\n        return False\n\n    if day < 1:\n        return False\n\n    if month in {1, 3, 5, 7, 8, 10, 12}:\n        if day > 31:\n            return False\n    elif month in {4, 6, 9, 11}:\n        if day > 30:\n            return False\n    elif month == 2:\n        if day > 29:\n            return False\n\n    return True",
+      "error": "",
+      "elapsed_s": 83.5
+    },
+    {
+      "task_id": "HumanEval/125",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 1
+      },
+      "selected_body": "    if ' ' in txt:\n        return txt.split()\n    elif ',' in txt:\n        return txt.split(',')\n    else:\n        return sum(1 for char in txt if char.islower() and (ord(char) - ord('a')) % 2 == 1)",
+      "error": "",
+      "elapsed_s": 47.1
+    },
+    {
+      "task_id": "HumanEval/126",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 4,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    for i in range(1, len(lst)):\n        if lst[i] < lst[i - 1]:\n            return False\n    if any(lst.count(x) > 2 for x in set(lst)):\n        return False\n    return True",
+      "error": "",
+      "elapsed_s": 64.8
+    },
+    {
+      "task_id": "HumanEval/127",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nstart1, end1 = interval1\nstart2, end2 = interval2\nintersection_start = max(start1, start2)\nintersection_end = min(end1, end2)\nif intersection_start > intersection_end:\n    return \"NO\"\nintersection_length = intersection_end - intersection_start + 1\nreturn \"YES\" if is_prime(intersection_length) else \"NO\"",
+      "error": "  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpcr7gazu5.py\", line 40\n    return \"NO\"\n    ^\nSyntaxError: 'return' outside function\n",
+      "elapsed_s": 94.3
+    },
+    {
+      "task_id": "HumanEval/128",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not arr:\n        return None\n    product_of_signs = 1\n    sum_of_magnitudes = 0\n    for num in arr:\n        sum_of_magnitudes += abs(num)\n        if num == 0:\n            product_of_signs = 0\n        else:\n            product_of_signs *= (1 if num > 0 else -1)\n    return sum_of_magnitudes * product_of_signs",
+      "error": "",
+      "elapsed_s": 43.7
+    },
+    {
+      "task_id": "HumanEval/129",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    from heapq import heappush, heappop\n    N = len(grid)\n    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n    min_path = None",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0yrgbl0c.py\", line 57, in <module>\n    check(minPath)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp0yrgbl0c.py\", line 41, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\nAssertionError\n",
+      "elapsed_s": 126.2
+    },
+    {
+      "task_id": "HumanEval/130",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n < 0:\n        return []\n    sequence = [1] * (n + 1)\n    sequence[0] = 3\n    if n >= 1:\n        sequence[1] = 2\n    for i in range(2, n + 1):\n        if i % 2 == 0:\n            sequence[i] = 1 + i // 2\n        else:\n            if i + 1 <= n:\n                sequence[i] = sequence[i - 1] + sequence[i - 2] + sequence[i + 1]\n            else:\n                sequence[i] = sequence[i - 1] + sequence[i - 2] + (1 + (i + 1) // 2)\n    return sequence",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpnnrfoamx.py\", line 53, in <module>\n    check(tri)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpnnrfoamx.py\", line 39, in check\n    assert candidate(3) == [1, 3, 2.0, 8.0]\nAssertionError\n",
+      "elapsed_s": 58.3
+    },
+    {
+      "task_id": "HumanEval/131",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    product = 1\n    has_odd = False\n    for digit in str(n):\n        d = int(digit)\n        if d % 2 == 1:\n            product *= d\n            has_odd = True\n    return product if has_odd else 0",
+      "error": "",
+      "elapsed_s": 16.4
+    },
+    {
+      "task_id": "HumanEval/132",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    depth = 0\n    max_depth = 0\n    for char in string:\n        if char == '[':\n            depth += 1\n            max_depth = max(max_depth, depth)\n        elif char == ']':\n            depth -= 1\n        if depth < 0:\n            return False\n    return max_depth > 1 and depth == 0",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp2e6ek5c6.py\", line 49, in <module>\n    check(is_nested)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmp2e6ek5c6.py\", line 39, in check\n    assert candidate('[[]][[') == True\nAssertionError\n",
+      "elapsed_s": 33.0
+    },
+    {
+      "task_id": "HumanEval/133",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    import math\n    return sum(math.ceil(x) ** 2 for x in lst)",
+      "error": "",
+      "elapsed_s": 11.8
+    },
+    {
+      "task_id": "HumanEval/134",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 2,
+        "s4_repaired": false,
+        "s5_selected_idx": 2
+      },
+      "selected_body": "    if not txt or txt[-1].isspace():\n        return False\n    return txt[-1].isalpha() and (len(txt) == 1 or txt[-2].isspace())",
+      "error": "",
+      "elapsed_s": 16.7
+    },
+    {
+      "task_id": "HumanEval/135",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    for i in range(len(arr) - 1, 0, -1):\n        if arr[i] < arr[i - 1]:\n            return i\n    return -1",
+      "error": "",
+      "elapsed_s": 15.3
+    },
+    {
+      "task_id": "HumanEval/136",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    largest_negative = None\n    smallest_positive = None\n    for num in lst:\n        if num < 0:\n            if largest_negative is None or num > largest_negative:\n                largest_negative = num\n        elif num > 0:\n            if smallest_positive is None or num < smallest_positive:\n                smallest_positive = num\n    return (largest_negative, smallest_positive)",
+      "error": "",
+      "elapsed_s": 24.5
+    },
+    {
+      "task_id": "HumanEval/137",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    def convert_to_float(value):\n        if isinstance(value, str):\n            value = value.replace(',', '.')\n        return float(value)\n\n    float_a = convert_to_float(a)\n    float_b = convert_to_float(b)\n\n    if float_a > float_b:\n        return a\n    elif float_b > float_a:\n        return b\n    else:\n        return None",
+      "error": "",
+      "elapsed_s": 24.2
+    },
+    {
+      "task_id": "HumanEval/138",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if n < 8 or n % 2 != 0:\n        return False\n    return True",
+      "error": "",
+      "elapsed_s": 9.9
+    },
+    {
+      "task_id": "HumanEval/139",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = 1\n    for i in range(1, n + 1):\n        factorial = 1\n        for j in range(1, i + 1):\n            factorial *= j\n        result *= factorial\n    return result",
+      "error": "",
+      "elapsed_s": 15.5
+    },
+    {
+      "task_id": "HumanEval/140",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 3,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = []\n    i = 0\n    while i < len(text):\n        if text[i] == ' ':\n            space_count = 0\n            while i < len(text) and text[i] == ' ':\n                space_count += 1\n                i += 1\n            if space_count > 2:\n                result.append('-')\n            else:\n                result.append('_' * space_count)\n        else:\n            result.append(text[i])\n            i += 1\n    return ''.join(result)",
+      "error": "",
+      "elapsed_s": 30.1
+    },
+    {
+      "task_id": "HumanEval/141",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    parts = file_name.split('.')\n    if len(parts) != 2:\n        return 'No'\n    name, extension = parts\n    if not name or not name[0].isalpha():\n        return 'No'\n    if sum(c.isdigit() for c in name) > 3:\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+      "error": "",
+      "elapsed_s": 27.9
+    },
+    {
+      "task_id": "HumanEval/142",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    total = 0\n    for i, num in enumerate(lst):\n        if i % 3 == 0:\n            total += num ** 2\n        elif i % 4 == 0:\n            total += num ** 3\n        else:\n            total += num\n    return total",
+      "error": "",
+      "elapsed_s": 23.2
+    },
+    {
+      "task_id": "HumanEval/143",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    def is_prime(n):\n        if n <= 1:\n            return False\n        if n <= 3:\n            return True\n        if n % 2 == 0 or n % 3 == 0:\n            return False\n        i = 5\n        while i * i <= n:\n            if n % i == 0 or n % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n\n    words = sentence.split()\n    prime_length_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_length_words)",
+      "error": "",
+      "elapsed_s": 40.2
+    },
+    {
+      "task_id": "HumanEval/144",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 1,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    from fractions import Fraction\n    result = Fraction(x) * Fraction(n)\n    return result.denominator == 1",
+      "error": "",
+      "elapsed_s": 12.6
+    },
+    {
+      "task_id": "HumanEval/145",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sorted(nums, key=lambda x: (sum(int(digit) for digit in str(abs(x))), nums.index(x)))",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpd8z3y9vg.py\", line 30, in <module>\n    check(order_by_points)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpd8z3y9vg.py\", line 18, in check\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\nAssertionError\n",
+      "elapsed_s": 22.6
+    },
+    {
+      "task_id": "HumanEval/146",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    count = 0\n    for num in nums:\n        if num > 10:\n            num_str = str(abs(num))\n            if int(num_str[0]) % 2 != 0 and int(num_str[-1]) % 2 != 0:\n                count += 1\n    return count",
+      "error": "",
+      "elapsed_s": 25.7
+    },
+    {
+      "task_id": "HumanEval/147",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 2,
+        "s4_repaired": false,
+        "s5_selected_idx": 2
+      },
+      "selected_body": "    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count_mod = [0, 0, 0]\n    for num in a:\n        count_mod[num % 3] += 1\n    result = (count_mod[0] * (count_mod[0] - 1) * (count_mod[0] - 2) // 6) + \\\n             (count_mod[1] * (count_mod[1] - 1) * (count_mod[1] - 2) // 6) + \\\n             (count_mod[2] * (count_mod[2] - 1) * (count_mod[2] - 2) // 6) + \\\n             (count_mod[0] * count_mod[1] * count_mod[2])\n    return result",
+      "error": "",
+      "elapsed_s": 59.2
+    },
+    {
+      "task_id": "HumanEval/148",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\n    if planet1 not in planets or planet2 not in planets:\n        return ()\n    index1, index2 = planets.index(planet1), planets.index(planet2)\n    if index1 > index2:\n        index1, index2 = index2, index1\n    return tuple(planets[index1 + 1:index2])",
+      "error": "",
+      "elapsed_s": 29.4
+    },
+    {
+      "task_id": "HumanEval/149",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    even_length_strings = [s for s in lst if len(s) % 2 == 0]\n    return sorted(even_length_strings, key=lambda x: (len(x), x))",
+      "error": "",
+      "elapsed_s": 18.6
+    },
+    {
+      "task_id": "HumanEval/150",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": true,
+        "s5_selected_idx": 5
+      },
+      "selected_body": "    if n <= 1:\n        return y\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return y\n    return x",
+      "error": "",
+      "elapsed_s": 43.2
+    },
+    {
+      "task_id": "HumanEval/151",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return sum(x**2 for x in lst if isinstance(x, int) and x >= 0 and x % 2 != 0)",
+      "error": "",
+      "elapsed_s": 14.0
+    },
+    {
+      "task_id": "HumanEval/152",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    return [abs(g - s) for g, s in zip(game, guess)]",
+      "error": "",
+      "elapsed_s": 15.4
+    },
+    {
+      "task_id": "HumanEval/153",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    strongest_extension = None\n    max_strength = float('-inf')\n    for extension in extensions:\n        cap = sum(1 for c in extension if c.isupper())\n        sm = sum(1 for c in extension if c.islower())\n        strength = cap - sm\n        if strength > max_strength:\n            max_strength = strength\n            strongest_extension = extension\n    return f\"{class_name}.{strongest_extension}\"",
+      "error": "",
+      "elapsed_s": 32.0
+    },
+    {
+      "task_id": "HumanEval/154",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+      "error": "",
+      "elapsed_s": 15.7
+    },
+    {
+      "task_id": "HumanEval/155",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    num_str = str(abs(num))\n    even_count = sum(1 for digit in num_str if int(digit) % 2 == 0)\n    odd_count = sum(1 for digit in num_str if int(digit) % 2 != 0)\n    return even_count, odd_count",
+      "error": "",
+      "elapsed_s": 19.8
+    },
+    {
+      "task_id": "HumanEval/156",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n    symbols = [\"m\", \"cm\", \"d\", \"cd\", \"c\", \"xc\", \"l\", \"xl\", \"x\", \"ix\", \"v\", \"iv\", \"i\"]\n    roman_numeral = \"\"\n    i = 0\n    while number > 0:\n        for _ in range(number // values[i]):\n            roman_numeral += symbols[i]\n            number -= values[i]\n        i += 1\n    return roman_numeral",
+      "error": "",
+      "elapsed_s": 37.4
+    },
+    {
+      "task_id": "HumanEval/157",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    sides = sorted([a, b, c])\n    return sides[0]**2 + sides[1]**2 == sides[2]**2",
+      "error": "",
+      "elapsed_s": 12.6
+    },
+    {
+      "task_id": "HumanEval/158",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    max_unique_count = -1\n    result_word = \"\"\n    for word in words:\n        unique_chars = set(word)\n        unique_count = len(unique_chars)\n        if unique_count > max_unique_count or (unique_count == max_unique_count and word < result_word):\n            max_unique_count = unique_count\n            result_word = word\n    return result_word",
+      "error": "",
+      "elapsed_s": 24.8
+    },
+    {
+      "task_id": "HumanEval/159",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    total_eaten = number + min(need, remaining)\n    carrots_left = max(remaining - need, 0)\n    return [total_eaten, carrots_left]",
+      "error": "",
+      "elapsed_s": 17.3
+    },
+    {
+      "task_id": "HumanEval/160",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    result = operand[0]\n    for i in range(len(operator)):\n        if operator[i] == '+':\n            result += operand[i + 1]\n        elif operator[i] == '-':\n            result -= operand[i + 1]\n        elif operator[i] == '*':\n            result *= operand[i + 1]\n        elif operator[i] == '//':\n            result //= operand[i + 1]\n        elif operator[i] == '**':\n            result **= operand[i + 1]\n    return result",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpfke0w0pa.py\", line 53, in <module>\n    check(do_algebra)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpfke0w0pa.py\", line 45, in check\n    assert candidate(['+', '*', '-'], [2, 3, 4, 5]) == 9\nAssertionError\n",
+      "elapsed_s": 44.3
+    },
+    {
+      "task_id": "HumanEval/161",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if not any(c.isalpha() for c in s):\n        return s[::-1]\n    return ''.join(c.swapcase() if c.isalpha() else c for c in s)",
+      "error": "",
+      "elapsed_s": 15.4
+    },
+    {
+      "task_id": "HumanEval/162",
+      "passed": true,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 5,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    import hashlib\n    if not text:\n        return None\n    return hashlib.md5(text.encode()).hexdigest()",
+      "error": "",
+      "elapsed_s": 14.5
+    },
+    {
+      "task_id": "HumanEval/163",
+      "passed": false,
+      "stages": {
+        "s1_candidates": 5,
+        "s2_aux_tests": 5,
+        "s3_orig_pass": 0,
+        "s4_repaired": false,
+        "s5_selected_idx": 0
+      },
+      "selected_body": "    if a > b:\n        a, b = b, a\n    return [x for x in range(a, b + 1) if x % 2 == 0]",
+      "error": "Traceback (most recent call last):\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpw9jooti3.py\", line 29, in <module>\n    check(generate_integers)\n  File \"/var/folders/f2/b3njznbx6697l68gfd1915kw0000gn/T/tmpw9jooti3.py\", line 19, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\nAssertionError: Test 1\n",
+      "elapsed_s": 26.2
+    }
+  ]
+}
